@@ -26,7 +26,7 @@ export function Button(props) {
   const { label, variant, ...rest } = props;
   let bpkProps = { ...rest };
   if (variant !== 'primary') {
-    bpkProps[variant] = 'true';
+    bpkProps[variant] = true;
   }
 
   return <BpkButton {...bpkProps}>{label}</BpkButton>;

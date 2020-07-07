@@ -19,7 +19,7 @@ This is the Backpack package for Framer components.
 | [`bpk-component-breakpoint`](https://backpack.github.io/components/breakpoint)                           | -                  |
 | [`bpk-component-button`](https://backpack.github.io/components/button)                                   | :white_check_mark: |
 | [`bpk-component-calendar`](https://backpack.github.io/components/calendar)                               | -                  |
-| [`bpk-component-card`](https://backpack.github.io/components/card)                                       | -                  |
+| [`bpk-component-card`](https://backpack.github.io/components/card)                                       | :white_check_mark: |
 | [`bpk-component-checkbox`](https://backpack.github.io/components/checkbox)                               | -                  |
 | [`bpk-component-chip`](https://backpack.github.io/components/chip)                                       | -                  |
 | [`bpk-component-close-button`](https://backpack.github.io/components/close-button)                       | -                  |
@@ -64,7 +64,7 @@ This is the Backpack package for Framer components.
 | [`bpk-component-spinner`](https://backpack.github.io/components/spinner)                                 | -                  |
 | [`bpk-component-star-rating`](https://backpack.github.io/components/star-rating)                         | -                  |
 | [`bpk-component-table`](https://backpack.github.io/components/table)                                     | -                  |
-| [`bpk-component-text`](https://backpack.github.io/components/text)                                       | -                  |
+| [`bpk-component-text`](https://backpack.github.io/components/text)                                       | :white_check_mark: |
 | [`bpk-component-textarea`](https://backpack.github.io/components/textarea)                               | -                  |
 | [`bpk-component-ticket`](https://backpack.github.io/components/ticket)                                   | -                  |
 | [`bpk-component-tooltip`](https://backpack.github.io/components/tooltip)                                 | -                  |
