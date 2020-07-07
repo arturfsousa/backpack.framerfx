@@ -17,7 +17,7 @@ interface Props {
 
 const defaultProps: Props = {
   text: 'Badge',
-  type: 'warning',
+  type: BADGE_TYPES.warning,
   centered: false,
   docked: null,
 };
@@ -37,14 +37,14 @@ addPropertyControls(Badge, {
   },
   type: {
     type: ControlType.Enum,
-    title: 'Extra Space',
+    title: 'Type',
     options: [
-      'warning',
-      'success',
-      'destructive',
-      'light',
-      'inverse',
-      'outline',
+      BADGE_TYPES.warning,
+      BADGE_TYPES.success,
+      BADGE_TYPES.destructive,
+      BADGE_TYPES.light,
+      BADGE_TYPES.inverse,
+      BADGE_TYPES.outline,
     ],
   },
   centered: {
