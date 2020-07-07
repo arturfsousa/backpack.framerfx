@@ -37,7 +37,7 @@ This is the Backpack package for Framer components.
 | [`bpk-component-heading`](https://backpack.github.io/components/heading)                                 | -                  |
 | [`bpk-component-horizontal-nav`](https://backpack.github.io/components/horizontal-nav)                   | -                  |
 | [`bpk-component-icon`](https://backpack.github.io/components/icon)                                       | -                  |
-| [`bpk-component-image`](https://backpack.github.io/components/image)                                     | -                  |
+| [`bpk-component-image`](https://backpack.github.io/components/image)                                     | :white_check_mark: |
 | [`bpk-component-infinite-scroll`](https://backpack.github.io/components/infinite-scroll)                 | -                  |
 | [`bpk-component-input`](https://backpack.github.io/components/input)                                     | -                  |
 | [`bpk-component-label`](https://backpack.github.io/components/label)                                     | -                  |

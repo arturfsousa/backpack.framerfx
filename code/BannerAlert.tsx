@@ -10,14 +10,12 @@ interface Props {
 }
 
 const defaultProps: Props = {
-  message: 'Badge',
+  message: 'Banner',
   type: ALERT_TYPES.PRIMARY,
 };
 
 export function BannerAlert(props) {
-  const { ...rest } = props;
-
-  return <BpkBannerAlert {...rest} />;
+  return <BpkBannerAlert {...props} />;
 }
 
 BannerAlert.defaultProps = defaultProps;
