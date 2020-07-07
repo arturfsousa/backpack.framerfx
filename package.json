@@ -16,5 +16,9 @@
   "peerDependencies": {
     "framer": "^1.0",
     "react": "^16.8"
+  },
+  "dependencies": {
+    "@framer/framer.default": "^1.71.0",
+    "backpack-transpiled": "^0.0.2"
   }
 }
