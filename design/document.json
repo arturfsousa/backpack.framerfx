@@ -1,0 +1,29 @@
+{
+  "root" : {
+    "__class" : "RootNode",
+    "children" : [
+
+    ],
+    "disableBackdropFilters" : false,
+    "duplicatedFrom" : null,
+    "guidesX" : [
+
+    ],
+    "guidesY" : [
+
+    ],
+    "homeNodeId" : null,
+    "id" : "BsMOCu9oR",
+    "name" : null,
+    "originalid" : null,
+    "parentid" : null,
+    "tokens" : {
+
+    },
+    "tokensIndex" : [
+
+    ],
+    "visible" : false
+  },
+  "version" : 66
+}
