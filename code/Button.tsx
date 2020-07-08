@@ -22,7 +22,7 @@ const defaultProps: Props = {
   blank: false,
 };
 
-export function Button(props) {
+export function Button(props: Props) {
   const { label, variant, ...rest } = props;
   let bpkProps = { ...rest };
   if (variant !== 'primary') {

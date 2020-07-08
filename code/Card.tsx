@@ -2,15 +2,20 @@ import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
 import BpkCard from 'backpack-transpiled/bpk-component-card';
 
-export function Card(props) {
+interface Props {
+  children: NonNullable<React.ReactNode>;
+  padded?: boolean;
+}
+
+export function Card(props: Props) {
   const { children, ...rest } = props;
 
-  return (
-    <BpkCard {...rest} padded={true}>
-      {children}
-    </BpkCard>
-  );
+  return <BpkCard {...rest}>{children}</BpkCard>;
 }
+
+Card.defaultProps = {
+  padded: true,
+};
 
 addPropertyControls(Card, {
   children: {
@@ -20,5 +25,9 @@ addPropertyControls(Card, {
       type: ControlType.ComponentInstance,
       title: 'Text',
     },
+  },
+  padded: {
+    type: ControlType.Boolean,
+    title: 'Padded',
   },
 });

@@ -24,7 +24,7 @@ const defaultProps: Props = {
   tagName: 'p',
 };
 
-export function Text(props) {
+export function Text(props: Props) {
   const { text, textStyle, tagName } = props;
 
   const Component = withDefaultProps(BpkText, {

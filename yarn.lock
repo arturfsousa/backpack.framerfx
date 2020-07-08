@@ -60,10 +60,10 @@ babel-runtime@^6.11.6, babel-runtime@^6.26.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.11.0"
 
-backpack-transpiled@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/backpack-transpiled/-/backpack-transpiled-0.0.2.tgz#3401806ca5d17381d4e4e21e67ad960ee3a91793"
-  integrity sha512-/RBc6/3JqYuXKhqYe1zCzs1PqTgU++rdjyVoq/MhfEUpEENiDITCaFC3C/SUO1zIqiDM/QAI8ZlWX+7G9sakKA==
+backpack-transpiled@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/backpack-transpiled/-/backpack-transpiled-0.0.3.tgz#0b9a75cb1827a9ed19b18a07ca489df334950279"
+  integrity sha512-hMGlfIsLkVyh4E6cxILK58EU6meyMl11+DDW+Y3qPjyxuvq8K5n1ZR5knsKqlkpJerKVu66oQxifhVtOjLWHSQ==
   dependencies:
     "@skyscanner/popper.js" "^1.12.9-beta.1"
     a11y-focus-scope "^1.1.3"

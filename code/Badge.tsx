@@ -22,7 +22,7 @@ const defaultProps: Props = {
   docked: null,
 };
 
-export function Badge(props) {
+export function Badge(props: Props) {
   const { text, ...rest } = props;
 
   return <BpkBadge {...rest}>{text}</BpkBadge>;
