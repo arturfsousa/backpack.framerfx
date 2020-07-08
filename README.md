@@ -5,6 +5,18 @@
 
 This is the Backpack package for Framer components.
 
+## Usage
+
+Clone and install dependencies:
+
+```sh
+git clone git@github.com:arturfsousa/backpack.framerfx.git
+cd backpack.framerfx
+yarn
+```
+
+and open the project folder `backpack.framerfx` on `FramerX`.
+
 ## Available Components
 
 | Component                                                                                                | Is available?      |
