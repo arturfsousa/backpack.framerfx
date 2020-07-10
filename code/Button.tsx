@@ -4,6 +4,7 @@ import { addPropertyControls, ControlType } from 'framer';
 import BpkButton from 'backpack-transpiled/bpk-component-button';
 
 interface Props {
+  height?: number
   label?: string;
   large?: boolean;
   disabled?: boolean;
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const defaultProps: Props = {
+  height: 36,
   label: 'Button',
   large: false,
   disabled: false,
