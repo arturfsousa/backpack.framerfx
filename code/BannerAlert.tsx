@@ -2,6 +2,7 @@ import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
 import BpkBannerAlert, {
   ALERT_TYPES,
+  // @ts-ignore
 } from 'backpack-transpiled/bpk-component-banner-alert';
 
 interface Props {

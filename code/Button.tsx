@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
+// @ts-ignore
 import BpkButton from 'backpack-transpiled/bpk-component-button';
 
 interface Props {

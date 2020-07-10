@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
+// @ts-ignore
 import BpkBlockquote from 'backpack-transpiled/bpk-component-blockquote';
 
 interface Props {

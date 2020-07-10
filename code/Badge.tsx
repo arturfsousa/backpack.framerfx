@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
+// @ts-ignore
 import BpkBadge, { BADGE_TYPES } from 'backpack-transpiled/bpk-component-badge';
 
 interface Props {

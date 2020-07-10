@@ -1,6 +1,7 @@
 import * as React from 'react';
 import BpkBreadcrumb, {
   BpkBreadcrumbItem,
+  // @ts-ignore
 } from 'backpack-transpiled/bpk-component-breadcrumb';
 
 export function Breadcrumb() {

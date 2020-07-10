@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
+// @ts-ignore
 import { withDefaultProps } from 'backpack-transpiled/bpk-react-utils';
+// @ts-ignore
 import BpkText from 'backpack-transpiled/bpk-component-text';
 
 interface Props {

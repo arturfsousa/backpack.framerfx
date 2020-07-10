@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
   BpkAccordion,
   BpkAccordionItem,
+  // @ts-ignore
 } from 'backpack-transpiled/bpk-component-accordion';
 
 export function Accordion() {

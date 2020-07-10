@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
+// @ts-ignore
 import BpkCard from 'backpack-transpiled/bpk-component-card';
 
 interface Props {
@@ -7,10 +8,14 @@ interface Props {
   padded?: boolean;
 }
 
-export function Card(props: Props) {
+export function Card(props) {
   const { children, ...rest } = props;
 
-  return <BpkCard {...rest}>{children}</BpkCard>;
+  const relativeChildren = React.Children.map(children, (child) =>
+    React.cloneElement(child, { position: "relative" })
+  )
+
+  return <BpkCard {...rest}>{relativeChildren}</BpkCard>;
 }
 
 Card.defaultProps = {

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { addPropertyControls, ControlType } from 'framer';
+// @ts-ignore
 import BpkImage from 'backpack-transpiled/bpk-component-image';
 
 interface Props {
@@ -9,7 +10,7 @@ interface Props {
   src?: string;
 }
 
-export function Image(props: Props) {
+export function Image(props) {
   const { children, ...rest } = props;
   return <BpkImage {...rest} />;
 }
