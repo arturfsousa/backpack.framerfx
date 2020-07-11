@@ -1,26 +1,65 @@
-import * as React from 'react';
-import {
-  BpkAccordion,
-  BpkAccordionItem,
-  // @ts-ignore
-} from 'backpack-transpiled/bpk-component-accordion';
+import * as React from "react"
+import { addPropertyControls, ControlType } from "framer"
 
-export function Accordion() {
-  return (
-    <BpkAccordion>
-      <BpkAccordionItem id="stops" title="Stops">
-        My stops content.
-      </BpkAccordionItem>
-      <BpkAccordionItem
-        id="departure-times"
-        title="Departure times"
-        initiallyExpanded
-      >
-        My departure times content.
-      </BpkAccordionItem>
-      <BpkAccordionItem id="journey-duration" title="Journey duration">
-        My journey duration content.
-      </BpkAccordionItem>
-    </BpkAccordion>
-  );
+import {
+    BpkAccordion,
+    BpkAccordionItem,
+    withSingleItemAccordionState,
+    withAccordionItemState,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-accordion"
+
+const SingleItemAccordion = withSingleItemAccordionState(BpkAccordion)
+const StatefulAccordionItem = withAccordionItemState(BpkAccordionItem)
+
+const defaultProps = {
+    isSingleExpander: true,
+    sections: ["Section One", "Section Two", "Section Three"],
 }
+
+export function Accordion(props) {
+    const { isSingleExpander, sections } = props
+
+    const content = "Lorem ipsum dolor sit"
+    const singleItems = sections.map((section) => {
+        const item = (
+            <BpkAccordionItem id={section} title={section}>
+                {content}
+            </BpkAccordionItem>
+        )
+        return item
+    })
+    const statefulItems = sections.map((section) => {
+        const item = (
+            <StatefulAccordionItem id={section} title={section}>
+                {content}
+            </StatefulAccordionItem>
+        )
+        return item
+    })
+    const accordion = isSingleExpander ? (
+        <SingleItemAccordion>{singleItems}</SingleItemAccordion>
+    ) : (
+        <BpkAccordion>{statefulItems}</BpkAccordion>
+    )
+    return accordion
+}
+
+Accordion.defaultProps = defaultProps
+
+addPropertyControls(Accordion, {
+    isSingleExpander: {
+        type: ControlType.Boolean,
+        title: "Expand Behaviour",
+        defaultValue: true,
+        enabledTitle: "Single",
+        disabledTitle: "Multiple",
+    },
+    sections: {
+        type: ControlType.Array,
+        propertyControl: {
+            type: ControlType.String,
+        },
+        maxCount: 5,
+    },
+})

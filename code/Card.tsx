@@ -1,38 +1,38 @@
-import * as React from 'react';
-import { addPropertyControls, ControlType } from 'framer';
+import * as React from "react"
+import { addPropertyControls, ControlType } from "framer"
 // @ts-ignore
-import BpkCard from 'backpack-transpiled/bpk-component-card';
+import BpkCard from "backpack-transpiled/bpk-component-card"
 
 interface Props {
-  children: NonNullable<React.ReactNode>;
-  padded?: boolean;
+    children: NonNullable<React.ReactNode>
+    padded?: boolean
 }
 
 export function Card(props) {
-  const { children, ...rest } = props;
+    const { children, ...rest } = props
 
-  const relativeChildren = React.Children.map(children, (child) =>
-    React.cloneElement(child, { position: "relative" })
-  )
+    const relativeChildren = React.Children.map(children, (child) =>
+        React.cloneElement(child, { position: "relative" })
+    )
 
-  return <BpkCard {...rest}>{relativeChildren}</BpkCard>;
+    return <BpkCard {...rest}>{relativeChildren}</BpkCard>
 }
 
 Card.defaultProps = {
-  padded: true,
-};
+    padded: true,
+}
 
 addPropertyControls(Card, {
-  children: {
-    type: ControlType.Array,
-    title: 'Content',
-    propertyControl: {
-      type: ControlType.ComponentInstance,
-      title: 'Text',
+    children: {
+        type: ControlType.Array,
+        title: "Content",
+        propertyControl: {
+            type: ControlType.ComponentInstance,
+            title: "Text",
+        },
     },
-  },
-  padded: {
-    type: ControlType.Boolean,
-    title: 'Padded',
-  },
-});
+    padded: {
+        type: ControlType.Boolean,
+        title: "Padded",
+    },
+})
