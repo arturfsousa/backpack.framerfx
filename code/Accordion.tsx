@@ -1,5 +1,7 @@
 import * as React from "react"
-import { addPropertyControls, ControlType } from "framer"
+import { addPropertyControls, ControlType, Stack } from "framer"
+
+import { NotConnected } from "./NotConnected"
 
 import {
     BpkAccordion,
@@ -14,35 +16,58 @@ const StatefulAccordionItem = withAccordionItemState(BpkAccordionItem)
 
 const defaultProps = {
     isSingleExpander: true,
-    sections: ["Section One", "Section Two", "Section Three"],
 }
 
 export function Accordion(props) {
-    const { isSingleExpander, sections } = props
+    const { isSingleExpander, sections, children } = props
 
-    const content = "Lorem ipsum dolor sit"
-    const singleItems = sections.map((section) => {
-        const item = (
-            <BpkAccordionItem id={section} title={section}>
-                {content}
-            </BpkAccordionItem>
-        )
-        return item
-    })
-    const statefulItems = sections.map((section) => {
-        const item = (
-            <StatefulAccordionItem id={section} title={section}>
-                {content}
-            </StatefulAccordionItem>
-        )
-        return item
-    })
-    const accordion = isSingleExpander ? (
-        <SingleItemAccordion>{singleItems}</SingleItemAccordion>
-    ) : (
-        <BpkAccordion>{statefulItems}</BpkAccordion>
-    )
-    return accordion
+    if (React.Children.count(children) === 0) {
+        return <NotConnected prompt="Connect to a stack" />
+    } else {
+        const items = children[0].props.children
+        const hasChildren = React.Children.count(items) > 0
+
+        if (hasChildren) {
+            const singleItems = items.map((child) => {
+                const { name = "Frame" } = child.props
+
+                const singleItem = (
+                    <BpkAccordionItem id={name} title={name}>
+                        {React.cloneElement(child, {
+                            position: "relative",
+                            width: "100%",
+                        })}
+                    </BpkAccordionItem>
+                )
+
+                return singleItem
+            })
+
+            const statefulItems = items.map((child) => {
+                const { name = "Frame" } = child.props
+
+                const statefulItem = (
+                    <StatefulAccordionItem id={name} title={name}>
+                        {React.cloneElement(child, {
+                            position: "relative",
+                            width: "100%",
+                        })}
+                    </StatefulAccordionItem>
+                )
+                return statefulItem
+            })
+
+            const accordion = isSingleExpander ? (
+                <SingleItemAccordion>{singleItems}</SingleItemAccordion>
+            ) : (
+                <BpkAccordion>{statefulItems}</BpkAccordion>
+            )
+
+            return accordion
+        } else {
+            return <NotConnected prompt="Connect to a stack" />
+        }
+    }
 }
 
 Accordion.defaultProps = defaultProps
@@ -50,16 +75,9 @@ Accordion.defaultProps = defaultProps
 addPropertyControls(Accordion, {
     isSingleExpander: {
         type: ControlType.Boolean,
-        title: "Expand Behaviour",
+        title: "Expand",
         defaultValue: true,
         enabledTitle: "Single",
         disabledTitle: "Multiple",
-    },
-    sections: {
-        type: ControlType.Array,
-        propertyControl: {
-            type: ControlType.String,
-        },
-        maxCount: 5,
     },
 })
