@@ -15,57 +15,52 @@ const SingleItemAccordion = withSingleItemAccordionState(BpkAccordion)
 const StatefulAccordionItem = withAccordionItemState(BpkAccordionItem)
 
 const defaultProps = {
+    width: 360,
+    height: 180,
     isSingleExpander: true,
 }
 
 export function Accordion(props) {
-    const { isSingleExpander, sections, children } = props
+    const { isSingleExpander, children, ...rest } = props
 
     if (React.Children.count(children) === 0) {
         return <NotConnected prompt="Connect to a stack" />
     } else {
-        const items = children[0].props.children
-        const hasChildren = React.Children.count(items) > 0
+        const childrenOfConnected = children[0].props.children
+        const hasChildren = React.Children.count(childrenOfConnected) > 0
 
         if (hasChildren) {
-            const singleItems = items.map((child) => {
-                const { name = "Frame" } = child.props
+            const items = React.Children.map(
+                childrenOfConnected,
+                (child, key) => {
+                    const { name = "Frame" } = child.props
 
-                const singleItem = (
-                    <BpkAccordionItem id={name} title={name}>
-                        {React.cloneElement(child, {
-                            position: "relative",
-                            width: "100%",
-                        })}
-                    </BpkAccordionItem>
-                )
+                    const element = React.cloneElement(child, {
+                        position: "relative",
+                        width: "100%",
+                    })
 
-                return singleItem
-            })
-
-            const statefulItems = items.map((child) => {
-                const { name = "Frame" } = child.props
-
-                const statefulItem = (
-                    <StatefulAccordionItem id={name} title={name}>
-                        {React.cloneElement(child, {
-                            position: "relative",
-                            width: "100%",
-                        })}
-                    </StatefulAccordionItem>
-                )
-                return statefulItem
-            })
+                    return isSingleExpander ? (
+                        <BpkAccordionItem id={name} title={name} key={key}>
+                            {element}
+                        </BpkAccordionItem>
+                    ) : (
+                        <StatefulAccordionItem id={name} title={name} key={key}>
+                            {element}
+                        </StatefulAccordionItem>
+                    )
+                }
+            )
 
             const accordion = isSingleExpander ? (
-                <SingleItemAccordion>{singleItems}</SingleItemAccordion>
+                <SingleItemAccordion {...rest}>{items}</SingleItemAccordion>
             ) : (
-                <BpkAccordion>{statefulItems}</BpkAccordion>
+                <BpkAccordion {...rest}>{items}</BpkAccordion>
             )
 
             return accordion
         } else {
-            return <NotConnected prompt="Connect to a stack" />
+            return <NotConnected prompt="Add content to stack" />
         }
     }
 }

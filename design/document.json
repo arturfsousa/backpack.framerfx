@@ -13420,7 +13420,7 @@
                   "value" : "hy7lq80ou"
                 }
               ],
-              "isSingleExpander" : true
+              "isSingleExpander" : false
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -13487,7 +13487,7 @@
         "guidesY" : [
 
         ],
-        "height" : 192,
+        "height" : 180,
         "heightType" : 0,
         "id" : "MHSPbhg5H",
         "intrinsicHeight" : null,
@@ -13497,7 +13497,7 @@
         "isTarget" : false,
         "left" : -2546,
         "locked" : false,
-        "name" : null,
+        "name" : "Accordion",
         "onTap" : [
 
         ],
@@ -13517,7 +13517,7 @@
         "rotation" : 0,
         "top" : -1685,
         "visible" : true,
-        "width" : 524,
+        "width" : 360,
         "widthType" : 0
       },
       {
@@ -13550,7 +13550,7 @@
             "exportOptions" : [
 
             ],
-            "fillColor" : "hsl(0, 87%, 36%)",
+            "fillColor" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
             "fillEnabled" : true,
             "fillImage" : null,
             "fillImageOriginalName" : null,
@@ -13565,7 +13565,7 @@
             "guidesY" : [
 
             ],
-            "height" : 31,
+            "height" : 36,
             "heightType" : 0,
             "id" : "g9O5ZgPTA",
             "intrinsicHeight" : null,
@@ -13575,7 +13575,7 @@
             "isTarget" : false,
             "left" : 0,
             "locked" : false,
-            "name" : "One",
+            "name" : "Section One",
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "hy7lq80ou",
@@ -13592,7 +13592,7 @@
             "rotation" : 0,
             "top" : 0,
             "visible" : true,
-            "width" : 167,
+            "width" : 180,
             "widthType" : 0
           },
           {
@@ -13613,7 +13613,7 @@
             "exportOptions" : [
 
             ],
-            "fillColor" : "hsl(214, 48%, 39%)",
+            "fillColor" : "var(--token-8d28b969-e3ae-4f59-97cb-ba33dfebb0ce, rgb(0, 166, 152)) \/* {\"name\":\"Monteverde\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
             "fillEnabled" : true,
             "fillImage" : null,
             "fillImageOriginalName" : null,
@@ -13628,7 +13628,7 @@
             "guidesY" : [
 
             ],
-            "height" : 77,
+            "height" : 72,
             "heightType" : 0,
             "id" : "h1BxwmKB9",
             "intrinsicHeight" : null,
@@ -13638,7 +13638,7 @@
             "isTarget" : false,
             "left" : 0,
             "locked" : false,
-            "name" : "Lola",
+            "name" : "Section Two",
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "hy7lq80ou",
@@ -13655,7 +13655,7 @@
             "rotation" : 0,
             "top" : 0,
             "visible" : true,
-            "width" : 157,
+            "width" : 180,
             "widthType" : 0
           },
           {
@@ -13678,7 +13678,7 @@
             "exportOptions" : [
 
             ],
-            "fillColor" : "hsl(103, 48%, 39%)",
+            "fillColor" : "var(--token-ba317a7b-7f55-477a-a32b-a3e8183c7692, rgb(255, 148, 0)) \/* {\"name\":\"Kolkata\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
             "fillEnabled" : true,
             "fillImage" : null,
             "fillImageOriginalName" : null,
@@ -13693,7 +13693,7 @@
             "guidesY" : [
 
             ],
-            "height" : 107,
+            "height" : 108,
             "heightType" : 0,
             "id" : "xpdazHtry",
             "intrinsicHeight" : null,
@@ -13703,7 +13703,7 @@
             "isTarget" : false,
             "left" : 0,
             "locked" : false,
-            "name" : "Axel",
+            "name" : "Section Three",
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "hy7lq80ou",
@@ -13720,7 +13720,7 @@
             "rotation" : 0,
             "top" : 0,
             "visible" : true,
-            "width" : 157,
+            "width" : 180,
             "widthType" : 0
           },
           {
@@ -13746,7 +13746,7 @@
             "exportOptions" : [
 
             ],
-            "fillColor" : "hsl(0, 84%, 81%)",
+            "fillColor" : "var(--token-1e1b236b-0f92-426b-87e6-5ef348eac096, rgb(209, 67, 91)) \/* {\"name\":\"Panjin\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
             "fillEnabled" : true,
             "fillImage" : null,
             "fillImageOriginalName" : null,
@@ -13761,7 +13761,7 @@
             "guidesY" : [
 
             ],
-            "height" : 31,
+            "height" : 36,
             "heightType" : 0,
             "id" : "LgEIvyZWK",
             "intrinsicHeight" : null,
@@ -13771,7 +13771,7 @@
             "isTarget" : false,
             "left" : 0,
             "locked" : false,
-            "name" : "Two",
+            "name" : "Section Four",
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "hy7lq80ou",
@@ -13788,7 +13788,7 @@
             "rotation" : 0,
             "top" : 0,
             "visible" : true,
-            "width" : 167,
+            "width" : 180,
             "widthType" : 0
           }
         ],
@@ -13814,7 +13814,7 @@
         "guidesY" : [
 
         ],
-        "height" : 276,
+        "height" : 282,
         "heightType" : 0,
         "id" : "hy7lq80ou",
         "intrinsicHeight" : null,
@@ -13822,9 +13822,9 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : -1808,
+        "left" : -2080,
         "locked" : false,
-        "name" : null,
+        "name" : "Accordion Content",
         "opacity" : 1,
         "originalid" : null,
         "padding" : 0,
@@ -13850,9 +13850,195 @@
         "stackDistribution" : "start",
         "stackEnabled" : true,
         "stackGap" : 10,
+        "top" : -1685,
+        "visible" : true,
+        "width" : 180,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "duplicatedFrom" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgb(248, 22, 22)",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImageOriginalName" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
+        "height" : 90,
+        "heightType" : 0,
+        "id" : "q0HsEMnSf",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : -1347,
+        "locked" : false,
+        "name" : "CardContent",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "BsMOCu9oR",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
         "top" : -1695,
         "visible" : true,
-        "width" : 167,
+        "width" : 207,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.32176656151419558,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Card.tsx_Card",
+            "codeComponentPackageVersion" : "1.71.0",
+            "codeComponentProps" : {
+              "children" : [
+                {
+                  "enabled" : true,
+                  "type" : "componentinstance",
+                  "value" : "q0HsEMnSf"
+                }
+              ],
+              "padded" : true
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "DLNfvVFu5"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 114,
+            "heightType" : 0,
+            "id" : "RFIjn4qcH",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 59,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "kDjhMq7xN",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 59,
+            "rotation" : 0,
+            "top" : 45,
+            "visible" : true,
+            "width" : 180,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "duplicatedFrom" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "white",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImageOriginalName" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
+        "height" : 317,
+        "heightType" : 0,
+        "id" : "kDjhMq7xN",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : -1730,
+        "locked" : false,
+        "name" : "Card",
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "BsMOCu9oR",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -1695,
+        "visible" : true,
+        "width" : 298,
         "widthType" : 0
       }
     ],
