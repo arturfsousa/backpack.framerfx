@@ -101,8 +101,8 @@ export const colors = Object.freeze({
     "Dark Text Primary": "var(--token-2ed3c9a9-8e58-4972-a822-aa5b1c9acd08, rgb(255, 255, 255))",
     /** #8E8E93 */
     "Dark Text Secondary": "var(--token-d8a2454a-06eb-4bba-a375-a16eb908fa78, rgb(142, 142, 147))",
-    /** #2C2C2E */
-    "Dark Text Disabled": "var(--token-bbfccc4e-5e4c-4764-893a-ce107abd4bfa, rgb(44, 44, 46))",
+    /** #636366 */
+    "Dark Text Disabled": "var(--token-bbfccc4e-5e4c-4764-893a-ce107abd4bfa, rgb(99, 99, 102))",
     /** #000000 */
     "Dark Background": "var(--token-fe690aab-64e6-44d8-950e-cc8f9cdcd859, rgb(0, 0, 0))",
     /** #1D1B20 */
