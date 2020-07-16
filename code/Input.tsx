@@ -21,6 +21,7 @@ export function Input(props) {
         large,
         clearButtonMode,
         placeholder,
+        onChange,
     } = props
 
     const [value, setValue] = React.useState(props.value)
@@ -28,6 +29,11 @@ export function Input(props) {
 
     React.useEffect(() => setValue(props.value), [props.value])
     React.useEffect(() => setIsValid(props.isValid), [props.isValid])
+
+    const handleChange = (event) => {
+        setValue(event.target.value)
+        onChange && onChange(event)
+    }
 
     const control = (
         <BpkInput
@@ -37,7 +43,7 @@ export function Input(props) {
             name={label}
             value={value}
             valid={isValid}
-            onChange={(event) => setValue(event.target.value)}
+            onChange={handleChange}
             placeholder={placeholder}
             clearButtonMode={clearButtonMode}
             clearButtonLabel="Clear"
