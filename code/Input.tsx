@@ -27,7 +27,7 @@ export function Input(props) {
     React.useEffect(() => setValue(props.value), [props.value])
     React.useEffect(() => setIsValid(props.isValid), [props.isValid])
 
-    const input = (
+    const control = (
         <BpkInput
             id={label}
             type={type}
@@ -43,13 +43,13 @@ export function Input(props) {
         />
     )
 
-    const field = (
+    const fieldSet = (
         <BpkFieldset label={label} validationMessage={validationMessage}>
-            {input}
+            {control}
         </BpkFieldset>
     )
 
-    return isFieldSet ? field : input
+    return isFieldSet ? fieldSet : control
 }
 
 Input.defaultProps = {
