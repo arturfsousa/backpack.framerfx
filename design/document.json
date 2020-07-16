@@ -14067,6 +14067,7 @@
               "label" : "Label",
               "large" : false,
               "placeholder" : "Enter a value",
+              "required" : false,
               "type" : "TEXT",
               "validationMessage" : "Error",
               "value" : ""
@@ -14130,6 +14131,7 @@
               "label" : "Label",
               "large" : false,
               "optionsText" : "One, Two, Three",
+              "required" : false,
               "validationMessage" : "Enter a value"
             },
             "codeOverrideEnabled" : false,

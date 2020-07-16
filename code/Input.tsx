@@ -13,6 +13,7 @@ import BpkInput, {
 export function Input(props) {
     const {
         isFieldSet,
+        required,
         label,
         description,
         validationMessage,
@@ -20,6 +21,7 @@ export function Input(props) {
         large,
         clearButtonMode,
         placeholder,
+        onChange,
     } = props
 
     const [value, setValue] = React.useState(props.value)
@@ -27,6 +29,11 @@ export function Input(props) {
 
     React.useEffect(() => setValue(props.value), [props.value])
     React.useEffect(() => setIsValid(props.isValid), [props.isValid])
+
+    const handleChange = (event) => {
+        setValue(event.target.value)
+        onChange && onChange(event)
+    }
 
     const control = (
         <BpkInput
@@ -36,7 +43,7 @@ export function Input(props) {
             name={label}
             value={value}
             valid={isValid}
-            onChange={(event) => setValue(event.target.value)}
+            onChange={handleChange}
             placeholder={placeholder}
             clearButtonMode={clearButtonMode}
             clearButtonLabel="Clear"
@@ -45,7 +52,7 @@ export function Input(props) {
     )
 
     const fieldSet = (
-        <BpkFieldset label={label} description={description} validationMessage={validationMessage}>
+        <BpkFieldset required={required} label={label} description={description} validationMessage={validationMessage}>
             {control}
         </BpkFieldset>
     )
@@ -71,6 +78,16 @@ addPropertyControls(Input, {
         enabledTitle: "Yes",
         disabledTitle: "No",
     },
+    required: {
+        type: ControlType.Boolean,
+        title: "Required",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+        hidden(props) {
+            return props.isFieldSet === false
+        },
+    },
     label: {
         title: "Label",
         type: ControlType.String,
@@ -85,6 +102,7 @@ addPropertyControls(Input, {
         type: ControlType.String,
         defaultValue: "",
         placeholder: "None",
+        displayTextArea: true,
         hidden(props) {
             return props.isFieldSet === false
         },

@@ -13,6 +13,7 @@ const defaultOptionsText =
 export function Select(props) {
     const {
         isFieldSet,
+        required,
         label,
         description,
         validationMessage,
@@ -60,7 +61,7 @@ export function Select(props) {
     )
 
     const fieldSet = (
-        <BpkFieldset label={label} description={description} validationMessage={validationMessage}>
+        <BpkFieldset required={required} label={label} description={description} validationMessage={validationMessage}>
             {control}
         </BpkFieldset>
     )
@@ -86,6 +87,16 @@ addPropertyControls(Select, {
         enabledTitle: "Yes",
         disabledTitle: "No",
     },
+    required: {
+        type: ControlType.Boolean,
+        title: "Required",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+        hidden(props) {
+            return props.isFieldSet === false
+        },
+    },
     label: {
         title: "Label",
         type: ControlType.String,
@@ -100,6 +111,7 @@ addPropertyControls(Select, {
         type: ControlType.String,
         defaultValue: "",
         placeholder: "None",
+        displayTextArea: true,
         hidden(props) {
             return props.isFieldSet === false
         },
