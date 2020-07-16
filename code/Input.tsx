@@ -1,13 +1,14 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
-// @ts-ignore
+
 import BpkInput, {
     INPUT_TYPES,
     CLEAR_BUTTON_MODES,
+    // @ts-ignore
 } from "backpack-transpiled/bpk-component-input"
 
 export function Input(props) {
-    const { type, large, clearButtonMode, placeholder, ...rest } = props
+    const { type, large, clearButtonMode, placeholder } = props
 
     const [value, setValue] = React.useState(props.value)
 
@@ -15,7 +16,6 @@ export function Input(props) {
 
     return (
         <BpkInput
-            {...rest}
             id="id"
             type={type}
             large={large}
