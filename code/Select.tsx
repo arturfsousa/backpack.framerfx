@@ -1,5 +1,9 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { addPropertyControls, ControlType } from "framer"
+
+// @ts-ignore
+import BpkFieldset from "backpack-transpiled/bpk-component-fieldset"
+
 // @ts-ignore
 import BpkSelect from "backpack-transpiled/bpk-component-select"
 
@@ -7,11 +11,21 @@ const defaultOptionsText =
     "Economy, Premium Economy, Business Class, First Class"
 
 export function Select(props) {
-    const { large, disabled, onChange, ...rest } = props
+    const {
+        isFieldSet,
+        label,
+        description,
+        validationMessage,
+        large,
+        disabled,
+        onChange,
+        ...rest
+    } = props
 
     const [value, setValue] = React.useState(props.value)
+    const [isValid, setIsValid] = React.useState(props.isValid)
 
-    // React.useEffect(() => setValue(props.value), [props.value])
+    React.useEffect(() => setIsValid(props.isValid), [props.isValid])
 
     const optionArray = props.options
         ? props.options
@@ -30,7 +44,7 @@ export function Select(props) {
         onChange && onChange(event)
     }
 
-    return (
+    const control = (
         <BpkSelect
             {...rest}
             id="select"
@@ -38,11 +52,20 @@ export function Select(props) {
             large={large}
             name="select"
             value={value}
+            valid={isValid}
             onChange={handleChange}
         >
             {options}
         </BpkSelect>
     )
+
+    const fieldSet = (
+        <BpkFieldset label={label} description={description} validationMessage={validationMessage}>
+            {control}
+        </BpkFieldset>
+    )
+
+    return isFieldSet ? fieldSet : control
 }
 
 Select.defaultProps = {
@@ -56,6 +79,47 @@ Select.defaultProps = {
 }
 
 addPropertyControls(Select, {
+    isFieldSet: {
+        type: ControlType.Boolean,
+        title: "Field Set",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+    },
+    label: {
+        title: "Label",
+        type: ControlType.String,
+        defaultValue: "Label",
+        placeholder: "None",
+        hidden(props) {
+            return props.isFieldSet === false
+        },
+    },
+    description: {
+        title: "Description",
+        type: ControlType.String,
+        defaultValue: "",
+        placeholder: "None",
+        hidden(props) {
+            return props.isFieldSet === false
+        },
+    },
+    validationMessage: {
+        title: "Error",
+        type: ControlType.String,
+        defaultValue: "Please enter a value",
+        placeholder: "None",
+        hidden(props) {
+            return props.isFieldSet === false
+        },
+    },
+    isValid: {
+        type: ControlType.Boolean,
+        title: "Validation",
+        defaultValue: true,
+        enabledTitle: "Valid",
+        disabledTitle: "Invalid",
+    },
     large: {
         type: ControlType.Boolean,
         title: "Size",
@@ -79,6 +143,7 @@ addPropertyControls(Select, {
         type: ControlType.String,
         title: "Options",
         defaultValue: defaultOptionsText,
+        placeholder: "None",
         displayTextArea: true,
     },
 })
