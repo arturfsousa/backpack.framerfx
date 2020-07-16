@@ -1,5 +1,8 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { addPropertyControls, ControlType } from "framer"
+
+// @ts-ignore
+import BpkFieldset from "backpack-transpiled/bpk-component-fieldset"
 
 import BpkInput, {
     INPUT_TYPES,
@@ -8,19 +11,30 @@ import BpkInput, {
 } from "backpack-transpiled/bpk-component-input"
 
 export function Input(props) {
-    const { type, large, clearButtonMode, placeholder } = props
+    const {
+        isField,
+        label,
+        validationMessage,
+        type,
+        large,
+        clearButtonMode,
+        placeholder,
+    } = props
 
     const [value, setValue] = React.useState(props.value)
+    const [isValid, setIsValid] = React.useState(props.isValid)
 
     React.useEffect(() => setValue(props.value), [props.value])
+    React.useEffect(() => setIsValid(props.isValid), [props.isValid])
 
-    return (
+    const input = (
         <BpkInput
-            id="id"
+            id={label}
             type={type}
             large={large}
-            name="input"
+            name={label}
             value={value}
+            valid={isValid}
             onChange={(event) => setValue(event.target.value)}
             placeholder={placeholder}
             clearButtonMode={clearButtonMode}
@@ -28,16 +42,58 @@ export function Input(props) {
             onClear={() => setValue("")}
         />
     )
+
+    const field = (
+        <BpkFieldset label={label} validationMessage={validationMessage}>
+            {input}
+        </BpkFieldset>
+    )
+
+    return isField ? field : input
 }
 
 Input.defaultProps = {
     height: 36,
     width: 240,
+    isField: true,
+    isValid: null,
+    label: "Label",
     placeholder: "Country, city or airport",
     value: "",
 }
 
 addPropertyControls(Input, {
+    isField: {
+        type: ControlType.Boolean,
+        title: "Field Set",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+    },
+    label: {
+        title: "Label",
+        type: ControlType.String,
+        defaultValue: "Label",
+        hidden(props) {
+            return props.isField === false
+        },
+    },
+    validationMessage: {
+        title: "Error",
+        type: ControlType.String,
+        defaultValue: "Please enter a value",
+        hidden(props) {
+            return props.isField === false
+        },
+    },
+    isValid: {
+        type: ControlType.Enum,
+        title: "Validation",
+        defaultValue: false,
+        optionTitles: ["None", "Valid", "Invalid"],
+        options: [null, true, false],
+        displaySegmentedControl: true,
+    },
     type: {
         title: "Type",
         type: ControlType.Enum,
