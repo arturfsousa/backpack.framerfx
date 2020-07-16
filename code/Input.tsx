@@ -14,6 +14,7 @@ export function Input(props) {
     const {
         isFieldSet,
         label,
+        description,
         validationMessage,
         type,
         large,
@@ -44,7 +45,7 @@ export function Input(props) {
     )
 
     const fieldSet = (
-        <BpkFieldset label={label} validationMessage={validationMessage}>
+        <BpkFieldset label={label} description={description} validationMessage={validationMessage}>
             {control}
         </BpkFieldset>
     )
@@ -74,16 +75,27 @@ addPropertyControls(Input, {
         title: "Label",
         type: ControlType.String,
         defaultValue: "Label",
+        placeholder: "None",
         hidden(props) {
-            return props.isField === false
+            return props.isFieldSet === false
+        },
+    },
+    description: {
+        title: "Description",
+        type: ControlType.String,
+        defaultValue: "",
+        placeholder: "None",
+        hidden(props) {
+            return props.isFieldSet === false
         },
     },
     validationMessage: {
         title: "Error",
         type: ControlType.String,
         defaultValue: "Please enter a value",
+        placeholder: "None",
         hidden(props) {
-            return props.isField === false
+            return props.isFieldSet === false
         },
     },
     isValid: {
@@ -121,10 +133,12 @@ addPropertyControls(Input, {
         title: "Placeholder",
         type: ControlType.String,
         defaultValue: "Country, city or airport",
+        placeholder: "None",
     },
     value: {
         title: "Value",
         type: ControlType.String,
         defaultValue: "",
+        placeholder: "None",
     },
 })
