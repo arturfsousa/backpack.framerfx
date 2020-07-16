@@ -1,10 +1,14 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
-// @ts-ignore
-import BpkInput, { INPUT_TYPES, CLEAR_BUTTON_MODES } from 'backpack-transpiled/bpk-component-input'
+
+import BpkInput, {
+    INPUT_TYPES,
+    CLEAR_BUTTON_MODES,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-input"
 
 export function Input(props) {
-    const { type, large, clearButtonMode, placeholder, ...rest } = props
+    const { type, large, clearButtonMode, placeholder } = props
 
     const [value, setValue] = React.useState(props.value)
 
@@ -39,21 +43,23 @@ addPropertyControls(Input, {
         type: ControlType.Enum,
         defaultValue: INPUT_TYPES.text,
         options: Object.keys(INPUT_TYPES),
-        optionTitles: Object.keys(INPUT_TYPES).map(key => INPUT_TYPES[key]),
+        optionTitles: Object.keys(INPUT_TYPES).map((key) => INPUT_TYPES[key]),
     },
     large: {
         type: ControlType.Boolean,
         title: "Size",
         defaultValue: false,
         enabledTitle: "Large",
-        disabledTitle: "Small"
+        disabledTitle: "Small",
     },
     clearButtonMode: {
         title: "Clear Mode",
         type: ControlType.Enum,
         defaultValue: CLEAR_BUTTON_MODES.never,
         options: Object.keys(CLEAR_BUTTON_MODES),
-        optionTitles: Object.keys(CLEAR_BUTTON_MODES).map(key => CLEAR_BUTTON_MODES[key]),
+        optionTitles: Object.keys(CLEAR_BUTTON_MODES).map(
+            (key) => CLEAR_BUTTON_MODES[key]
+        ),
     },
     placeholder: {
         title: "Placeholder",
