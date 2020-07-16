@@ -12,7 +12,7 @@ import BpkInput, {
 
 export function Input(props) {
     const {
-        isField,
+        isFieldSet,
         label,
         validationMessage,
         type,
@@ -49,7 +49,7 @@ export function Input(props) {
         </BpkFieldset>
     )
 
-    return isField ? field : input
+    return isFieldSet ? field : input
 }
 
 Input.defaultProps = {
@@ -63,7 +63,7 @@ Input.defaultProps = {
 }
 
 addPropertyControls(Input, {
-    isField: {
+    isFieldSet: {
         type: ControlType.Boolean,
         title: "Field Set",
         defaultValue: false,

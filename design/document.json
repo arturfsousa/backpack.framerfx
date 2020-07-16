@@ -14052,7 +14052,7 @@
         "codeComponentPackageVersion" : "1.71.0",
         "codeComponentProps" : {
           "clearButtonMode" : "never",
-          "isField" : true,
+          "isFieldSet" : false,
           "isValid" : null,
           "label" : "Label",
           "large" : false,
