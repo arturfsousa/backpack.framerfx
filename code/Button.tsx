@@ -8,10 +8,11 @@ interface Props {
     label?: string
     large?: boolean
     disabled?: boolean
-    variant?: "primary" | "secondary" | "featured" | "destructive" | "outline"
-    link?: boolean
-    href?: string
-    blank?: boolean
+    variant?: "primary" | "secondary" | "featured" | "destructive" | "outline" | "link"
+    // link?: boolean
+    // href?: string
+    // blank?: boolean
+    onClick?: any
 }
 
 const defaultProps: Props = {
@@ -20,9 +21,9 @@ const defaultProps: Props = {
     large: false,
     disabled: false,
     variant: "primary",
-    link: false,
-    href: null,
-    blank: false,
+    // link: false,
+    // href: null,
+    // blank: false,
 }
 
 export function Button(props: Props) {
@@ -41,30 +42,41 @@ addPropertyControls(Button, {
     label: {
         type: ControlType.String,
         title: "Label",
+        defaultValue: "Done",
+        placeholder: "None",
+    },
+    variant: {
+        type: ControlType.Enum,
+        title: "Type",
+        options: ["primary", "secondary", "featured", "destructive", "outline", "link"],
     },
     large: {
         type: ControlType.Boolean,
-        title: "Large",
+        title: "Size",
+        defaultValue: false,
+        enabledTitle: "Large",
+        disabledTitle: "Small",
     },
     disabled: {
         type: ControlType.Boolean,
         title: "Disabled",
     },
-    variant: {
-        type: ControlType.Enum,
-        title: "Variant",
-        options: ["primary", "secondary", "featured", "destructive", "outline"],
-    },
-    link: {
-        type: ControlType.Boolean,
-        title: "Link",
-    },
-    href: {
-        type: ControlType.String,
-        title: "Link href",
-    },
-    blank: {
-        type: ControlType.Boolean,
-        title: "Link target blank",
+    // link: {
+    //     type: ControlType.Boolean,
+    //     title: "Link",
+    // },
+    // href: {
+    //     type: ControlType.String,
+    //     title: "Link href",
+    // },
+    // blank: {
+    //     type: ControlType.Boolean,
+    //     title: "Link Target",
+    //     defaultValue: false,
+    //     enabledTitle: "New Tab",
+    //     disabledTitle: "Self",
+    // },
+    onClick: {
+        type: ControlType.EventHandler,
     },
 })

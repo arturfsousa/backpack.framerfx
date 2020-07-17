@@ -194,13 +194,10 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "https:\/\/backpack.github.io\/",
               "label" : "Link",
               "large" : true,
-              "link" : true,
-              "variant" : "primary"
+              "variant" : "link"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -258,13 +255,10 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "https:\/\/backpack.github.io\/",
               "label" : "Link",
               "large" : false,
-              "link" : true,
-              "variant" : "primary"
+              "variant" : "link"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -323,13 +317,10 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : true,
               "disabled" : false,
-              "href" : "https:\/\/backpack.github.io\/",
               "label" : "Link",
               "large" : true,
-              "link" : true,
-              "variant" : "primary"
+              "variant" : "link"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -388,13 +379,10 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "https:\/\/skyscanner.net",
-              "label" : "Link button",
+              "label" : "Link",
               "large" : false,
-              "link" : true,
-              "variant" : "primary"
+              "variant" : "link"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -461,12 +449,9 @@
                 "codeComponentIdentifier" : ".\/Button.tsx_Button",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "blank" : false,
                   "disabled" : true,
-                  "href" : "",
                   "label" : "Outline",
                   "large" : true,
-                  "link" : false,
                   "variant" : "outline"
                 },
                 "codeOverrideEnabled" : false,
@@ -524,12 +509,9 @@
                 "codeComponentIdentifier" : ".\/Button.tsx_Button",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "blank" : false,
                   "disabled" : true,
-                  "href" : "",
                   "label" : "Outline",
                   "large" : false,
-                  "link" : false,
                   "variant" : "outline"
                 },
                 "codeOverrideEnabled" : false,
@@ -588,12 +570,9 @@
                 "codeComponentIdentifier" : ".\/Button.tsx_Button",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "blank" : false,
                   "disabled" : false,
-                  "href" : "",
                   "label" : "Outline",
                   "large" : true,
-                  "link" : false,
                   "variant" : "outline"
                 },
                 "codeOverrideEnabled" : false,
@@ -652,12 +631,9 @@
                 "codeComponentIdentifier" : ".\/Button.tsx_Button",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "blank" : false,
                   "disabled" : false,
-                  "href" : "",
                   "label" : "Outline",
                   "large" : false,
-                  "link" : false,
                   "variant" : "outline"
                 },
                 "codeOverrideEnabled" : false,
@@ -768,12 +744,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Destructive",
               "large" : true,
-              "link" : false,
               "variant" : "destructive"
             },
             "codeOverrideEnabled" : false,
@@ -830,12 +803,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Destructive",
               "large" : false,
-              "link" : false,
               "variant" : "destructive"
             },
             "codeOverrideEnabled" : false,
@@ -893,12 +863,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Destructive",
               "large" : true,
-              "link" : false,
               "variant" : "destructive"
             },
             "codeOverrideEnabled" : false,
@@ -956,12 +923,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Destructive",
               "large" : false,
-              "link" : false,
               "variant" : "destructive"
             },
             "codeOverrideEnabled" : false,
@@ -1018,12 +982,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Featured",
               "large" : true,
-              "link" : false,
               "variant" : "featured"
             },
             "codeOverrideEnabled" : false,
@@ -1080,12 +1041,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Featured",
               "large" : false,
-              "link" : false,
               "variant" : "featured"
             },
             "codeOverrideEnabled" : false,
@@ -1142,12 +1100,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Featured",
               "large" : true,
-              "link" : false,
               "variant" : "featured"
             },
             "codeOverrideEnabled" : false,
@@ -1203,12 +1158,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Featured",
               "large" : false,
-              "link" : false,
               "variant" : "featured"
             },
             "codeOverrideEnabled" : false,
@@ -1264,12 +1216,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Secondary",
               "large" : true,
-              "link" : false,
               "variant" : "secondary"
             },
             "codeOverrideEnabled" : false,
@@ -1325,12 +1274,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Secondary",
               "large" : false,
-              "link" : false,
               "variant" : "secondary"
             },
             "codeOverrideEnabled" : false,
@@ -1386,12 +1332,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Secondary",
               "large" : true,
-              "link" : false,
               "variant" : "secondary"
             },
             "codeOverrideEnabled" : false,
@@ -1446,12 +1389,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Secondary",
               "large" : false,
-              "link" : false,
               "variant" : "secondary"
             },
             "codeOverrideEnabled" : false,
@@ -1506,12 +1446,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Primary",
               "large" : true,
-              "link" : false,
               "variant" : "primary"
             },
             "codeOverrideEnabled" : false,
@@ -1568,12 +1505,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : true,
-              "href" : "",
               "label" : "Primary",
               "large" : false,
-              "link" : false,
               "variant" : "primary"
             },
             "codeOverrideEnabled" : false,
@@ -1630,12 +1564,9 @@
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Primary",
               "large" : true,
-              "link" : false,
               "variant" : "primary"
             },
             "codeOverrideEnabled" : false,
@@ -1685,18 +1616,18 @@
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.059239940387481371,
+            "centerAnchorX" : 0.05700447093889717,
             "centerAnchorY" : 0.11898016997167139,
             "clip" : true,
             "codeComponentIdentifier" : ".\/Button.tsx_Button",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
-              "blank" : false,
               "disabled" : false,
-              "href" : "",
               "label" : "Primary",
               "large" : false,
-              "link" : false,
+              "onClick" : [
+
+              ],
               "variant" : "primary"
             },
             "codeOverrideEnabled" : false,
@@ -1739,7 +1670,7 @@
             "rotation" : 0,
             "top" : 24,
             "visible" : true,
-            "width" : 109,
+            "width" : 103,
             "widthType" : 0
           }
         ],
