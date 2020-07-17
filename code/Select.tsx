@@ -61,7 +61,7 @@ export function Select(props) {
     )
 
     const fieldSet = (
-        <BpkFieldset required={required} label={label} description={description} validationMessage={validationMessage}>
+        <BpkFieldset disabled={disabled} required={required} label={label} description={description} validationMessage={validationMessage}>
             {control}
         </BpkFieldset>
     )
@@ -80,6 +80,13 @@ Select.defaultProps = {
 }
 
 addPropertyControls(Select, {
+    large: {
+        type: ControlType.Boolean,
+        title: "Size",
+        defaultValue: false,
+        enabledTitle: "Large",
+        disabledTitle: "Small",
+    },
     isFieldSet: {
         type: ControlType.Boolean,
         title: "Field Set",
@@ -131,13 +138,6 @@ addPropertyControls(Select, {
         defaultValue: true,
         enabledTitle: "Valid",
         disabledTitle: "Invalid",
-    },
-    large: {
-        type: ControlType.Boolean,
-        title: "Size",
-        defaultValue: false,
-        enabledTitle: "Large",
-        disabledTitle: "Small",
     },
     disabled: {
         type: ControlType.Boolean,

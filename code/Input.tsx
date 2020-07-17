@@ -17,6 +17,7 @@ export function Input(props) {
         label,
         description,
         validationMessage,
+        disabled,
         type,
         large,
         clearButtonMode,
@@ -43,6 +44,7 @@ export function Input(props) {
             name={label}
             value={value}
             valid={isValid}
+            disabled={disabled}
             onChange={handleChange}
             placeholder={placeholder}
             clearButtonMode={clearButtonMode}
@@ -52,7 +54,7 @@ export function Input(props) {
     )
 
     const fieldSet = (
-        <BpkFieldset required={required} label={label} description={description} validationMessage={validationMessage}>
+        <BpkFieldset disabled={disabled} required={required} label={label} description={description} validationMessage={validationMessage}>
             {control}
         </BpkFieldset>
     )
@@ -71,6 +73,13 @@ Input.defaultProps = {
 }
 
 addPropertyControls(Input, {
+    large: {
+        type: ControlType.Boolean,
+        title: "Size",
+        defaultValue: false,
+        enabledTitle: "Large",
+        disabledTitle: "Small",
+    },
     isFieldSet: {
         type: ControlType.Boolean,
         title: "Field Set",
@@ -124,19 +133,19 @@ addPropertyControls(Input, {
         options: [null, true, false],
         displaySegmentedControl: true,
     },
+    disabled: {
+        type: ControlType.Boolean,
+        title: "Disabled",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+    },
     type: {
         title: "Type",
         type: ControlType.Enum,
         defaultValue: INPUT_TYPES.text,
         options: Object.keys(INPUT_TYPES),
         optionTitles: Object.keys(INPUT_TYPES).map((key) => INPUT_TYPES[key]),
-    },
-    large: {
-        type: ControlType.Boolean,
-        title: "Size",
-        defaultValue: false,
-        enabledTitle: "Large",
-        disabledTitle: "Small",
     },
     clearButtonMode: {
         title: "Clear Mode",
