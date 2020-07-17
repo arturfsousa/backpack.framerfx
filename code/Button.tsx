@@ -42,7 +42,7 @@ addPropertyControls(Button, {
     label: {
         type: ControlType.String,
         title: "Label",
-        defaultValue: "Done",
+        defaultValue: "Button",
         placeholder: "None",
     },
     variant: {
