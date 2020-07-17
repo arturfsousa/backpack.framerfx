@@ -25,7 +25,8 @@ const iconNames = Object.keys(Icons.lg)
 
 const defaultProps = {
     height: 36,
-    label: "Button",
+    width: 36,
+    // label: "Button",
     large: false,
     disabled: false,
     variant: "primary",
@@ -34,8 +35,8 @@ const defaultProps = {
     // blank: false,
 }
 
-export function Button(props) {
-    const { hasTrailingIcon, isIconSearch, choose, search, label, variant, ...rest } = props
+export function IconButton(props) {
+    const { isIconSearch, choose, search, variant, ...rest } = props
 
     // Icon
     const formatedSearch = search.trim().toLowerCase().split(' ').join('-')
@@ -50,32 +51,23 @@ export function Button(props) {
         bpkProps[variant] = true
     }
 
-    let contents
-    if (hasTrailingIcon === null) {
-        contents = label
-    } else if (hasTrailingIcon) {
-        contents = <>{label} <AlignedIcon /></>
-    } else {
-        contents = <><AlignedIcon /> {label}</>
-    }
-
-    return <BpkButton {...bpkProps}>{contents}</BpkButton>
+    return <BpkButton {...bpkProps} iconOnly><AlignedIcon /></BpkButton>
 }
 
-Button.defaultProps = defaultProps
+IconButton.defaultProps = defaultProps
 
-addPropertyControls(Button, {
-    label: {
-        type: ControlType.String,
-        title: "Label",
-        defaultValue: "Button",
-        placeholder: "None",
-    },
+addPropertyControls(IconButton, {
+    // label: {
+    //     type: ControlType.String,
+    //     title: "Label",
+    //     defaultValue: "Button",
+    //     placeholder: "None",
+    // },
     variant: {
         type: ControlType.Enum,
         title: "Type",
-        options: ["primary", "secondary", "featured", "destructive", "outline", "link"],
-        optionTitles: ["Primary", "Secondary", "Featured", "Destructive", "Outline", "Link"],
+        options: ["primary", "secondary", "featured", "destructive", "outline"],
+        optionTitles: ["Primary", "Secondary", "Featured", "Destructive", "Outline"],
     },
     large: {
         type: ControlType.Boolean,
@@ -92,23 +84,12 @@ addPropertyControls(Button, {
         disabledTitle: "Enabled",
     },
     // Icon Controls
-    hasTrailingIcon: {
-        type: ControlType.Enum,
-        title: "Show Icon",
-        defaultValue: null,
-        optionTitles: ["None", "Left", "Right"],
-        options: [null, false, true],
-        displaySegmentedControl: true,
-    },
     isIconSearch: {
         type: ControlType.Boolean,
         title: "Find Icon",
         defaultValue: false,
         enabledTitle: "Search",
         disabledTitle: "Choose",
-        hidden(props) {
-            return props.hasTrailingIcon === null
-        },
     },
     choose: {
         type: ControlType.Enum,
@@ -117,7 +98,7 @@ addPropertyControls(Button, {
         options: iconNames,
         optionTitles: iconNames.map((key) => Icons.lg[key]),
         hidden(props) {
-            return props.isIconSearch === true || props.hasTrailingIcon === null
+            return props.isIconSearch === true
         },
     },
     search: {
@@ -126,7 +107,7 @@ addPropertyControls(Button, {
         defaultValue: "plus",
         placeholder: "None",
         hidden(props) {
-            return props.isIconSearch === false || props.hasTrailingIcon === null
+            return props.isIconSearch === false
         },
     },
     // link: {
