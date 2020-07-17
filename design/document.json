@@ -14089,6 +14089,7 @@
             "codeComponentProps" : {
               "clearButtonMode" : "never",
               "description" : "Description",
+              "disabled" : false,
               "isFieldSet" : true,
               "isValid" : null,
               "label" : "Label",
