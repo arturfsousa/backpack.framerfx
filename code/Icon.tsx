@@ -7,11 +7,11 @@ import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 const iconNames = Object.keys(Icons.lg)
 
 export function Icon(props) {
-    const { isSearch, choose, search, isLarge, tint, onClick, ...rest } = props
+    const { isIconSearch, choose, search, isLarge, tint, onClick, ...rest } = props
 
     const formatedSearch = search.trim().toLowerCase().split(' ').join('-')
     const isFound = iconNames.indexOf(formatedSearch) !== -1
-    const iconName = isSearch ? isFound ? formatedSearch : "exclamation" : choose
+    const iconName = isIconSearch ? isFound ? formatedSearch : "exclamation" : choose
 
     const Icon = isLarge ? Icons.lg[iconName] : Icons.sm[iconName]
 
@@ -28,7 +28,7 @@ Icon.defaultProps = {
 }
 
 addPropertyControls(Icon, {
-    isSearch: {
+    isIconSearch: {
         type: ControlType.Boolean,
         title: "Find Icon",
         defaultValue: false,
@@ -37,20 +37,20 @@ addPropertyControls(Icon, {
     },
     choose: {
         type: ControlType.Enum,
-        title: "Icon",
+        title: "Icon Name",
         options: iconNames,
         optionTitles: iconNames.map((key) => Icons.lg[key]),
         hidden(props) {
-            return props.isSearch === true
+            return props.isIconSearch === true
         },
     },
     search: {
         type: ControlType.String,
-        title: "Icon",
+        title: "Icon Name",
         defaultValue: "flight",
         placeholder: "None",
         hidden(props) {
-            return props.isSearch === false
+            return props.isIconSearch === false
         },
     },
     isLarge: {
