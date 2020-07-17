@@ -21,7 +21,7 @@ and open the project folder `backpack.framerfx` on `FramerX`.
 
 | Component                                                                                                | Is available?      |
 | -------------------------------------------------------------------------------------------------------- | ------------------ |
-| [`bpk-component-accordion`](https://backpack.github.io/components/accordion)                             | -                  |
+| [`bpk-component-accordion`](https://backpack.github.io/components/accordion)                             | :white_check_mark: |
 | [`bpk-component-autosuggest`](https://backpack.github.io/components/autosuggest)                         | -                  |
 | [`bpk-component-badge`](https://backpack.github.io/components/badge)                                     | :white_check_mark: |
 | [`bpk-component-banner-alert`](https://backpack.github.io/components/banner-alert)                       | -                  |
@@ -42,7 +42,7 @@ and open the project folder `backpack.framerfx` on `FramerX`.
 | [`bpk-component-description-list`](https://backpack.github.io/components/description-list)               | -                  |
 | [`bpk-component-dialog`](https://backpack.github.io/components/dialog)                                   | -                  |
 | [`bpk-component-drawer`](https://backpack.github.io/components/drawer)                                   | -                  |
-| [`bpk-component-fieldset`](https://backpack.github.io/components/fieldset)                               | -                  |
+| [`bpk-component-fieldset`](https://backpack.github.io/components/fieldset)                               | :white_check_mark: |
 | [`bpk-component-form-validation`](https://backpack.github.io/components/form-validation)                 | -                  |
 | [`bpk-component-grid`](https://backpack.github.io/components/grid)                                       | -                  |
 | [`bpk-component-grid-toggle`](https://backpack.github.io/components/grid-toggle)                         | -                  |
