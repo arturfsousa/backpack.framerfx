@@ -13900,7 +13900,7 @@
         "exportOptions" : [
 
         ],
-        "fillColor" : "var(--token-a3f48c56-f93d-4829-9f0d-2d26c9a9934a, rgb(157, 192, 242)) \/* {\"name\":\"Sky Blue Tint 02\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+        "fillColor" : "var(--token-2d65afee-b190-4995-a24e-de577111dd83, rgb(205, 223, 248)) \/* {\"name\":\"Sky Blue Tint 03\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
         "fillEnabled" : true,
         "fillImage" : null,
         "fillImageOriginalName" : null,
@@ -13964,6 +13964,7 @@
             "codeComponentIdentifier" : ".\/Card.tsx_Card",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
+              "backgroundColor" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
               "children" : [
                 {
                   "enabled" : true,
@@ -13971,7 +13972,11 @@
                   "value" : "q0HsEMnSf"
                 }
               ],
-              "padded" : true
+              "color" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+              "padded" : true,
+              "text" : "Skyscanner",
+              "usesDefaultStyle" : true,
+              "usesTextContent" : true
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
