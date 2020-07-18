@@ -1,27 +1,11 @@
 import * as React from "react"
-import { addPropertyControls, ControlType } from "framer"
 // @ts-ignore
 import { BpkContentBubble } from "backpack-transpiled/bpk-component-flare"
 
-interface Props {
-    content?: string
+export function Flare() {
+    return <BpkContentBubble />
 }
 
-const defaultProps: Props = {
-    content: "Hello World!",
+Flare.defaultProps = {
+    height: 24,
 }
-
-export function Flare(props: Props) {
-    const { ...rest } = props
-
-    return <BpkContentBubble {...rest} />
-}
-
-Flare.defaultProps = defaultProps
-
-addPropertyControls(Flare, {
-    content: {
-        type: ControlType.String,
-        title: "Text",
-    },
-})

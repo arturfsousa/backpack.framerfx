@@ -3581,7 +3581,7 @@
         "codeComponentIdentifier" : ".\/Flare.tsx_Flare",
         "codeComponentPackageVersion" : "1.71.0",
         "codeComponentProps" : {
-          "content" : "Hello World!"
+
         },
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
@@ -3599,12 +3599,12 @@
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
         "fillType" : "color",
-        "height" : 56,
+        "height" : 24,
         "heightType" : 0,
         "id" : "Q91uh0tG0",
         "intrinsicHeight" : null,
         "intrinsicWidth" : null,
-        "left" : -2546,
+        "left" : -1995,
         "locked" : false,
         "name" : null,
         "opacity" : 1,
@@ -3620,9 +3620,9 @@
         "radiusTopRight" : 0,
         "right" : null,
         "rotation" : 0,
-        "top" : -1941,
+        "top" : -2100,
         "visible" : true,
-        "width" : 202,
+        "width" : 200,
         "widthType" : 0
       },
       {
@@ -13919,6 +13919,51 @@
                 }
               ],
               "color" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+              "onClick" : [
+                {
+                  "actionIdentifier" : "framer\/useNavigate",
+                  "controls" : {
+                    "animation" : {
+                      "type" : "transition",
+                      "value" : {
+                        "damping" : 60,
+                        "delay" : 0,
+                        "duration" : 0.29999999999999999,
+                        "ease" : [
+                          0.44,
+                          0,
+                          0.56000000000000005,
+                          1
+                        ],
+                        "mass" : 1,
+                        "stiffness" : 500,
+                        "type" : "spring"
+                      }
+                    },
+                    "appearsFrom" : {
+                      "type" : "segmentedenum",
+                      "value" : "right"
+                    },
+                    "backdropColor" : {
+                      "type" : "color",
+                      "value" : "rgba(4,4,15,.4)"
+                    },
+                    "target" : {
+                      "type" : "componentinstance",
+                      "value" : "TaJFwzwzO"
+                    },
+                    "transition" : {
+                      "type" : "enum",
+                      "value" : "push"
+                    },
+                    "type" : {
+                      "type" : "segmentedenum",
+                      "value" : "next"
+                    }
+                  },
+                  "identifier" : "896ad60e-9241-441d-ba11-431b81155d53"
+                }
+              ],
               "padded" : true,
               "text" : "Skyscanner",
               "usesDefaultStyle" : true,
