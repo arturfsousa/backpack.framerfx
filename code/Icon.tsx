@@ -63,7 +63,7 @@ addPropertyControls(Icon, {
     tint: {
         title: "Colour",
         type: ControlType.Color,
-        defaultValue: "#0099ff",
+        defaultValue: "#0770e3",
     },
     onClick: {
         type: ControlType.EventHandler,

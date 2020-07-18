@@ -3521,60 +3521,6 @@
         "centerAnchorX" : 0,
         "centerAnchorY" : 0,
         "clip" : true,
-        "codeComponentIdentifier" : ".\/examples\/Card.tsx_CardExample",
-        "codeComponentPackageVersion" : "1.71.0",
-        "codeComponentProps" : {
-
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "duplicatedFrom" : [
-          "Gd_PvCWw9"
-        ],
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImageOriginalName" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillType" : "color",
-        "height" : 376,
-        "heightType" : 0,
-        "id" : "xPtnqVvcK",
-        "intrinsicHeight" : null,
-        "intrinsicWidth" : null,
-        "left" : -1672,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "BsMOCu9oR",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -2285,
-        "visible" : true,
-        "width" : 325,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "clip" : true,
         "codeComponentIdentifier" : ".\/Image.tsx_Image",
         "codeComponentPackageVersion" : "1.71.0",
         "codeComponentProps" : {
@@ -13900,7 +13846,7 @@
         "exportOptions" : [
 
         ],
-        "fillColor" : "var(--token-a3f48c56-f93d-4829-9f0d-2d26c9a9934a, rgb(157, 192, 242)) \/* {\"name\":\"Sky Blue Tint 02\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+        "fillColor" : "var(--token-2d65afee-b190-4995-a24e-de577111dd83, rgb(205, 223, 248)) \/* {\"name\":\"Sky Blue Tint 03\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
         "fillEnabled" : true,
         "fillImage" : null,
         "fillImageOriginalName" : null,
@@ -13964,6 +13910,7 @@
             "codeComponentIdentifier" : ".\/Card.tsx_Card",
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
+              "backgroundColor" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
               "children" : [
                 {
                   "enabled" : true,
@@ -13971,7 +13918,11 @@
                   "value" : "q0HsEMnSf"
                 }
               ],
-              "padded" : true
+              "color" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+              "padded" : true,
+              "text" : "Skyscanner",
+              "usesDefaultStyle" : true,
+              "usesTextContent" : true
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
