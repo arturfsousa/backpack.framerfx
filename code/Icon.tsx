@@ -18,21 +18,21 @@ export function Icon(props) {
     } = props
 
     const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
-
     const Icon = isLarge ? Icons.lg[iconName] : Icons.sm[iconName]
-
+    
     return <Icon fill={tint} onClick={onClick} />
 }
 
 export function findIcon(searchPhrase) {
     const formatedSearch = searchPhrase.trim().toLowerCase()
 
+    const isNotBlank = formatedSearch !== ""
     const exactMatch = iconNames.find((name) => name === formatedSearch)
     const isExactMatch = exactMatch !== undefined
-
+    
     const regex = new RegExp(formatedSearch.split(/[\s-]+/).join("[-]*"))
     const found = iconNames.find((name) => regex.test(name))
-    const isFound = found !== undefined
+    const isFound = found !== undefined && isNotBlank
 
     return isExactMatch ? exactMatch : isFound ? found : "exclamation"
 }
@@ -40,8 +40,9 @@ export function findIcon(searchPhrase) {
 Icon.defaultProps = {
     height: 18,
     width: 18,
+    isIconSearch: true,
     chosenIcon: "flight",
-    search: "flight",
+    searchPhrase: "flight",
     isLarge: false,
     tint: "#0099ff",
 }

@@ -35,6 +35,8 @@ const defaultProps = {
     large: false,
     disabled: false,
     variant: "primary",
+    isIconSearch: true,
+    searchPhrase: "plus",
     // link: false,
     // href: null,
     // blank: false,
@@ -44,7 +46,6 @@ export function IconButton(props) {
     const { isIconSearch, chosenIcon, searchPhrase, variant, ...rest } = props
 
     const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
-
     const Icon = props.large ? Icons.lg[iconName] : Icons.sm[iconName]
     const AlignedIcon = withButtonAlignment(withRtlSupport(Icon))
 
