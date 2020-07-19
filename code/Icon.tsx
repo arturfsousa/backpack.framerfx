@@ -7,21 +7,40 @@ import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 const iconNames = Object.keys(Icons.lg)
 
 export function Icon(props) {
-    const { isIconSearch, choose, search, isLarge, tint, onClick, ...rest } = props
+    const {
+        isIconSearch,
+        chosenIcon,
+        searchPhrase,
+        isLarge,
+        tint,
+        onClick,
+        ...rest
+    } = props
 
-    const formatedSearch = search.trim().toLowerCase().split(' ').join('-')
-    const isFound = iconNames.indexOf(formatedSearch) !== -1
-    const iconName = isIconSearch ? isFound ? formatedSearch : "exclamation" : choose
+    const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
 
     const Icon = isLarge ? Icons.lg[iconName] : Icons.sm[iconName]
 
-    return <Icon fill={tint} onClick={onClick}/>
+    return <Icon fill={tint} onClick={onClick} />
+}
+
+export function findIcon(searchPhrase) {
+    const formatedSearch = searchPhrase.trim().toLowerCase()
+
+    const exactMatch = iconNames.find((name) => name === formatedSearch)
+    const isExactMatch = exactMatch !== undefined
+
+    const regex = new RegExp(formatedSearch.split(/[\s-]+/).join("[-]*"))
+    const found = iconNames.find((name) => regex.test(name))
+    const isFound = found !== undefined
+
+    return isExactMatch ? exactMatch : isFound ? found : "exclamation"
 }
 
 Icon.defaultProps = {
     height: 18,
     width: 18,
-    choose: "flight",
+    chosenIcon: "flight",
     search: "flight",
     isLarge: false,
     tint: "#0099ff",
@@ -35,7 +54,7 @@ addPropertyControls(Icon, {
         enabledTitle: "Search",
         disabledTitle: "Choose",
     },
-    choose: {
+    chosenIcon: {
         type: ControlType.Enum,
         title: "Icon Name",
         options: iconNames,
@@ -44,7 +63,7 @@ addPropertyControls(Icon, {
             return props.isIconSearch === true
         },
     },
-    search: {
+    searchPhrase: {
         type: ControlType.String,
         title: "Icon Name",
         defaultValue: "flight",

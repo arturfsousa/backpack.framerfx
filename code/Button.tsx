@@ -1,10 +1,15 @@
 import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
+import { findIcon } from "./Icon"
+
 // @ts-ignore
 import BpkButton from "backpack-transpiled/bpk-component-button"
-// @ts-ignore
-import { withButtonAlignment, withRtlSupport } from "backpack-transpiled/bpk-component-icon"
+import {
+    withButtonAlignment,
+    withRtlSupport,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-icon"
 // @ts-ignore
 import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 
@@ -35,12 +40,17 @@ const defaultProps = {
 }
 
 export function Button(props) {
-    const { hasTrailingIcon, isIconSearch, choose, search, label, variant, ...rest } = props
+    const {
+        hasTrailingIcon,
+        isIconSearch,
+        chosenIcon,
+        searchPhrase,
+        label,
+        variant,
+        ...rest
+    } = props
 
-    // Icon
-    const formatedSearch = search.trim().toLowerCase().split(' ').join('-')
-    const isFound = iconNames.indexOf(formatedSearch) !== -1
-    const iconName = isIconSearch ? isFound ? formatedSearch : "exclamation" : choose
+    const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
 
     const Icon = props.large ? Icons.lg[iconName] : Icons.sm[iconName]
     const AlignedIcon = withButtonAlignment(withRtlSupport(Icon))
@@ -54,9 +64,17 @@ export function Button(props) {
     if (hasTrailingIcon === null) {
         contents = label
     } else if (hasTrailingIcon) {
-        contents = <>{label} <AlignedIcon /></>
+        contents = (
+            <>
+                {label} <AlignedIcon />
+            </>
+        )
     } else {
-        contents = <><AlignedIcon /> {label}</>
+        contents = (
+            <>
+                <AlignedIcon /> {label}
+            </>
+        )
     }
 
     return <BpkButton {...bpkProps}>{contents}</BpkButton>
@@ -74,8 +92,22 @@ addPropertyControls(Button, {
     variant: {
         type: ControlType.Enum,
         title: "Type",
-        options: ["primary", "secondary", "featured", "destructive", "outline", "link"],
-        optionTitles: ["Primary", "Secondary", "Featured", "Destructive", "Outline", "Link"],
+        options: [
+            "primary",
+            "secondary",
+            "featured",
+            "destructive",
+            "outline",
+            "link",
+        ],
+        optionTitles: [
+            "Primary",
+            "Secondary",
+            "Featured",
+            "Destructive",
+            "Outline",
+            "Link",
+        ],
     },
     large: {
         type: ControlType.Boolean,
@@ -110,7 +142,7 @@ addPropertyControls(Button, {
             return props.hasTrailingIcon === null
         },
     },
-    choose: {
+    chosenIcon: {
         type: ControlType.Enum,
         title: "Icon Name",
         defaultValue: "plus",
@@ -120,13 +152,15 @@ addPropertyControls(Button, {
             return props.isIconSearch === true || props.hasTrailingIcon === null
         },
     },
-    search: {
+    searchPhrase: {
         type: ControlType.String,
         title: "Icon Name",
         defaultValue: "plus",
         placeholder: "None",
         hidden(props) {
-            return props.isIconSearch === false || props.hasTrailingIcon === null
+            return (
+                props.isIconSearch === false || props.hasTrailingIcon === null
+            )
         },
     },
     // link: {
