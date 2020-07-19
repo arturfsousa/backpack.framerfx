@@ -36,6 +36,7 @@ const defaultProps = {
     variant: "primary",
     isIconSearch: true,
     searchPhrase: "plus",
+    hasTrailingIcon: null,
     // link: false,
     // href: null,
     // blank: false,
