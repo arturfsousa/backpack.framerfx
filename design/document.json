@@ -14263,7 +14263,7 @@
         "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
         "codeComponentPackageVersion" : "1.71.0",
         "codeComponentProps" : {
-          "choose" : "face--happy",
+          "choose" : "chevron-left",
           "isIconSearch" : false,
           "isLarge" : false,
           "search" : "",

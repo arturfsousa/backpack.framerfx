@@ -9,9 +9,16 @@ const iconNames = Object.keys(Icons.lg)
 export function Icon(props) {
     const { isIconSearch, choose, search, isLarge, tint, onClick, ...rest } = props
 
-    const formatedSearch = search.trim().toLowerCase().split(' ').join('-')
-    const isFound = iconNames.indexOf(formatedSearch) !== -1
-    const iconName = isIconSearch ? isFound ? formatedSearch : "exclamation" : choose
+    const formatedSearch = search.trim().toLowerCase()
+    
+    const exactMatch = iconNames.find(name => name === formatedSearch)
+    const isExactMatch = exactMatch !== undefined
+
+    const regex = new RegExp(formatedSearch.split(/[\s-]+/).join('[-]*'))
+    const found = iconNames.find(name => regex.test(name))
+    const isFound = found !== undefined
+
+    const iconName = isIconSearch ? isExactMatch ? exactMatch : isFound ? found : "exclamation" : choose
 
     const Icon = isLarge ? Icons.lg[iconName] : Icons.sm[iconName]
 
