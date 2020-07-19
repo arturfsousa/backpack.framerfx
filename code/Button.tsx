@@ -34,6 +34,8 @@ const defaultProps = {
     large: false,
     disabled: false,
     variant: "primary",
+    isIconSearch: true,
+    searchPhrase: "plus",
     // link: false,
     // href: null,
     // blank: false,
