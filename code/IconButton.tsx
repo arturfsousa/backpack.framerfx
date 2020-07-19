@@ -1,10 +1,15 @@
 import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
+import { findIcon } from "./Icon"
+
 // @ts-ignore
 import BpkButton from "backpack-transpiled/bpk-component-button"
-// @ts-ignore
-import { withButtonAlignment, withRtlSupport } from "backpack-transpiled/bpk-component-icon"
+import {
+    withButtonAlignment,
+    withRtlSupport,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-icon"
 // @ts-ignore
 import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 
@@ -36,12 +41,9 @@ const defaultProps = {
 }
 
 export function IconButton(props) {
-    const { isIconSearch, choose, search, variant, ...rest } = props
+    const { isIconSearch, chosenIcon, searchPhrase, variant, ...rest } = props
 
-    // Icon
-    const formatedSearch = search.trim().toLowerCase().split(' ').join('-')
-    const isFound = iconNames.indexOf(formatedSearch) !== -1
-    const iconName = isIconSearch ? isFound ? formatedSearch : "exclamation" : choose
+    const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
 
     const Icon = props.large ? Icons.lg[iconName] : Icons.sm[iconName]
     const AlignedIcon = withButtonAlignment(withRtlSupport(Icon))
@@ -51,7 +53,11 @@ export function IconButton(props) {
         bpkProps[variant] = true
     }
 
-    return <BpkButton {...bpkProps} iconOnly><AlignedIcon /></BpkButton>
+    return (
+        <BpkButton {...bpkProps} iconOnly>
+            <AlignedIcon />
+        </BpkButton>
+    )
 }
 
 IconButton.defaultProps = defaultProps
@@ -67,7 +73,13 @@ addPropertyControls(IconButton, {
         type: ControlType.Enum,
         title: "Type",
         options: ["primary", "secondary", "featured", "destructive", "outline"],
-        optionTitles: ["Primary", "Secondary", "Featured", "Destructive", "Outline"],
+        optionTitles: [
+            "Primary",
+            "Secondary",
+            "Featured",
+            "Destructive",
+            "Outline",
+        ],
     },
     large: {
         type: ControlType.Boolean,
@@ -91,7 +103,7 @@ addPropertyControls(IconButton, {
         enabledTitle: "Search",
         disabledTitle: "Choose",
     },
-    choose: {
+    chosenIcon: {
         type: ControlType.Enum,
         title: "Icon Name",
         defaultValue: "plus",
@@ -101,7 +113,7 @@ addPropertyControls(IconButton, {
             return props.isIconSearch === true
         },
     },
-    search: {
+    searchPhrase: {
         type: ControlType.String,
         title: "Icon Name",
         defaultValue: "plus",
