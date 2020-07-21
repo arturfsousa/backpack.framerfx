@@ -13886,55 +13886,12 @@
                 }
               ],
               "color" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+              "hasDefaultStyle" : true,
               "onClick" : [
-                {
-                  "actionIdentifier" : "framer\/useNavigate",
-                  "controls" : {
-                    "animation" : {
-                      "type" : "transition",
-                      "value" : {
-                        "damping" : 60,
-                        "delay" : 0,
-                        "duration" : 0.29999999999999999,
-                        "ease" : [
-                          0.44,
-                          0,
-                          0.56000000000000005,
-                          1
-                        ],
-                        "mass" : 1,
-                        "stiffness" : 500,
-                        "type" : "spring"
-                      }
-                    },
-                    "appearsFrom" : {
-                      "type" : "segmentedenum",
-                      "value" : "right"
-                    },
-                    "backdropColor" : {
-                      "type" : "color",
-                      "value" : "rgba(4,4,15,.4)"
-                    },
-                    "target" : {
-                      "type" : "componentinstance",
-                      "value" : "TaJFwzwzO"
-                    },
-                    "transition" : {
-                      "type" : "enum",
-                      "value" : "push"
-                    },
-                    "type" : {
-                      "type" : "segmentedenum",
-                      "value" : "next"
-                    }
-                  },
-                  "identifier" : "896ad60e-9241-441d-ba11-431b81155d53"
-                }
+
               ],
               "padded" : true,
-              "text" : "Skyscanner",
-              "usesDefaultStyle" : true,
-              "usesTextContent" : true
+              "text" : "Skyscanner"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -14122,6 +14079,7 @@
               "label" : "Label",
               "large" : false,
               "optionsText" : "One, Two, Three",
+              "prompt" : "Select",
               "required" : false,
               "validationMessage" : "Enter a value"
             },
@@ -14456,6 +14414,64 @@
         "top" : -2107,
         "visible" : true,
         "width" : 173,
+        "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "clip" : true,
+        "codeComponentIdentifier" : ".\/Radio.tsx_Radio",
+        "codeComponentPackageVersion" : "1.71.0",
+        "codeComponentProps" : {
+          "checked" : true,
+          "disabled" : false,
+          "label" : "Add nearby airports",
+          "valid" : true,
+          "white" : true
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "duplicatedFrom" : [
+          "irfaRBjvp"
+        ],
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImageOriginalName" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 20,
+        "heightType" : 0,
+        "id" : "kTAtvNb0S",
+        "intrinsicHeight" : 20,
+        "intrinsicWidth" : 240,
+        "left" : -1581,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "BsMOCu9oR",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -2059,
+        "visible" : true,
+        "width" : 240,
         "widthType" : 0
       }
     ],
