@@ -1,6 +1,6 @@
 .bpk-select {
     -webkit-appearance: none;
 }
-[type="checkbox"] {
+[type="checkbox"], [type="radio"] {
     -webkit-appearance: none;
 }
