@@ -16,6 +16,7 @@ export function Select(props) {
         required,
         label,
         description,
+        prompt,
         validationMessage,
         large,
         disabled,
@@ -45,6 +46,13 @@ export function Select(props) {
         onChange && onChange(event)
     }
 
+    const promptOption =
+        prompt === "" ? null : (
+            <option key={-1} value="" disabled>
+                {prompt}
+            </option>
+        )
+
     const control = (
         <BpkSelect
             {...rest}
@@ -56,12 +64,19 @@ export function Select(props) {
             valid={isValid}
             onChange={handleChange}
         >
+            {promptOption}
             {options}
         </BpkSelect>
     )
 
     const fieldSet = (
-        <BpkFieldset disabled={disabled} required={required} label={label} description={description} validationMessage={validationMessage}>
+        <BpkFieldset
+            disabled={disabled}
+            required={required}
+            label={label}
+            description={description}
+            validationMessage={validationMessage}
+        >
             {control}
         </BpkFieldset>
     )
@@ -74,6 +89,7 @@ Select.defaultProps = {
     width: 240,
     disabled: false,
     value: "",
+    prompt: "Please Select",
     optionsText: defaultOptionsText,
     options: null,
     onChange: () => null,
@@ -157,6 +173,12 @@ addPropertyControls(Select, {
         defaultValue: defaultOptionsText,
         placeholder: "None",
         displayTextArea: true,
+    },
+    prompt: {
+        title: "Prompt",
+        type: ControlType.String,
+        defaultValue: "Please Select",
+        placeholder: "None",
     },
 })
 

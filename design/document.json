@@ -14079,6 +14079,7 @@
               "label" : "Label",
               "large" : false,
               "optionsText" : "One, Two, Three",
+              "prompt" : "Select",
               "required" : false,
               "validationMessage" : "Enter a value"
             },
