@@ -128,7 +128,7 @@ addPropertyControls(Input, {
     isValid: {
         type: ControlType.Enum,
         title: "Validation",
-        defaultValue: false,
+        defaultValue: null,
         optionTitles: ["None", "Valid", "Invalid"],
         options: [null, true, false],
         displaySegmentedControl: true,
