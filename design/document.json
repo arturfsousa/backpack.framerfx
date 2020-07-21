@@ -13886,55 +13886,12 @@
                 }
               ],
               "color" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+              "hasDefaultStyle" : true,
               "onClick" : [
-                {
-                  "actionIdentifier" : "framer\/useNavigate",
-                  "controls" : {
-                    "animation" : {
-                      "type" : "transition",
-                      "value" : {
-                        "damping" : 60,
-                        "delay" : 0,
-                        "duration" : 0.29999999999999999,
-                        "ease" : [
-                          0.44,
-                          0,
-                          0.56000000000000005,
-                          1
-                        ],
-                        "mass" : 1,
-                        "stiffness" : 500,
-                        "type" : "spring"
-                      }
-                    },
-                    "appearsFrom" : {
-                      "type" : "segmentedenum",
-                      "value" : "right"
-                    },
-                    "backdropColor" : {
-                      "type" : "color",
-                      "value" : "rgba(4,4,15,.4)"
-                    },
-                    "target" : {
-                      "type" : "componentinstance",
-                      "value" : "TaJFwzwzO"
-                    },
-                    "transition" : {
-                      "type" : "enum",
-                      "value" : "push"
-                    },
-                    "type" : {
-                      "type" : "segmentedenum",
-                      "value" : "next"
-                    }
-                  },
-                  "identifier" : "896ad60e-9241-441d-ba11-431b81155d53"
-                }
+
               ],
               "padded" : true,
-              "text" : "Skyscanner",
-              "usesDefaultStyle" : true,
-              "usesTextContent" : true
+              "text" : "Skyscanner"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
