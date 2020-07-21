@@ -4,6 +4,9 @@ import { addPropertyControls, ControlType } from "framer"
 import { colors } from "./canvas"
 // @ts-ignore
 import BpkCard from "backpack-transpiled/bpk-component-card"
+// @ts-ignore
+import { borderRadiusSm } from "backpack-transpiled/bpk-tokens/tokens/base.es6"
+
 
 interface Props {
     children: NonNullable<React.ReactNode>
@@ -20,15 +23,23 @@ export function Card(props) {
         ...rest
     } = props
 
+    const cardRadiusStyle = props.padded ? null : {style: {borderRadius: borderRadiusSm} }
+
     const relativeChildren = React.Children.map(children, (child) =>
         React.cloneElement(child, {
             position: "relative",
-            style: { width: "100%" },
+            width: "100%",
+            _constraints: {
+                enabled: false,
+            },
+            ...cardRadiusStyle
         })
     )
+
     const style = hasDefaultStyle
         ? null
         : { color: color, backgroundColor: backgroundColor }
+
     if (React.Children.count(children) === 0) {
         return (
             <BpkCard {...rest} style={style}>
