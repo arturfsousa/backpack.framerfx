@@ -100,3 +100,5 @@ addPropertyControls(Radio, {
         type: ControlType.EventHandler,
     },
 })
+
+Radio.displayName = "Radio Button"
