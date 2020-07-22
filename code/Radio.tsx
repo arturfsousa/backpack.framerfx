@@ -6,6 +6,7 @@ import BpkRadio from "backpack-transpiled/bpk-component-radio"
 
 export function Radio(props) {
     const {
+        name,
         label,
         onChange,
         disabled,
@@ -13,8 +14,6 @@ export function Radio(props) {
         // smallLabel,
         white,
     } = props
-
-    const name = label.trim().toLowerCase().split("/[s]+/").join("-")
 
     const [checked, setChecked] = React.useState(props.checked)
     React.useEffect(() => setChecked(props.checked), [props.checked])
@@ -50,10 +49,17 @@ Radio.defaultProps = {
 }
 
 addPropertyControls(Radio, {
+    name: {
+        title: "Input Name",
+        type: ControlType.String,
+        defaultValue: "radio",
+        placeholder: "Enter a name",
+    },
     label: {
         title: "Label",
         type: ControlType.String,
         defaultValue: "Add nearby airports",
+        placeholder: "Enter a label",
     },
     white: {
         type: ControlType.Boolean,
@@ -94,3 +100,5 @@ addPropertyControls(Radio, {
         type: ControlType.EventHandler,
     },
 })
+
+Radio.displayName = "Radio Button"

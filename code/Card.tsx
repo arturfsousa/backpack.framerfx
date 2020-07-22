@@ -7,7 +7,6 @@ import BpkCard from "backpack-transpiled/bpk-component-card"
 // @ts-ignore
 import { borderRadiusSm } from "backpack-transpiled/bpk-tokens/tokens/base.es6"
 
-
 interface Props {
     children: NonNullable<React.ReactNode>
     padded?: boolean
@@ -23,7 +22,9 @@ export function Card(props) {
         ...rest
     } = props
 
-    const cardRadiusStyle = props.padded ? null : {style: {borderRadius: borderRadiusSm} }
+    const cardRadiusStyle = props.padded
+        ? null
+        : { style: { borderRadius: borderRadiusSm } }
 
     const relativeChildren = React.Children.map(children, (child) =>
         React.cloneElement(child, {
@@ -32,7 +33,7 @@ export function Card(props) {
             _constraints: {
                 enabled: false,
             },
-            ...cardRadiusStyle
+            ...cardRadiusStyle,
         })
     )
 
