@@ -20,9 +20,22 @@ const defaultProps: Props = {
 }
 
 export function Chip(props: Props) {
-    const { text, ...rest } = props
+    const { text, onClose, ...rest } = props
 
-    return <BpkChip {...rest}>{text}</BpkChip>
+    const [dismissed, setDismissed] = React.useState(false)
+
+    const handleClose = () => {
+        setDismissed(true)
+        onClose && onClose()
+    }
+
+    return (
+        <div style={dismissed ? { display: "none" } : {display: "inline-block"}}>
+            <BpkChip {...rest} onClose={handleClose}>
+                {text}
+            </BpkChip>
+        </div>
+    )
 }
 
 Chip.defaultProps = defaultProps

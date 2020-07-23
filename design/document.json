@@ -15383,59 +15383,17 @@
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.2982062780269058,
-            "centerAnchorY" : 0.29918032786885246,
+            "centerAnchorX" : 0.2914798206278027,
+            "centerAnchorY" : 0.32786885245901637,
             "clip" : true,
             "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
             "codeComponentPackageVersion" : "1.74.0",
             "codeComponentProps" : {
               "dismissible" : true,
               "onClose" : [
-                {
-                  "actionIdentifier" : "framer\/useNavigate",
-                  "controls" : {
-                    "animation" : {
-                      "type" : "transition",
-                      "value" : {
-                        "damping" : 60,
-                        "delay" : 0,
-                        "duration" : 0.29999999999999999,
-                        "ease" : [
-                          0.44,
-                          0,
-                          0.56000000000000005,
-                          1
-                        ],
-                        "mass" : 1,
-                        "stiffness" : 500,
-                        "type" : "spring"
-                      }
-                    },
-                    "appearsFrom" : {
-                      "type" : "segmentedenum",
-                      "value" : "right"
-                    },
-                    "backdropColor" : {
-                      "type" : "color",
-                      "value" : "rgba(4,4,15,.4)"
-                    },
-                    "target" : {
-                      "type" : "componentinstance",
-                      "value" : "TaJFwzwzO"
-                    },
-                    "transition" : {
-                      "type" : "enum",
-                      "value" : "push"
-                    },
-                    "type" : {
-                      "type" : "segmentedenum",
-                      "value" : "next"
-                    }
-                  },
-                  "identifier" : "ce96a3f1-118e-41bd-b7ed-c11091689eb0"
-                }
+
               ],
-              "text" : "Chip",
+              "text" : "One",
               "type" : "neutral"
             },
             "codeOverrideEnabled" : false,
@@ -15475,9 +15433,129 @@
             "radiusTopRight" : 0,
             "right" : null,
             "rotation" : 0,
-            "top" : 55,
+            "top" : 62,
             "visible" : true,
-            "width" : 81,
+            "width" : 78,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.28923766816143498,
+            "centerAnchorY" : 0.5,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
+            "codeComponentPackageVersion" : "1.74.0",
+            "codeComponentProps" : {
+              "dismissible" : true,
+              "onClose" : [
+
+              ],
+              "text" : "Two",
+              "type" : "neutral"
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "bPp1pFyDA",
+              "mwaYsSTxV"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 36,
+            "heightType" : 0,
+            "id" : "evtals7dt",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 26,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "YP9O4gGeW",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : null,
+            "visible" : true,
+            "width" : 77,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 72,
+            "centerAnchorX" : 0.31838565022421522,
+            "centerAnchorY" : 0.63114754098360659,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
+            "codeComponentPackageVersion" : "1.74.0",
+            "codeComponentProps" : {
+              "dismissible" : true,
+              "onClose" : [
+
+              ],
+              "text" : "Three",
+              "type" : "neutral"
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "bPp1pFyDA",
+              "mwaYsSTxV"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 36,
+            "heightType" : 0,
+            "id" : "ck2X_m328",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 26,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "YP9O4gGeW",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : null,
+            "visible" : true,
+            "width" : 90,
             "widthType" : 0
           }
         ],
@@ -15516,6 +15594,12 @@
         "name" : null,
         "opacity" : 1,
         "originalid" : null,
+        "padding" : 24,
+        "paddingBottom" : 0,
+        "paddingLeft" : 26,
+        "paddingPerSide" : false,
+        "paddingRight" : 0,
+        "paddingTop" : 0,
         "parentid" : "BsMOCu9oR",
         "previewSettings" : null,
         "radius" : 0,
@@ -15528,6 +15612,11 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
+        "stackAlignment" : "start",
+        "stackDirection" : "vertical",
+        "stackDistribution" : "start",
+        "stackEnabled" : true,
+        "stackGap" : 12,
         "top" : -2718,
         "visible" : true,
         "width" : 223,
