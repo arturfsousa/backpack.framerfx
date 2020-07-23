@@ -14553,8 +14553,9 @@
         "codeComponentIdentifier" : ".\/Text.tsx_Text",
         "codeComponentPackageVersion" : "1.71.0",
         "codeComponentProps" : {
-          "_color" : "Text Primary",
-          "bold" : false,
+          "_color" : "Sky White",
+          "_weightIfLarger" : "regular",
+          "_weightIfSmaller" : "regular",
           "text" : "Enter some text",
           "textStyle" : "base"
         },

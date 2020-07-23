@@ -8,10 +8,14 @@ import { withDefaultProps } from "backpack-transpiled/bpk-react-utils"
 // @ts-ignore
 import BpkText from "backpack-transpiled/bpk-component-text"
 
+const largerTextStyleRegex = RegExp("^x+l$")
+
 interface Props {
     height: number
     _color?: "Text Primary" | "Text Secondary" | "Sky White"
-    bold?: boolean
+    weight?: string
+    _weightIfSmaller?: string
+    _weightIfLarger?: string
     text?: string
     textStyle?:
         | "xs"
@@ -31,18 +35,22 @@ const defaultProps: Props = {
     text: "Enter some text",
     textStyle: "base",
     tagName: "span",
-    bold: false,
+    weight: "regular",
     _color: "Text Primary",
 }
 
 export function Text(props: Props) {
-    const { text, textStyle, bold } = props
+    const { text, textStyle, _weightIfSmaller, _weightIfLarger } = props
 
     const color = colors[props._color]
 
+    const weight = largerTextStyleRegex.test(props.textStyle)
+        ? _weightIfLarger
+        : _weightIfSmaller
+
     const Component = withDefaultProps(BpkText, {
         textStyle,
-        bold,
+        weight,
     })
 
     return (
@@ -77,19 +85,40 @@ addPropertyControls(Text, {
             "xxxxxl",
         ],
     },
+    // Weight can only be `black` if textStyle is `xl` or larger
+    _weightIfSmaller: {
+        type: ControlType.Enum,
+        title: "Weight",
+        defaultValue: "regular",
+        options: ["regular", "bold"],
+        optionTitles: ["Book", "Bold"],
+        hidden(props) {
+            return largerTextStyleRegex.test(props.textStyle)
+        },
+    },
+    _weightIfLarger: {
+        type: ControlType.Enum,
+        title: "Weight",
+        defaultValue: "regular",
+        options: ["regular", "bold", "black"],
+        optionTitles: ["Book", "Bold", "Black"],
+        hidden(props) {
+            return !largerTextStyleRegex.test(props.textStyle)
+        },
+    },
+    // weight: {
+    //     type: ControlType.Enum,
+    //     title: "Weight",
+    //     defaultValue: "regular",
+    //     options: weights,
+    //     optionTitles: weights.map((key) => WEIGHT_STYLES[key]),
+    // },
     _color: {
         type: ControlType.Enum,
         title: "Style",
         defaultValue: "Text Primary",
         options: ["Text Primary", "Text Secondary", "Sky White"],
         optionTitles: ["Primary", "Secondary", "White"],
-    },
-    bold: {
-        type: ControlType.Boolean,
-        title: "Weight",
-        defaultValue: false,
-        enabledTitle: "Bold",
-        disabledTitle: "Normal",
     },
     // tagName: {
     //     type: ControlType.Enum,
