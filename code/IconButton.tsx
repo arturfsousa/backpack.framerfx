@@ -20,7 +20,7 @@ const iconNames = Object.keys(Icons.lg)
 //     label?: string
 //     large?: boolean
 //     disabled?: boolean
-//     variant?: "primary" | "secondary" | "featured" | "destructive" | "outline" | "link"
+//     _variant?: "primary" | "secondary" | "featured" | "destructive" | "outline" | "link"
 //     // link?: boolean
 //     // href?: string
 //     // blank?: boolean
@@ -34,24 +34,30 @@ const defaultProps = {
     // label: "Button",
     large: false,
     disabled: false,
-    variant: "primary",
-    isIconSearch: true,
-    searchPhrase: "plus",
+    _variant: "primary",
+    _isIconSearch: true,
+    _searchPhrase: "plus",
     // link: false,
     // href: null,
     // blank: false,
 }
 
 export function IconButton(props) {
-    const { isIconSearch, chosenIcon, searchPhrase, variant, ...rest } = props
+    const {
+        _isIconSearch,
+        _chosenIcon,
+        _searchPhrase,
+        _variant,
+        ...rest
+    } = props
 
-    const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
+    const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
     const Icon = props.large ? Icons.lg[iconName] : Icons.sm[iconName]
     const AlignedIcon = withButtonAlignment(withRtlSupport(Icon))
 
     let bpkProps = { ...rest }
-    if (variant !== "primary") {
-        bpkProps[variant] = true
+    if (_variant !== "primary") {
+        bpkProps[_variant] = true
     }
 
     return (
@@ -70,7 +76,7 @@ addPropertyControls(IconButton, {
     //     defaultValue: "Button",
     //     placeholder: "None",
     // },
-    variant: {
+    _variant: {
         type: ControlType.Enum,
         title: "Type",
         options: ["primary", "secondary", "featured", "destructive", "outline"],
@@ -97,30 +103,30 @@ addPropertyControls(IconButton, {
         disabledTitle: "Enabled",
     },
     // Icon Controls
-    isIconSearch: {
+    _isIconSearch: {
         type: ControlType.Boolean,
         title: "Find Icon",
         defaultValue: false,
         enabledTitle: "Search",
         disabledTitle: "Choose",
     },
-    chosenIcon: {
+    _chosenIcon: {
         type: ControlType.Enum,
         title: "Icon Name",
         defaultValue: "plus",
         options: iconNames,
         optionTitles: iconNames.map((key) => Icons.lg[key]),
         hidden(props) {
-            return props.isIconSearch === true
+            return props._isIconSearch === true
         },
     },
-    searchPhrase: {
+    _searchPhrase: {
         type: ControlType.String,
         title: "Icon Name",
         defaultValue: "plus",
         placeholder: "None",
         hidden(props) {
-            return props.isIconSearch === false
+            return props._isIconSearch === false
         },
     },
     // link: {

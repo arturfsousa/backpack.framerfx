@@ -12,7 +12,7 @@ const defaultOptionsText =
 
 export function Select(props) {
     const {
-        isFieldSet,
+        _isFieldSet,
         required,
         label,
         description,
@@ -25,9 +25,9 @@ export function Select(props) {
     } = props
 
     const [value, setValue] = React.useState(props.value)
-    const [isValid, setIsValid] = React.useState(props.isValid)
+    const [valid, setValid] = React.useState(props.valid)
 
-    React.useEffect(() => setIsValid(props.isValid), [props.isValid])
+    React.useEffect(() => setValid(props.valid), [props.valid])
 
     const optionArray = props.options
         ? props.options
@@ -61,7 +61,7 @@ export function Select(props) {
             large={large}
             name="select"
             value={value}
-            valid={isValid}
+            valid={valid}
             onChange={handleChange}
         >
             {promptOption}
@@ -81,7 +81,7 @@ export function Select(props) {
         </BpkFieldset>
     )
 
-    return isFieldSet ? fieldSet : control
+    return _isFieldSet ? fieldSet : control
 }
 
 Select.defaultProps = {
@@ -103,7 +103,7 @@ addPropertyControls(Select, {
         enabledTitle: "Large",
         disabledTitle: "Small",
     },
-    isFieldSet: {
+    _isFieldSet: {
         type: ControlType.Boolean,
         title: "Field Set",
         defaultValue: false,
@@ -117,7 +117,7 @@ addPropertyControls(Select, {
         enabledTitle: "Yes",
         disabledTitle: "No",
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
     label: {
@@ -126,7 +126,7 @@ addPropertyControls(Select, {
         defaultValue: "Label",
         placeholder: "None",
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
     description: {
@@ -136,7 +136,7 @@ addPropertyControls(Select, {
         placeholder: "None",
         displayTextArea: true,
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
     validationMessage: {
@@ -145,10 +145,10 @@ addPropertyControls(Select, {
         defaultValue: "Please enter a value",
         placeholder: "None",
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
-    isValid: {
+    valid: {
         type: ControlType.Boolean,
         title: "Validation",
         defaultValue: true,

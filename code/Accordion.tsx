@@ -17,11 +17,11 @@ const StatefulAccordionItem = withAccordionItemState(BpkAccordionItem)
 const defaultProps = {
     width: 360,
     height: 180,
-    isSingleExpander: true,
+    _isSingleExpander: true,
 }
 
 export function Accordion(props) {
-    const { isSingleExpander, children, ...rest } = props
+    const { _isSingleExpander, children, ...rest } = props
 
     if (React.Children.count(children) === 0) {
         return <NotConnected prompt="Connect to a stack" />
@@ -40,7 +40,7 @@ export function Accordion(props) {
                         width: "100%",
                     })
 
-                    return isSingleExpander ? (
+                    return _isSingleExpander ? (
                         <BpkAccordionItem id={name} title={name} key={key}>
                             {element}
                         </BpkAccordionItem>
@@ -52,7 +52,7 @@ export function Accordion(props) {
                 }
             )
 
-            const accordion = isSingleExpander ? (
+            const accordion = _isSingleExpander ? (
                 <SingleItemAccordion {...rest}>{items}</SingleItemAccordion>
             ) : (
                 <BpkAccordion {...rest}>{items}</BpkAccordion>
@@ -68,7 +68,7 @@ export function Accordion(props) {
 Accordion.defaultProps = defaultProps
 
 addPropertyControls(Accordion, {
-    isSingleExpander: {
+    _isSingleExpander: {
         type: ControlType.Boolean,
         title: "Expand",
         defaultValue: true,

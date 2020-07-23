@@ -14,10 +14,10 @@ interface Props {
 
 export function Card(props) {
     const {
-        hasDefaultStyle,
+        _hasDefaultStyle,
         color,
         backgroundColor,
-        text,
+        _text,
         children,
         ...rest
     } = props
@@ -37,14 +37,14 @@ export function Card(props) {
         })
     )
 
-    const style = hasDefaultStyle
+    const style = _hasDefaultStyle
         ? null
         : { color: color, backgroundColor: backgroundColor }
 
     if (React.Children.count(children) === 0) {
         return (
             <BpkCard {...rest} style={style}>
-                {text}
+                {_text}
             </BpkCard>
         )
     } else {
@@ -60,7 +60,7 @@ Card.defaultProps = {
     width: 360,
     height: 180,
     usesCustomStyle: false,
-    text: "Skyscanner",
+    _text: "Skyscanner",
     padded: true,
 }
 
@@ -69,7 +69,7 @@ addPropertyControls(Card, {
         type: ControlType.Boolean,
         title: "Padded",
     },
-    text: {
+    _text: {
         title: "Text",
         type: ControlType.String,
         defaultValue: "Skyscanner",
@@ -79,7 +79,7 @@ addPropertyControls(Card, {
             return props.children.length > 0
         },
     },
-    hasDefaultStyle: {
+    _hasDefaultStyle: {
         type: ControlType.Boolean,
         title: "Style",
         defaultValue: true,
@@ -91,7 +91,7 @@ addPropertyControls(Card, {
         type: ControlType.Color,
         defaultValue: colors["Sky White"],
         hidden(props) {
-            return props.hasDefaultStyle
+            return props._hasDefaultStyle
         },
     },
     backgroundColor: {
@@ -99,7 +99,7 @@ addPropertyControls(Card, {
         type: ControlType.Color,
         defaultValue: colors["Sky Blue"],
         hidden(props) {
-            return props.hasDefaultStyle
+            return props._hasDefaultStyle
         },
     },
     onClick: {

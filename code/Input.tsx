@@ -12,7 +12,7 @@ import BpkInput, {
 
 export function Input(props) {
     const {
-        isFieldSet,
+        _isFieldSet,
         required,
         label,
         description,
@@ -26,10 +26,10 @@ export function Input(props) {
     } = props
 
     const [value, setValue] = React.useState(props.value)
-    const [isValid, setIsValid] = React.useState(props.isValid)
+    const [valid, setValid] = React.useState(props.valid)
 
     React.useEffect(() => setValue(props.value), [props.value])
-    React.useEffect(() => setIsValid(props.isValid), [props.isValid])
+    React.useEffect(() => setValid(props.valid), [props.valid])
 
     const handleChange = (event) => {
         setValue(event.target.value)
@@ -43,7 +43,7 @@ export function Input(props) {
             large={large}
             name={label}
             value={value}
-            valid={isValid}
+            valid={valid}
             disabled={disabled}
             onChange={handleChange}
             placeholder={placeholder}
@@ -54,19 +54,25 @@ export function Input(props) {
     )
 
     const fieldSet = (
-        <BpkFieldset disabled={disabled} required={required} label={label} description={description} validationMessage={validationMessage}>
+        <BpkFieldset
+            disabled={disabled}
+            required={required}
+            label={label}
+            description={description}
+            validationMessage={validationMessage}
+        >
             {control}
         </BpkFieldset>
     )
 
-    return isFieldSet ? fieldSet : control
+    return _isFieldSet ? fieldSet : control
 }
 
 Input.defaultProps = {
     height: 36,
     width: 240,
     isField: true,
-    isValid: null,
+    valid: null,
     label: "Label",
     placeholder: "Country, city or airport",
     value: "",
@@ -80,7 +86,7 @@ addPropertyControls(Input, {
         enabledTitle: "Large",
         disabledTitle: "Small",
     },
-    isFieldSet: {
+    _isFieldSet: {
         type: ControlType.Boolean,
         title: "Field Set",
         defaultValue: false,
@@ -94,7 +100,7 @@ addPropertyControls(Input, {
         enabledTitle: "Yes",
         disabledTitle: "No",
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
     label: {
@@ -103,7 +109,7 @@ addPropertyControls(Input, {
         defaultValue: "Label",
         placeholder: "None",
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
     description: {
@@ -113,7 +119,7 @@ addPropertyControls(Input, {
         placeholder: "None",
         displayTextArea: true,
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
     validationMessage: {
@@ -122,10 +128,10 @@ addPropertyControls(Input, {
         defaultValue: "Please enter a value",
         placeholder: "None",
         hidden(props) {
-            return props.isFieldSet === false
+            return props._isFieldSet === false
         },
     },
-    isValid: {
+    valid: {
         type: ControlType.Enum,
         title: "Validation",
         defaultValue: null,

@@ -17,26 +17,26 @@ const iconNames = Object.keys(Icons.lg)
 
 // interface Props {
 //     height?: number
-//     label?: string
+//     _label?: string
 //     large?: boolean
 //     disabled?: boolean
-//     variant?: "primary" | "secondary" | "featured" | "destructive" | "outline" | "link"
+//     _variant?: "primary" | "secondary" | "featured" | "destructive" | "outline" | "link"
 //     // link?: boolean
 //     // href?: string
 //     // blank?: boolean
-//     hasTrailingIcon?: boolean
+//     _hasTrailingIcon?: boolean
 //     onClick?: any
 // }
 
 const defaultProps = {
     height: 36,
-    label: "Button",
+    _label: "Button",
     large: false,
     disabled: false,
-    variant: "primary",
-    isIconSearch: true,
-    searchPhrase: "plus",
-    hasTrailingIcon: null,
+    _variant: "primary",
+    _isIconSearch: true,
+    _searchPhrase: "plus",
+    _hasTrailingIcon: null,
     // link: false,
     // href: null,
     // blank: false,
@@ -44,38 +44,38 @@ const defaultProps = {
 
 export function Button(props) {
     const {
-        hasTrailingIcon,
-        isIconSearch,
-        chosenIcon,
-        searchPhrase,
-        label,
-        variant,
+        _hasTrailingIcon,
+        _isIconSearch,
+        _chosenIcon,
+        _searchPhrase,
+        _label,
+        _variant,
         ...rest
     } = props
 
-    const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
+    const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
 
     const Icon = props.large ? Icons.lg[iconName] : Icons.sm[iconName]
     const AlignedIcon = withButtonAlignment(withRtlSupport(Icon))
 
     let bpkProps = { ...rest }
-    if (variant !== "primary") {
-        bpkProps[variant] = true
+    if (_variant !== "primary") {
+        bpkProps[_variant] = true
     }
 
     let contents
-    if (hasTrailingIcon === null) {
-        contents = label
-    } else if (hasTrailingIcon) {
+    if (_hasTrailingIcon === null) {
+        contents = _label
+    } else if (_hasTrailingIcon) {
         contents = (
             <>
-                {label} <AlignedIcon />
+                {_label} <AlignedIcon />
             </>
         )
     } else {
         contents = (
             <>
-                <AlignedIcon /> {label}
+                <AlignedIcon /> {_label}
             </>
         )
     }
@@ -86,13 +86,13 @@ export function Button(props) {
 Button.defaultProps = defaultProps
 
 addPropertyControls(Button, {
-    label: {
+    _label: {
         type: ControlType.String,
         title: "Label",
         defaultValue: "Button",
         placeholder: "None",
     },
-    variant: {
+    _variant: {
         type: ControlType.Enum,
         title: "Type",
         options: [
@@ -127,7 +127,7 @@ addPropertyControls(Button, {
         disabledTitle: "Enabled",
     },
     // Icon Controls
-    hasTrailingIcon: {
+    _hasTrailingIcon: {
         type: ControlType.Enum,
         title: "Show Icon",
         defaultValue: null,
@@ -135,34 +135,36 @@ addPropertyControls(Button, {
         options: [null, false, true],
         displaySegmentedControl: true,
     },
-    isIconSearch: {
+    _isIconSearch: {
         type: ControlType.Boolean,
         title: "Find Icon",
         defaultValue: false,
         enabledTitle: "Search",
         disabledTitle: "Choose",
         hidden(props) {
-            return props.hasTrailingIcon === null
+            return props._hasTrailingIcon === null
         },
     },
-    chosenIcon: {
+    _chosenIcon: {
         type: ControlType.Enum,
         title: "Icon Name",
         defaultValue: "plus",
         options: iconNames,
         optionTitles: iconNames.map((key) => Icons.lg[key]),
         hidden(props) {
-            return props.isIconSearch === true || props.hasTrailingIcon === null
+            return (
+                props._isIconSearch === true || props._hasTrailingIcon === null
+            )
         },
     },
-    searchPhrase: {
+    _searchPhrase: {
         type: ControlType.String,
         title: "Icon Name",
         defaultValue: "plus",
         placeholder: "None",
         hidden(props) {
             return (
-                props.isIconSearch === false || props.hasTrailingIcon === null
+                props._isIconSearch === false || props._hasTrailingIcon === null
             )
         },
     },
