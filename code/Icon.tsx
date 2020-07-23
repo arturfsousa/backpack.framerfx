@@ -8,28 +8,28 @@ const iconNames = Object.keys(Icons.lg)
 
 export function Icon(props) {
     const {
-        isIconSearch,
-        chosenIcon,
-        searchPhrase,
-        isLarge,
-        tint,
+        _isIconSearch,
+        _chosenIcon,
+        _searchPhrase,
+        _isLarge,
+        _tint,
         onClick,
         ...rest
     } = props
 
-    const iconName = isIconSearch ? findIcon(searchPhrase) : chosenIcon
-    const Icon = isLarge ? Icons.lg[iconName] : Icons.sm[iconName]
-    
-    return <Icon fill={tint} onClick={onClick} />
+    const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
+    const Icon = _isLarge ? Icons.lg[iconName] : Icons.sm[iconName]
+
+    return <Icon fill={_tint} onClick={onClick} />
 }
 
-export function findIcon(searchPhrase) {
-    const formatedSearch = searchPhrase.trim().toLowerCase()
+export function findIcon(_searchPhrase) {
+    const formatedSearch = _searchPhrase.trim().toLowerCase()
 
     const isNotBlank = formatedSearch !== ""
     const exactMatch = iconNames.find((name) => name === formatedSearch)
     const isExactMatch = exactMatch !== undefined
-    
+
     const regex = new RegExp(formatedSearch.split(/[\s-]+/).join("[-]*"))
     const found = iconNames.find((name) => regex.test(name))
     const isFound = found !== undefined && isNotBlank
@@ -40,47 +40,47 @@ export function findIcon(searchPhrase) {
 Icon.defaultProps = {
     height: 18,
     width: 18,
-    isIconSearch: true,
-    chosenIcon: "flight",
-    searchPhrase: "flight",
-    isLarge: false,
-    tint: "#0099ff",
+    _isIconSearch: true,
+    _chosenIcon: "flight",
+    _searchPhrase: "flight",
+    _isLarge: false,
+    _tint: "#0099ff",
 }
 
 addPropertyControls(Icon, {
-    isIconSearch: {
+    _isIconSearch: {
         type: ControlType.Boolean,
         title: "Find Icon",
         defaultValue: false,
         enabledTitle: "Search",
         disabledTitle: "Choose",
     },
-    chosenIcon: {
+    _chosenIcon: {
         type: ControlType.Enum,
         title: "Icon Name",
         options: iconNames,
         optionTitles: iconNames.map((key) => Icons.lg[key]),
         hidden(props) {
-            return props.isIconSearch === true
+            return props._isIconSearch === true
         },
     },
-    searchPhrase: {
+    _searchPhrase: {
         type: ControlType.String,
         title: "Icon Name",
         defaultValue: "flight",
         placeholder: "None",
         hidden(props) {
-            return props.isIconSearch === false
+            return props._isIconSearch === false
         },
     },
-    isLarge: {
+    _isLarge: {
         type: ControlType.Boolean,
         title: "Size",
         defaultValue: false,
         enabledTitle: "Large",
         disabledTitle: "Small",
     },
-    tint: {
+    _tint: {
         title: "Colour",
         type: ControlType.Color,
         defaultValue: "#0770e3",

@@ -23,21 +23,21 @@ const BannerAlertExpandableState = withBannerAlertState(
 
 const defaultProps = {
     message: "Alert Message",
-    description: "Description",
-    ui: "default",
+    _description: "Description",
+    _ui: "default",
     type: ALERT_TYPES.PRIMARY,
-    shouldHide: false,
+    _shouldHide: false,
 }
 
 export function BannerAlert(props) {
-    const { shouldHide, ui, description, ...rest } = props
+    const { _shouldHide, _ui, _description, ...rest } = props
 
     const hideAfter =
-        RenderTarget.current() === RenderTarget.canvas || !shouldHide
+        RenderTarget.current() === RenderTarget.canvas || !_shouldHide
             ? null
             : props.hideAfter
 
-    switch (ui) {
+    switch (_ui) {
         case "dismissable":
             return (
                 <BannerAlertDismissableState
@@ -52,7 +52,7 @@ export function BannerAlert(props) {
                     {...rest}
                     toggleButtonLabel="View more"
                 >
-                    {description}
+                    {_description}
                 </BannerAlertExpandableState>
             )
         default:
@@ -63,7 +63,7 @@ export function BannerAlert(props) {
 BannerAlert.defaultProps = defaultProps
 
 addPropertyControls(BannerAlert, {
-    ui: {
+    _ui: {
         type: ControlType.Enum,
         title: "Type",
         options: ["default", "dismissable", "expandable"],
@@ -75,14 +75,14 @@ addPropertyControls(BannerAlert, {
         defaultValue: "Alert Message",
         placeholder: "None",
     },
-    description: {
+    _description: {
         type: ControlType.String,
         title: "Description",
         defaultValue: "Description",
         placeholder: "None",
         displayTextArea: true,
         hidden(props) {
-            return props.ui !== "expandable"
+            return props._ui !== "expandable"
         },
     },
     type: {
@@ -97,14 +97,14 @@ addPropertyControls(BannerAlert, {
             ALERT_TYPES.EVENT,
         ],
     },
-    shouldHide: {
+    _shouldHide: {
         type: ControlType.Boolean,
         title: "Timeout",
         defaultValue: false,
         enabledTitle: "Yes",
         disabledTitle: "No",
         hidden(props) {
-            return props.ui === "expandable"
+            return props._ui === "expandable"
         },
     },
     hideAfter: {
@@ -114,7 +114,7 @@ addPropertyControls(BannerAlert, {
         min: 0,
         max: 60,
         hidden(props) {
-            return !props.shouldHide || props.ui === "expandable"
+            return !props._shouldHide || props._ui === "expandable"
         },
     },
 })
