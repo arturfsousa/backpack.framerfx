@@ -9,7 +9,8 @@ interface Props {
 }
 
 const defaultProps: Props = {
-    text: "This is the BpkBlockquote...",
+    text:
+        "We start by solving problems for our travellers, followed by our partners. Never selfish, we put the company before the team and the team before ourselves.",
     extraSpace: false,
 }
 
@@ -25,9 +26,16 @@ addPropertyControls(Blockquote, {
     text: {
         type: ControlType.String,
         title: "Text",
+        defaultValue:
+            "We start by solving problems for our travellers, followed by our partners. Never selfish, we put the company before the team and the team before ourselves.",
+        placeholder: "Enter a quote",
+        displayTextArea: true,
     },
     extraSpace: {
         type: ControlType.Boolean,
         title: "Extra Space",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
     },
 })
