@@ -15695,90 +15695,109 @@
         "widthType" : 0
       },
       {
-        "__class" : "CodeComponentNode",
+        "__class" : "FrameNode",
         "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
         "bottom" : null,
         "centerAnchorX" : 0,
         "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.50157728706624605,
+            "centerAnchorY" : 0.5,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Slider.tsx_Slider",
+            "codeComponentPackageVersion" : "1.74.0",
+            "codeComponentProps" : {
+              "_isValue" : true,
+              "_value1" : 0,
+              "_value2" : 100,
+              "large" : false,
+              "max" : 100,
+              "min" : 0,
+              "minDistance" : 0,
+              "step" : 1
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "AiMaeBtMz"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 30,
+            "heightType" : 0,
+            "id" : "zKoBFySoN",
+            "intrinsicHeight" : 30,
+            "intrinsicWidth" : 240,
+            "left" : 39,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "QPwY76Bj3",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 38,
+            "rotation" : 0,
+            "top" : null,
+            "visible" : true,
+            "width" : 240,
+            "widthType" : 0
+          }
+        ],
         "clip" : true,
-        "codeComponentIdentifier" : ".\/Spinner.tsx_Spinner",
-        "codeComponentPackageVersion" : "1.74.0",
-        "codeComponentProps" : {
-          "_duration" : 2,
-          "_fadeOut" : false,
-          "_hasDuration" : true,
-          "_size" : "XL",
-          "onTimeout" : [
-            {
-              "actionIdentifier" : "framer\/useNavigate",
-              "controls" : {
-                "animation" : {
-                  "type" : "transition",
-                  "value" : {
-                    "damping" : 60,
-                    "delay" : 0,
-                    "duration" : 0.29999999999999999,
-                    "ease" : [
-                      0.44,
-                      0,
-                      0.56000000000000005,
-                      1
-                    ],
-                    "mass" : 1,
-                    "stiffness" : 500,
-                    "type" : "spring"
-                  }
-                },
-                "appearsFrom" : {
-                  "type" : "segmentedenum",
-                  "value" : "right"
-                },
-                "backdropColor" : {
-                  "type" : "color",
-                  "value" : "rgba(4,4,15,.4)"
-                },
-                "target" : {
-                  "type" : "componentinstance",
-                  "value" : "TaJFwzwzO"
-                },
-                "transition" : {
-                  "type" : "enum",
-                  "value" : "push"
-                },
-                "type" : {
-                  "type" : "segmentedenum",
-                  "value" : "next"
-                }
-              },
-              "identifier" : "0c3a5046-7833-4636-b292-6ed08cf9458e"
-            }
-          ],
-          "type" : "light"
-        },
         "codeOverrideEnabled" : false,
         "constraintsLocked" : false,
-        "duplicatedFrom" : [
-          "w7SVPbSWd"
-        ],
+        "duplicatedFrom" : null,
         "exportOptions" : [
 
         ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
+        "fillColor" : "white",
+        "fillEnabled" : true,
         "fillImage" : null,
         "fillImageOriginalName" : null,
         "fillImagePixelHeight" : null,
         "fillImagePixelWidth" : null,
         "fillImageResize" : "fill",
         "fillType" : "color",
-        "height" : 85,
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
+        "height" : 180,
         "heightType" : 0,
-        "id" : "usuAi4BBW",
-        "intrinsicHeight" : 128,
-        "intrinsicWidth" : 240,
-        "left" : -1951,
+        "id" : "QPwY76Bj3",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : -2102,
         "locked" : false,
-        "name" : null,
+        "name" : "Slider",
         "opacity" : 1,
         "originalid" : null,
         "parentid" : "BsMOCu9oR",
@@ -15790,11 +15809,12 @@
         "radiusPerCorner" : false,
         "radiusTopLeft" : 0,
         "radiusTopRight" : 0,
+        "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : -998,
+        "top" : -1274,
         "visible" : true,
-        "width" : 116,
+        "width" : 317,
         "widthType" : 0
       }
     ],
