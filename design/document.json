@@ -15693,6 +15693,109 @@
         "visible" : true,
         "width" : 480,
         "widthType" : 0
+      },
+      {
+        "__class" : "CodeComponentNode",
+        "aspectRatio" : null,
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "clip" : true,
+        "codeComponentIdentifier" : ".\/Spinner.tsx_Spinner",
+        "codeComponentPackageVersion" : "1.74.0",
+        "codeComponentProps" : {
+          "_duration" : 2,
+          "_fadeOut" : false,
+          "_hasDuration" : true,
+          "_size" : "XL",
+          "onTimeout" : [
+            {
+              "actionIdentifier" : "framer\/useNavigate",
+              "controls" : {
+                "animation" : {
+                  "type" : "transition",
+                  "value" : {
+                    "damping" : 60,
+                    "delay" : 0,
+                    "duration" : 0.29999999999999999,
+                    "ease" : [
+                      0.44,
+                      0,
+                      0.56000000000000005,
+                      1
+                    ],
+                    "mass" : 1,
+                    "stiffness" : 500,
+                    "type" : "spring"
+                  }
+                },
+                "appearsFrom" : {
+                  "type" : "segmentedenum",
+                  "value" : "right"
+                },
+                "backdropColor" : {
+                  "type" : "color",
+                  "value" : "rgba(4,4,15,.4)"
+                },
+                "target" : {
+                  "type" : "componentinstance",
+                  "value" : "TaJFwzwzO"
+                },
+                "transition" : {
+                  "type" : "enum",
+                  "value" : "push"
+                },
+                "type" : {
+                  "type" : "segmentedenum",
+                  "value" : "next"
+                }
+              },
+              "identifier" : "0c3a5046-7833-4636-b292-6ed08cf9458e"
+            }
+          ],
+          "type" : "light"
+        },
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "duplicatedFrom" : [
+          "w7SVPbSWd"
+        ],
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "rgba(255,255,255,1)",
+        "fillEnabled" : false,
+        "fillImage" : null,
+        "fillImageOriginalName" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "height" : 85,
+        "heightType" : 0,
+        "id" : "usuAi4BBW",
+        "intrinsicHeight" : 128,
+        "intrinsicWidth" : 240,
+        "left" : -1951,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "BsMOCu9oR",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -998,
+        "visible" : true,
+        "width" : 116,
+        "widthType" : 0
       }
     ],
     "disableBackdropFilters" : false,
