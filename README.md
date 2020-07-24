@@ -62,7 +62,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-navigation-stack`](https://backpack.github.io/components/navigation-stack)               | -         |
 | [`bpk-component-nudger`](https://backpack.github.io/components/nudger)                                   | -         |
 | [`bpk-component-pagination`](https://backpack.github.io/components/pagination)                           | -         |
-| [`bpk-component-panel`](https://backpack.github.io/components/panel)                                     | -         |
+| [`bpk-component-panel`](https://backpack.github.io/components/panel)                                     | 👍        |
 | [`bpk-component-paragraph`](https://backpack.github.io/components/paragraph)                             | -         |
 | [`bpk-component-phone-input`](https://backpack.github.io/components/phone-input)                         | -         |
 | [`bpk-component-popover`](https://backpack.github.io/components/popover)                                 | -         |
