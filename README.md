@@ -73,7 +73,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-section-list`](https://backpack.github.io/components/section-list)                       | -         |
 | [`bpk-component-select`](https://backpack.github.io/components/select)                                   | 👍        |
 | [`bpk-component-slider`](https://backpack.github.io/components/slider)                                   | -         |
-| [`bpk-component-spinner`](https://backpack.github.io/components/spinner)                                 | -         |
+| [`bpk-component-spinner`](https://backpack.github.io/components/spinner)                                 | 👍        |
 | [`bpk-component-star-rating`](https://backpack.github.io/components/star-rating)                         | -         |
 | [`bpk-component-table`](https://backpack.github.io/components/table)                                     | -         |
 | [`bpk-component-text`](https://backpack.github.io/components/text)                                       | 👍        |
