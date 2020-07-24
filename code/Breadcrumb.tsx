@@ -80,7 +80,7 @@ export function Breadcrumb(props: Props) {
 
 Breadcrumb.defaultProps = {
     height: 24,
-    width: 960,
+    width: 360,
     items: ["Page 1", "Page 2", "Page 3"],
 }
 

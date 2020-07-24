@@ -148,3 +148,5 @@ addPropertyControls(IconButton, {
         type: ControlType.EventHandler,
     },
 })
+
+IconButton.displayName = "Icon Button"
