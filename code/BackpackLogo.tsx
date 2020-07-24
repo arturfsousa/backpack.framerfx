@@ -44,3 +44,5 @@ export function BackpackLogo() {
         </svg>
     )
 }
+
+BackpackLogo.displayName = "Backpack Logo"

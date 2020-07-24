@@ -118,3 +118,5 @@ addPropertyControls(BannerAlert, {
         },
     },
 })
+
+BannerAlert.displayName = "Banner Alert"

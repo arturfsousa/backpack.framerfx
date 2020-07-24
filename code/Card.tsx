@@ -60,7 +60,8 @@ Card.defaultProps = {
     width: 360,
     height: 180,
     usesCustomStyle: false,
-    _text: "Skyscanner",
+    _text:
+        "We start by solving problems for our travellers, followed by our partners. Never selfish, we put the company before the team and the team before ourselves.",
     padded: true,
 }
 
@@ -72,7 +73,8 @@ addPropertyControls(Card, {
     _text: {
         title: "Text",
         type: ControlType.String,
-        defaultValue: "Skyscanner",
+        defaultValue:
+            "We start by solving problems for our travellers, followed by our partners. Never selfish, we put the company before the team and the team before ourselves.",
         placeholder: "None",
         displayTextArea: true,
         hidden(props) {
