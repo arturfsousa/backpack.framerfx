@@ -5,6 +5,8 @@ import { findIcon } from "./Icon"
 
 // @ts-ignore
 import BpkButton from "backpack-transpiled/bpk-component-button"
+// @ts-ignore
+import BpkLoadingButton from "backpack-transpiled/bpk-component-loading-button"
 import {
     withButtonAlignment,
     withRtlSupport,
@@ -37,6 +39,7 @@ const defaultProps = {
     _isIconSearch: true,
     _searchPhrase: "plus",
     _hasTrailingIcon: null,
+    // loading: true,
     // link: false,
     // href: null,
     // blank: false,
