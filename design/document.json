@@ -9764,12 +9764,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "link",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -9829,12 +9832,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "link",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -9895,12 +9901,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "link",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -9961,12 +9970,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "link",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -10035,12 +10047,15 @@
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
                   "_chosenIcon" : "plus",
+                  "_duration" : 2,
+                  "_hasDuration" : false,
                   "_hasTrailingIcon" : null,
                   "_isIconSearch" : false,
                   "_label" : "Button",
                   "_searchPhrase" : "plus",
                   "_variant" : "outline",
                   "disabled" : true,
+                  "iconPosition" : "leading",
                   "large" : true
                 },
                 "codeOverrideEnabled" : false,
@@ -10099,12 +10114,15 @@
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
                   "_chosenIcon" : "plus",
+                  "_duration" : 2,
+                  "_hasDuration" : false,
                   "_hasTrailingIcon" : null,
                   "_isIconSearch" : false,
                   "_label" : "Button",
                   "_searchPhrase" : "plus",
                   "_variant" : "outline",
                   "disabled" : true,
+                  "iconPosition" : "leading",
                   "large" : false
                 },
                 "codeOverrideEnabled" : false,
@@ -10164,12 +10182,15 @@
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
                   "_chosenIcon" : "plus",
+                  "_duration" : 2,
+                  "_hasDuration" : false,
                   "_hasTrailingIcon" : null,
                   "_isIconSearch" : false,
                   "_label" : "Button",
                   "_searchPhrase" : "plus",
                   "_variant" : "outline",
                   "disabled" : false,
+                  "iconPosition" : "leading",
                   "large" : true
                 },
                 "codeOverrideEnabled" : false,
@@ -10229,12 +10250,15 @@
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
                   "_chosenIcon" : "plus",
+                  "_duration" : 2,
+                  "_hasDuration" : false,
                   "_hasTrailingIcon" : null,
                   "_isIconSearch" : false,
                   "_label" : "Button",
                   "_searchPhrase" : "plus",
                   "_variant" : "outline",
                   "disabled" : false,
+                  "iconPosition" : "leading",
                   "large" : false
                 },
                 "codeOverrideEnabled" : false,
@@ -10346,12 +10370,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "destructive",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -10409,12 +10436,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "destructive",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -10473,12 +10503,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "destructive",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -10537,12 +10570,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "destructive",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -10600,12 +10636,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "featured",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -10663,12 +10702,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "featured",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -10726,12 +10768,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "featured",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -10788,12 +10833,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "featured",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -10850,12 +10898,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "secondary",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -10912,12 +10963,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "secondary",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -10974,12 +11028,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "secondary",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -11035,12 +11092,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "secondary",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -11096,12 +11156,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "primary",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -11159,12 +11222,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "plus",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "plus",
               "_variant" : "primary",
               "disabled" : true,
+              "iconPosition" : "leading",
               "large" : false
             },
             "codeOverrideEnabled" : false,
@@ -11222,12 +11288,15 @@
             "codeComponentPackageVersion" : "1.71.0",
             "codeComponentProps" : {
               "_chosenIcon" : "pause",
+              "_duration" : 2,
+              "_hasDuration" : false,
               "_hasTrailingIcon" : null,
               "_isIconSearch" : false,
               "_label" : "Button",
               "_searchPhrase" : "HELP",
               "_variant" : "primary",
               "disabled" : false,
+              "iconPosition" : "leading",
               "large" : true
             },
             "codeOverrideEnabled" : false,
@@ -11271,71 +11340,6 @@
             "top" : 73,
             "visible" : true,
             "width" : 132,
-            "widthType" : 0
-          },
-          {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : null,
-            "centerAnchorX" : 0.05700447093889717,
-            "centerAnchorY" : 0.11898016997167139,
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/Button.tsx_Button",
-            "codeComponentPackageVersion" : "1.71.0",
-            "codeComponentProps" : {
-              "_chosenIcon" : "plus",
-              "_hasTrailingIcon" : null,
-              "_isIconSearch" : false,
-              "_label" : "Button",
-              "_searchPhrase" : "plus",
-              "_variant" : "primary",
-              "disabled" : false,
-              "large" : false,
-              "onClick" : [
-
-              ]
-            },
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "duplicatedFrom" : [
-              "PeHeG6oeK",
-              "R06Uj4cA2"
-            ],
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 36,
-            "heightType" : 0,
-            "id" : "FiVsnEwBz",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "left" : 25,
-            "locked" : false,
-            "name" : "Primary",
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "lUxKP8wy6",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : null,
-            "rotation" : 0,
-            "top" : 24,
-            "visible" : true,
-            "width" : 103,
             "widthType" : 0
           },
           {
@@ -11390,6 +11394,116 @@
             "top" : null,
             "visible" : true,
             "width" : 60,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.054769001490312968,
+            "centerAnchorY" : 0.11898016997167139,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentPackageVersion" : "1.71.0",
+            "codeComponentProps" : {
+              "_chosenIcon" : "picture",
+              "_duration" : 2,
+              "_hasDuration" : false,
+              "_hasTrailingIcon" : null,
+              "_isIconSearch" : true,
+              "_label" : "Button",
+              "_searchPhrase" : "help",
+              "_variant" : "primary",
+              "disabled" : false,
+              "iconPosition" : "trailing",
+              "large" : false,
+              "onClick" : [
+                {
+                  "actionIdentifier" : "framer\/useNavigate",
+                  "controls" : {
+                    "animation" : {
+                      "type" : "transition",
+                      "value" : {
+                        "damping" : 60,
+                        "delay" : 0,
+                        "duration" : 0.29999999999999999,
+                        "ease" : [
+                          0.44,
+                          0,
+                          0.56000000000000005,
+                          1
+                        ],
+                        "mass" : 1,
+                        "stiffness" : 500,
+                        "type" : "spring"
+                      }
+                    },
+                    "appearsFrom" : {
+                      "type" : "segmentedenum",
+                      "value" : "right"
+                    },
+                    "backdropColor" : {
+                      "type" : "color",
+                      "value" : "rgba(4,4,15,.4)"
+                    },
+                    "target" : {
+                      "type" : "componentinstance",
+                      "value" : "TaJFwzwzO"
+                    },
+                    "transition" : {
+                      "type" : "enum",
+                      "value" : "push"
+                    },
+                    "type" : {
+                      "type" : "segmentedenum",
+                      "value" : "next"
+                    }
+                  },
+                  "identifier" : "ce5ea6c7-87b5-49eb-ac9c-1d32678ed833"
+                }
+              ]
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "PeHeG6oeK",
+              "R06Uj4cA2"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 36,
+            "heightType" : 0,
+            "id" : "FiVsnEwBz",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 25,
+            "locked" : false,
+            "name" : "Primary",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "lUxKP8wy6",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 24,
+            "visible" : true,
+            "width" : 97,
             "widthType" : 0
           }
         ],
@@ -16068,6 +16182,179 @@
         "top" : -1889,
         "visible" : true,
         "width" : 240,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.3818770226537217,
+            "centerAnchorY" : 0.21172638436482086,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Button.tsx_Button",
+            "codeComponentPackageVersion" : "1.71.0",
+            "codeComponentProps" : {
+              "_chosenIcon" : "picture",
+              "_duration" : 2,
+              "_hasDuration" : true,
+              "_hasTrailingIcon" : true,
+              "_isIconSearch" : true,
+              "_label" : "Button",
+              "_searchPhrase" : "long",
+              "_variant" : "primary",
+              "disabled" : false,
+              "iconPosition" : "trailing",
+              "large" : false,
+              "onClick" : [
+                {
+                  "actionIdentifier" : "framer\/useNavigate",
+                  "controls" : {
+                    "animation" : {
+                      "type" : "transition",
+                      "value" : {
+                        "damping" : 60,
+                        "delay" : 0,
+                        "duration" : 0.29999999999999999,
+                        "ease" : [
+                          0.44,
+                          0,
+                          0.56000000000000005,
+                          1
+                        ],
+                        "mass" : 1,
+                        "stiffness" : 500,
+                        "type" : "spring"
+                      }
+                    },
+                    "appearsFrom" : {
+                      "type" : "segmentedenum",
+                      "value" : "right"
+                    },
+                    "backdropColor" : {
+                      "type" : "color",
+                      "value" : "rgba(4,4,15,.4)"
+                    },
+                    "target" : {
+                      "type" : "componentinstance",
+                      "value" : "TaJFwzwzO"
+                    },
+                    "transition" : {
+                      "type" : "enum",
+                      "value" : "push"
+                    },
+                    "type" : {
+                      "type" : "segmentedenum",
+                      "value" : "next"
+                    }
+                  },
+                  "identifier" : "a5f987d4-4bda-451b-a930-4314ba9ea47c"
+                }
+              ]
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "PeHeG6oeK",
+              "R06Uj4cA2",
+              "FiVsnEwBz"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 36,
+            "heightType" : 0,
+            "id" : "M41XSbbP5",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 58,
+            "locked" : false,
+            "name" : "Primary",
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "FMvqGJiM9",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 47,
+            "visible" : true,
+            "width" : 120,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "duplicatedFrom" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "white",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImageOriginalName" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
+        "height" : 307,
+        "heightType" : 0,
+        "id" : "FMvqGJiM9",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : -2974,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "BsMOCu9oR",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -2595,
+        "visible" : true,
+        "width" : 309,
         "widthType" : 0
       }
     ],

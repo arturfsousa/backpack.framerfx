@@ -2,11 +2,14 @@ import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
 import { findIcon } from "./Icon"
+import { indentTitle } from "./lib/indentTitle"
 
 // @ts-ignore
 import BpkButton from "backpack-transpiled/bpk-component-button"
 // @ts-ignore
-import BpkLoadingButton from "backpack-transpiled/bpk-component-loading-button"
+import BpkLoadingButton, {
+    ICON_POSITION,
+} from "backpack-transpiled/bpk-component-loading-button"
 import {
     withButtonAlignment,
     withRtlSupport,
@@ -39,6 +42,9 @@ const defaultProps = {
     _isIconSearch: true,
     _searchPhrase: "plus",
     _hasTrailingIcon: null,
+    _duration: 2,
+    _hasDuration: false,
+    iconPosition: ICON_POSITION.TRAILING,
     // loading: true,
     // link: false,
     // href: null,
@@ -47,12 +53,16 @@ const defaultProps = {
 
 export function Button(props) {
     const {
+        iconPosition,
         _hasTrailingIcon,
         _isIconSearch,
         _chosenIcon,
         _searchPhrase,
         _label,
         _variant,
+        _hasDuration,
+        _duration,
+        onClick,
         ...rest
     } = props
 
@@ -83,7 +93,37 @@ export function Button(props) {
         )
     }
 
-    return <BpkButton {...bpkProps}>{contents}</BpkButton>
+    const [loading, setLoading] = React.useState(false)
+
+    const handleClick = () => {
+        setLoading(true)
+
+        window.setTimeout(() => {
+            setLoading(false)
+            onClick && onClick()
+        }, _duration * 1000)
+    }
+
+    if (_hasDuration) {
+        return (
+            <BpkLoadingButton
+                {...bpkProps}
+                loading={loading}
+                icon={<AlignedIcon />}
+                iconDisabled={<AlignedIcon />}
+                iconPosition={iconPosition}
+                onClick={handleClick}
+            >
+                {_label}
+            </BpkLoadingButton>
+        )
+    } else {
+        return (
+            <BpkButton {...bpkProps} onClick={onClick}>
+                {contents}
+            </BpkButton>
+        )
+    }
 }
 
 Button.defaultProps = defaultProps
@@ -129,45 +169,74 @@ addPropertyControls(Button, {
         enabledTitle: "Disabled",
         disabledTitle: "Enabled",
     },
+    // Loading Button Controls
+    _hasDuration: {
+        title: "Spinner",
+        type: ControlType.Boolean,
+        defaultValue: Button.defaultProps._hasDuration,
+        enabledTitle: "On Click",
+        disabledTitle: "Never",
+    },
+    _duration: {
+        title: indentTitle("Time"),
+        min: 0.1,
+        max: 10,
+        defaultValue: Button.defaultProps._duration,
+        type: ControlType.Number,
+        step: 0.1,
+        hidden: ({ _hasDuration }) => !_hasDuration,
+    },
+    iconPosition: {
+        type: ControlType.Enum,
+        title: "Icon",
+        defaultValue: ICON_POSITION.TRAILING,
+        optionTitles: ["Left", "Right"],
+        options: [ICON_POSITION.LEADING, ICON_POSITION.TRAILING],
+        displaySegmentedControl: true,
+        hidden: ({ _hasDuration }) => !_hasDuration,
+    },
     // Icon Controls
     _hasTrailingIcon: {
         type: ControlType.Enum,
-        title: "Show Icon",
+        title: "Icon",
         defaultValue: null,
         optionTitles: ["None", "Left", "Right"],
         options: [null, false, true],
         displaySegmentedControl: true,
+        hidden: ({ _hasDuration }) => _hasDuration,
     },
     _isIconSearch: {
         type: ControlType.Boolean,
-        title: "Find Icon",
+        title: indentTitle("Find Icon"),
         defaultValue: false,
         enabledTitle: "Search",
         disabledTitle: "Choose",
         hidden(props) {
-            return props._hasTrailingIcon === null
+            return props._hasTrailingIcon === null && !props._hasDuration
         },
     },
     _chosenIcon: {
         type: ControlType.Enum,
-        title: "Icon Name",
+        title: indentTitle("Icon Name"),
         defaultValue: "plus",
         options: iconNames,
         optionTitles: iconNames.map((key) => Icons.lg[key]),
         hidden(props) {
             return (
-                props._isIconSearch === true || props._hasTrailingIcon === null
+                props._isIconSearch === true ||
+                (props._hasTrailingIcon === null && !props._hasDuration)
             )
         },
     },
     _searchPhrase: {
         type: ControlType.String,
-        title: "Icon Name",
+        title: indentTitle("Icon Name"),
         defaultValue: "plus",
         placeholder: "None",
         hidden(props) {
             return (
-                props._isIconSearch === false || props._hasTrailingIcon === null
+                props._isIconSearch === false ||
+                (props._hasTrailingIcon === null && !props._hasDuration)
             )
         },
     },
@@ -186,6 +255,9 @@ addPropertyControls(Button, {
     //     enabledTitle: "New Tab",
     //     disabledTitle: "Self",
     // },
+    onTimeout: {
+        type: ControlType.EventHandler,
+    },
     onClick: {
         type: ControlType.EventHandler,
     },
