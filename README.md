@@ -21,7 +21,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | Component                                                                                                                  | Included? |
 | -------------------------------------------------------------------------------------------------------------------------- | --------- |
 | [`bpk-component-accordion`](https://backpack.github.io/components/accordion/?platform=web)                                 | 👍        |
-| [`bpk-component-autosuggest`](https://backpack.github.io/components/autosuggest/?platform=web)                             | -         |
+| [`bpk-component-autosuggest`](https://backpack.github.io/components/autosuggest/?platform=web)                             | 👍        |
 | [`bpk-component-badge`](https://backpack.github.io/components/badge/?platform=web)                                         | 👍        |
 | [`bpk-component-banner-alert`](https://backpack.github.io/components/banner-alert/?platform=web)                           | 👍        |
 | [`bpk-component-barchart`](https://backpack.github.io/components/barchart/?platform=web)                                   | -         |
@@ -73,6 +73,6 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-star-rating`](https://backpack.github.io/components/star-rating/?platform=web)                             | -         |
 | [`bpk-component-table`](https://backpack.github.io/components/table/?platform=web)                                         | -         |
 | [`bpk-component-text`](https://backpack.github.io/components/text/?platform=web)                                           | 👍        |
-| [`bpk-component-textarea`](https://backpack.github.io/components/textarea/?platform=web)                                   | -         |
+| [`bpk-component-textarea`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-textarea)             | 👍        |
 | [`bpk-component-ticket`](https://backpack.github.io/components/ticket/?platform=web)                                       | -         |
 | [`bpk-component-tooltip`](https://backpack.github.io/components/tooltip/?platform=web)                                     | -         |
