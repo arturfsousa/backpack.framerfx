@@ -1,0 +1,153 @@
+import * as React from "react"
+import { addPropertyControls, ControlType } from "framer"
+
+// @ts-ignore
+import BpkFieldset from "backpack-transpiled/bpk-component-fieldset"
+// @ts-ignore
+import BpkTextarea from "backpack-transpiled/bpk-component-textarea"
+
+export function TextArea(props) {
+    const {
+        _isFieldSet,
+        _textareaHeight,
+        required,
+        label,
+        description,
+        validationMessage,
+        disabled,
+        placeholder,
+        onChange,
+    } = props
+
+    const [value, setValue] = React.useState(props.value)
+    const [valid, setValid] = React.useState(props.valid)
+
+    React.useEffect(() => setValue(props.value), [props.value])
+    React.useEffect(() => setValid(props.valid), [props.valid])
+
+    const handleChange = (event) => {
+        setValue(event.target.value)
+        onChange && onChange(event)
+    }
+
+    const control = (
+        <BpkTextarea
+            id={label}
+            name={label}
+            value={value}
+            valid={valid}
+            disabled={disabled}
+            onChange={handleChange}
+            placeholder={placeholder}
+            style={{ height: _textareaHeight }}
+        />
+    )
+
+    const fieldSet = (
+        <BpkFieldset
+            disabled={disabled}
+            required={required}
+            label={label}
+            description={description}
+            validationMessage={validationMessage}
+        >
+            {control}
+        </BpkFieldset>
+    )
+
+    return _isFieldSet ? fieldSet : control
+}
+
+TextArea.defaultProps = {
+    height: 84,
+    width: 240,
+    isField: true,
+    valid: null,
+    label: "Label",
+    placeholder: "Enter your message",
+    value: "",
+}
+
+addPropertyControls(TextArea, {
+    _textareaHeight: {
+        title: "Height",
+        type: ControlType.Number,
+        defaultValue: 84,
+        min: 84,
+        step: 24,
+        displayStepper: true,
+    },
+    _isFieldSet: {
+        type: ControlType.Boolean,
+        title: "Field Set",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+    },
+    required: {
+        type: ControlType.Boolean,
+        title: "Required",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+        hidden(props) {
+            return props._isFieldSet === false
+        },
+    },
+    label: {
+        title: "Label",
+        type: ControlType.String,
+        defaultValue: "Label",
+        placeholder: "None",
+        hidden(props) {
+            return props._isFieldSet === false
+        },
+    },
+    description: {
+        title: "Description",
+        type: ControlType.String,
+        defaultValue: "",
+        placeholder: "None",
+        displayTextArea: true,
+        hidden(props) {
+            return props._isFieldSet === false
+        },
+    },
+    validationMessage: {
+        title: "Error",
+        type: ControlType.String,
+        defaultValue: "Please enter a value",
+        placeholder: "None",
+        hidden(props) {
+            return props._isFieldSet === false
+        },
+    },
+    valid: {
+        type: ControlType.Boolean,
+        title: "Validation",
+        defaultValue: true,
+        enabledTitle: "Valid",
+        disabledTitle: "Invalid",
+    },
+    disabled: {
+        type: ControlType.Boolean,
+        title: "Disabled",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+    },
+    placeholder: {
+        title: "Placeholder",
+        type: ControlType.String,
+        defaultValue: TextArea.defaultProps.placeholder,
+        placeholder: "None",
+    },
+    value: {
+        title: "Value",
+        type: ControlType.String,
+        defaultValue: "",
+        placeholder: "None",
+    },
+})
+
+TextArea.displayName = "Text Area"
