@@ -6,9 +6,9 @@ import { indentTitle } from "./lib/indentTitle"
 
 // @ts-ignore
 import BpkButton from "backpack-transpiled/bpk-component-button"
-// @ts-ignore
 import BpkLoadingButton, {
     ICON_POSITION,
+    // @ts-ignore
 } from "backpack-transpiled/bpk-component-loading-button"
 import {
     withButtonAlignment,
