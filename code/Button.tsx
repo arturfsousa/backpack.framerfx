@@ -20,20 +20,6 @@ import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 
 const iconNames = Object.keys(Icons.lg)
 
-const defaultProps = {
-    height: 36,
-    _label: "Button",
-    large: false,
-    disabled: false,
-    _variant: "primary",
-    _isIconSearch: true,
-    _searchPhrase: "plus",
-    _hasTrailingIcon: null,
-    _duration: 2,
-    _hasDuration: false,
-    iconPosition: ICON_POSITION.TRAILING,
-}
-
 export function Button(props) {
     const {
         iconPosition,
@@ -49,15 +35,15 @@ export function Button(props) {
         ...rest
     } = props
 
-    const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
+    // Set button variant
+    if (_variant !== "primary") {
+        rest[_variant] = true
+    }
 
+    // Get icon
+    const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
     const Icon = props.large ? Icons.lg[iconName] : Icons.sm[iconName]
     const AlignedIcon = withButtonAlignment(withRtlSupport(Icon))
-
-    let bpkProps = { ...rest }
-    if (_variant !== "primary") {
-        bpkProps[_variant] = true
-    }
 
     let contents
     if (_hasTrailingIcon === null) {
@@ -76,9 +62,10 @@ export function Button(props) {
         )
     }
 
+    // Handle loading button
     const [loading, setLoading] = React.useState(false)
 
-    const handleClick = () => {
+    const handleClickWithDelay = () => {
         setLoading(true)
 
         window.setTimeout(() => {
@@ -90,26 +77,38 @@ export function Button(props) {
     if (_hasDuration) {
         return (
             <BpkLoadingButton
-                {...bpkProps}
+                {...rest}
                 loading={loading}
                 icon={<AlignedIcon />}
                 iconDisabled={<AlignedIcon />}
                 iconPosition={iconPosition}
-                onClick={handleClick}
+                onClick={handleClickWithDelay}
             >
                 {_label}
             </BpkLoadingButton>
         )
     } else {
         return (
-            <BpkButton {...bpkProps} onClick={onClick}>
+            <BpkButton {...rest} onClick={onClick}>
                 {contents}
             </BpkButton>
         )
     }
 }
 
-Button.defaultProps = defaultProps
+Button.defaultProps = {
+    height: 36,
+    _label: "Button",
+    large: false,
+    disabled: false,
+    _variant: "primary",
+    _isIconSearch: true,
+    _searchPhrase: "plus",
+    _hasTrailingIcon: null,
+    _duration: 2,
+    _hasDuration: false,
+    iconPosition: ICON_POSITION.TRAILING,
+}
 
 addPropertyControls(Button, {
     _label: {
