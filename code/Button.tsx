@@ -20,19 +20,6 @@ import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 
 const iconNames = Object.keys(Icons.lg)
 
-// interface Props {
-//     height?: number
-//     _label?: string
-//     large?: boolean
-//     disabled?: boolean
-//     _variant?: "primary" | "secondary" | "featured" | "destructive" | "outline" | "link"
-//     // link?: boolean
-//     // href?: string
-//     // blank?: boolean
-//     _hasTrailingIcon?: boolean
-//     onClick?: any
-// }
-
 const defaultProps = {
     height: 36,
     _label: "Button",
@@ -45,10 +32,6 @@ const defaultProps = {
     _duration: 2,
     _hasDuration: false,
     iconPosition: ICON_POSITION.TRAILING,
-    // loading: true,
-    // link: false,
-    // href: null,
-    // blank: false,
 }
 
 export function Button(props) {
@@ -239,24 +222,6 @@ addPropertyControls(Button, {
                 (props._hasTrailingIcon === null && !props._hasDuration)
             )
         },
-    },
-    // link: {
-    //     type: ControlType.Boolean,
-    //     title: "Link",
-    // },
-    // href: {
-    //     type: ControlType.String,
-    //     title: "Link href",
-    // },
-    // blank: {
-    //     type: ControlType.Boolean,
-    //     title: "Link Target",
-    //     defaultValue: false,
-    //     enabledTitle: "New Tab",
-    //     disabledTitle: "Self",
-    // },
-    onTimeout: {
-        type: ControlType.EventHandler,
     },
     onClick: {
         type: ControlType.EventHandler,
