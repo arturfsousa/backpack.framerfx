@@ -2,9 +2,14 @@ import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
 import { findIcon } from "./Icon"
+import { indentTitle } from "./lib/indentTitle"
 
 // @ts-ignore
 import BpkButton from "backpack-transpiled/bpk-component-button"
+import BpkLoadingButton, {
+    ICON_POSITION,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-loading-button"
 import {
     withButtonAlignment,
     withRtlSupport,
@@ -15,67 +20,73 @@ import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 
 const iconNames = Object.keys(Icons.lg)
 
-// interface Props {
-//     height?: number
-//     label?: string
-//     large?: boolean
-//     disabled?: boolean
-//     _variant?: "primary" | "secondary" | "featured" | "destructive" | "outline" | "link"
-//     // link?: boolean
-//     // href?: string
-//     // blank?: boolean
-//     hasTrailingIcon?: boolean
-//     onClick?: any
-// }
-
-const defaultProps = {
-    height: 36,
-    width: 36,
-    // label: "Button",
-    large: false,
-    disabled: false,
-    _variant: "primary",
-    _isIconSearch: true,
-    _searchPhrase: "plus",
-    // link: false,
-    // href: null,
-    // blank: false,
-}
-
 export function IconButton(props) {
     const {
         _isIconSearch,
         _chosenIcon,
         _searchPhrase,
         _variant,
+        _hasDuration,
+        _duration,
+        onClick,
         ...rest
     } = props
 
+    // Set button variant
+    if (_variant !== "primary") {
+        rest[_variant] = true
+    }
+
+    // Get icon
     const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
     const Icon = props.large ? Icons.lg[iconName] : Icons.sm[iconName]
     const AlignedIcon = withButtonAlignment(withRtlSupport(Icon))
 
-    let bpkProps = { ...rest }
-    if (_variant !== "primary") {
-        bpkProps[_variant] = true
+    // Handle loading button
+    const [loading, setLoading] = React.useState(false)
+
+    const handleClickWithDelay = () => {
+        setLoading(true)
+
+        window.setTimeout(() => {
+            setLoading(false)
+            onClick && onClick()
+        }, _duration * 1000)
     }
 
-    return (
-        <BpkButton {...bpkProps} iconOnly>
-            <AlignedIcon />
-        </BpkButton>
-    )
+    if (_hasDuration) {
+        return (
+            <BpkLoadingButton
+                {...rest}
+                iconOnly
+                loading={loading}
+                icon={<AlignedIcon />}
+                iconDisabled={<AlignedIcon />}
+                onClick={handleClickWithDelay}
+            />
+        )
+    } else {
+        return (
+            <BpkButton {...rest} iconOnly onClick={onClick}>
+                <AlignedIcon />
+            </BpkButton>
+        )
+    }
 }
 
-IconButton.defaultProps = defaultProps
+IconButton.defaultProps = {
+    height: 36,
+    width: 36,
+    large: false,
+    disabled: false,
+    _variant: "primary",
+    _isIconSearch: true,
+    _searchPhrase: "plus",
+    _duration: 2,
+    _hasDuration: false,
+}
 
 addPropertyControls(IconButton, {
-    // label: {
-    //     type: ControlType.String,
-    //     title: "Label",
-    //     defaultValue: "Button",
-    //     placeholder: "None",
-    // },
     _variant: {
         type: ControlType.Enum,
         title: "Type",
@@ -102,6 +113,23 @@ addPropertyControls(IconButton, {
         enabledTitle: "Disabled",
         disabledTitle: "Enabled",
     },
+    // Loading Button Controls
+    _hasDuration: {
+        title: "Spinner",
+        type: ControlType.Boolean,
+        defaultValue: IconButton.defaultProps._hasDuration,
+        enabledTitle: "On Click",
+        disabledTitle: "Never",
+    },
+    _duration: {
+        title: indentTitle("Time"),
+        min: 0.1,
+        max: 10,
+        defaultValue: IconButton.defaultProps._duration,
+        type: ControlType.Number,
+        step: 0.1,
+        hidden: ({ _hasDuration }) => !_hasDuration,
+    },
     // Icon Controls
     _isIconSearch: {
         type: ControlType.Boolean,
@@ -112,7 +140,7 @@ addPropertyControls(IconButton, {
     },
     _chosenIcon: {
         type: ControlType.Enum,
-        title: "Icon Name",
+        title: indentTitle("Icon Name"),
         defaultValue: "plus",
         options: iconNames,
         optionTitles: iconNames.map((key) => Icons.lg[key]),
@@ -122,28 +150,13 @@ addPropertyControls(IconButton, {
     },
     _searchPhrase: {
         type: ControlType.String,
-        title: "Icon Name",
+        title: indentTitle("Icon Name"),
         defaultValue: "plus",
         placeholder: "None",
         hidden(props) {
             return props._isIconSearch === false
         },
     },
-    // link: {
-    //     type: ControlType.Boolean,
-    //     title: "Link",
-    // },
-    // href: {
-    //     type: ControlType.String,
-    //     title: "Link href",
-    // },
-    // blank: {
-    //     type: ControlType.Boolean,
-    //     title: "Link Target",
-    //     defaultValue: false,
-    //     enabledTitle: "New Tab",
-    //     disabledTitle: "Self",
-    // },
     onClick: {
         type: ControlType.EventHandler,
     },

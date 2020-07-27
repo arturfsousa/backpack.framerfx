@@ -52,7 +52,6 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-label`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-label)                   | -         |
 | [`bpk-component-link`](https://backpack.github.io/components/link/?platform=web)                                           | -         |
 | [`bpk-component-list`](https://backpack.github.io/components/list/?platform=web)                                           | -         |
-| [`bpk-component-loading-button`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-loading-button) | -         |
 | [`bpk-component-mobile-scroll-container`](https://backpack.github.io/components/mobile-scroll-container/?platform=web)     | -         |
 | [`bpk-component-modal`](https://backpack.github.io/components/modal/?platform=web)                                         | -         |
 | [`bpk-component-navigation-bar`](https://backpack.github.io/components/navigation-bar/?platform=web)                       | -         |
