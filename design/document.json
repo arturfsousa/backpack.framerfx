@@ -13995,65 +13995,6 @@
         "__class" : "CodeComponentNode",
         "aspectRatio" : null,
         "bottom" : null,
-        "centerAnchorX" : 1.3100000000000001,
-        "centerAnchorY" : 0.13,
-        "clip" : true,
-        "codeComponentIdentifier" : ".\/IconButton.tsx_IconButton",
-        "codeComponentPackageVersion" : "1.71.0",
-        "codeComponentProps" : {
-          "_chosenIcon" : "price-alerts",
-          "_isIconSearch" : false,
-          "_searchPhrase" : "ERR",
-          "_variant" : "primary",
-          "disabled" : false,
-          "large" : false
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "duplicatedFrom" : [
-          "UwTjeJ5EH"
-        ],
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImageOriginalName" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillType" : "color",
-        "height" : 36,
-        "heightType" : 0,
-        "id" : "hmTgWqbzR",
-        "intrinsicHeight" : 36,
-        "intrinsicWidth" : null,
-        "left" : -2546,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "BsMOCu9oR",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -2801,
-        "visible" : true,
-        "width" : 36,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
         "centerAnchorX" : 0,
         "centerAnchorY" : 0,
         "clip" : true,
@@ -16210,7 +16151,7 @@
               "_isIconSearch" : true,
               "_label" : "Button",
               "_searchPhrase" : "long",
-              "_variant" : "primary",
+              "_variant" : "destructive",
               "disabled" : false,
               "iconPosition" : "trailing",
               "large" : false,
@@ -16302,6 +16243,112 @@
             "top" : 47,
             "visible" : true,
             "width" : 120,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.25566343042071199,
+            "centerAnchorY" : 0.42996742671009774,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/IconButton.tsx_IconButton",
+            "codeComponentPackageVersion" : "1.71.0",
+            "codeComponentProps" : {
+              "_chosenIcon" : "price-alerts",
+              "_duration" : 2,
+              "_hasDuration" : true,
+              "_isIconSearch" : false,
+              "_searchPhrase" : "ERR",
+              "_variant" : "primary",
+              "disabled" : false,
+              "large" : true,
+              "onClick" : [
+                {
+                  "actionIdentifier" : "framer\/useNavigate",
+                  "controls" : {
+                    "animation" : {
+                      "type" : "transition",
+                      "value" : {
+                        "damping" : 60,
+                        "delay" : 0,
+                        "duration" : 0.29999999999999999,
+                        "ease" : [
+                          0.44,
+                          0,
+                          0.56000000000000005,
+                          1
+                        ],
+                        "mass" : 1,
+                        "stiffness" : 500,
+                        "type" : "spring"
+                      }
+                    },
+                    "appearsFrom" : {
+                      "type" : "segmentedenum",
+                      "value" : "right"
+                    },
+                    "backdropColor" : {
+                      "type" : "color",
+                      "value" : "rgba(4,4,15,.4)"
+                    },
+                    "target" : {
+                      "type" : "componentinstance",
+                      "value" : "TaJFwzwzO"
+                    },
+                    "transition" : {
+                      "type" : "enum",
+                      "value" : "push"
+                    },
+                    "type" : {
+                      "type" : "segmentedenum",
+                      "value" : "next"
+                    }
+                  },
+                  "identifier" : "ed421794-65e6-41ad-82c8-f0da875d8f2b"
+                }
+              ]
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "UwTjeJ5EH"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 42,
+            "heightType" : 0,
+            "id" : "hmTgWqbzR",
+            "intrinsicHeight" : 36,
+            "intrinsicWidth" : null,
+            "left" : 58,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "FMvqGJiM9",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 111,
+            "visible" : true,
+            "width" : 42,
             "widthType" : 0
           }
         ],
