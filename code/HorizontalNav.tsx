@@ -10,12 +10,13 @@ import BpkHorizontalNav, {
 export function HorizontalNav(props) {
     const {
         type,
-        spaceAround,
         showUnderline,
         autoScrollToSelected,
 
         // Item properties
         items,
+        _selectedItem,
+        spaceAround,
 
         // Event properties
         onTab1Click,
@@ -44,10 +45,15 @@ export function HorizontalNav(props) {
         { text: items[9], event: onTab10Click },
     ].slice(0, items.length)
 
-    const [selected, setSelected] = React.useState(items[0])
+    const getSelection = () =>
+        _selectedItem > 0 && _selectedItem <= items.length
+            ? items[_selectedItem - 1]
+            : ""
+    const [selected, setSelected] = React.useState(getSelection())
+    React.useEffect(() => setSelected(getSelection()), [_selectedItem])
 
     const handleClick = (item) => {
-        setSelected(item.text)
+        !item.event && setSelected(item.text)
         item.event && item.event()
     }
 
@@ -75,10 +81,11 @@ export function HorizontalNav(props) {
 }
 
 HorizontalNav.defaultProps = {
-    height: 128,
+    height: 44,
     width: 240,
     items: ["Tab 1", "Tab 2", "Tab 3"],
     type: HORIZONTAL_NAV_TYPES.default,
+    _selectedItem: 1,
 }
 
 addPropertyControls(HorizontalNav, {
@@ -113,9 +120,20 @@ addPropertyControls(HorizontalNav, {
         disabledTitle: "No",
     },
 
+    // Selected Item Property Controls
+    _selectedItem: {
+        type: ControlType.Number,
+        title: "Active Tab",
+        defaultValue: HorizontalNav.defaultProps._selectedItem,
+        displayStepper: true,
+        step: 1,
+        min: 0,
+        max: 10,
+    },
+
     items: {
         type: ControlType.Array,
-        title: "Items",
+        title: "Tabs",
         maxCount: 10,
         defaultValue: HorizontalNav.defaultProps.items,
         propertyControl: {
@@ -123,15 +141,6 @@ addPropertyControls(HorizontalNav, {
             defaultValue: "Tab Title",
         },
     },
-
-    // disable1: {
-    //     type: ControlType.Boolean,
-    //     title: "Disable 1",
-    //     defaultValue: false,
-    //     enabledTitle: "Yes",
-    //     disabledTitle: "No",
-    //     hidden: ({ items }) => items.length > 4,
-    // },
 
     // Event Property Controls
     onTab1Click: {
