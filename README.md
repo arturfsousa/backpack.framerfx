@@ -33,7 +33,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-card`](https://backpack.github.io/components/card/?platform=web)                                           | 👍        |
 | [`bpk-component-checkbox`](https://backpack.github.io/components/checkbox/?platform=web)                                   | 👍        |
 | [`bpk-component-chip`](https://backpack.github.io/components/chip/?platform=web)                                           | 👍        |
-| [`bpk-component-close-button`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-close-button)     | -         |
+| [`bpk-component-close-button`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-close-button)     | 👍        |
 | [`bpk-component-code`](https://backpack.github.io/components/code/?platform=web)                                           | -         |
 | [`bpk-component-datatable`](https://backpack.github.io/components/datatable/?platform=web)                                 | -         |
 | [`bpk-component-datepicker`](https://backpack.github.io/components/datepicker/?platform=web)                               | -         |
@@ -44,7 +44,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-flare`](https://backpack.github.io/components/flare/?platform=web)                                         | 👍        |
 | [`bpk-component-form-validation`](https://backpack.github.io/components/form-validation/?platform=web)                     | -         |
 | [`bpk-component-grid`](https://backpack.github.io/components/grid/?platform=web)                                           | -         |
-| [`bpk-component-horizontal-nav`](https://backpack.github.io/components/horizontal-nav/?platform=web)                       | -         |
+| [`bpk-component-horizontal-nav`](https://backpack.github.io/components/horizontal-nav/?platform=web)                       | 👍        |
 | [`bpk-component-icon`](https://backpack.github.io/components/icon/?platform=web)                                           | 👍        |
 | [`bpk-component-image`](https://backpack.github.io/components/image/?platform=web)                                         | 👍        |
 | [`bpk-component-infinite-scroll`](https://backpack.github.io/components/infinite-scroll/?platform=web)                     | -         |
