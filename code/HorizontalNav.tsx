@@ -19,6 +19,7 @@ export function HorizontalNav(props) {
         spaceAround,
 
         // Event properties
+        onChange,
         onTab1Click,
         onTab2Click,
         onTab3Click,
@@ -33,16 +34,16 @@ export function HorizontalNav(props) {
 
     // Object with item data
     const allItems = [
-        { text: items[0], event: onTab1Click },
-        { text: items[1], event: onTab2Click },
-        { text: items[2], event: onTab3Click },
-        { text: items[3], event: onTab4Click },
-        { text: items[4], event: onTab5Click },
-        { text: items[5], event: onTab6Click },
-        { text: items[6], event: onTab7Click },
-        { text: items[7], event: onTab8Click },
-        { text: items[8], event: onTab9Click },
-        { text: items[9], event: onTab10Click },
+        { index: 0, text: items[0], event: onTab1Click },
+        { index: 1, text: items[1], event: onTab2Click },
+        { index: 2, text: items[2], event: onTab3Click },
+        { index: 3, text: items[3], event: onTab4Click },
+        { index: 4, text: items[4], event: onTab5Click },
+        { index: 5, text: items[5], event: onTab6Click },
+        { index: 6, text: items[6], event: onTab7Click },
+        { index: 7, text: items[7], event: onTab8Click },
+        { index: 8, text: items[8], event: onTab9Click },
+        { index: 9, text: items[9], event: onTab10Click },
     ].slice(0, items.length)
 
     const getSelection = () =>
@@ -53,6 +54,8 @@ export function HorizontalNav(props) {
     React.useEffect(() => setSelected(getSelection()), [_selectedItem])
 
     const handleClick = (item) => {
+        onChange && onChange(item.index)
+        // Don't change active tab when using in combination with a transition
         !item.event && setSelected(item.text)
         item.event && item.event()
     }
@@ -89,6 +92,7 @@ HorizontalNav.defaultProps = {
     spaceAround: false,
     showUnderline: true,
     autoScrollToSelected: false,
+    onChange: () => null,
 }
 
 addPropertyControls(HorizontalNav, {

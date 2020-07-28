@@ -16608,37 +16608,37 @@
                   "value" : "Tab 3"
                 },
                 {
-                  "enabled" : true,
+                  "enabled" : false,
                   "type" : "string",
                   "value" : "Tab 4"
                 },
                 {
-                  "enabled" : true,
+                  "enabled" : false,
                   "type" : "string",
                   "value" : "Tab 5"
                 },
                 {
-                  "enabled" : true,
+                  "enabled" : false,
                   "type" : "string",
                   "value" : "Tab 6"
                 },
                 {
-                  "enabled" : true,
+                  "enabled" : false,
                   "type" : "string",
                   "value" : "Tab 7"
                 },
                 {
-                  "enabled" : true,
+                  "enabled" : false,
                   "type" : "string",
                   "value" : "Tab 8"
                 },
                 {
-                  "enabled" : true,
+                  "enabled" : false,
                   "type" : "string",
                   "value" : "Tab 9"
                 },
                 {
-                  "enabled" : true,
+                  "enabled" : false,
                   "type" : "string",
                   "value" : "Tab 10"
                 }
@@ -16650,55 +16650,16 @@
 
               ],
               "onTab10Click" : [
-                {
-                  "actionIdentifier" : "framer\/useNavigate",
-                  "controls" : {
-                    "animation" : {
-                      "type" : "transition",
-                      "value" : {
-                        "damping" : 60,
-                        "delay" : 0,
-                        "duration" : 0.29999999999999999,
-                        "ease" : [
-                          0.44,
-                          0,
-                          0.56000000000000005,
-                          1
-                        ],
-                        "mass" : 1,
-                        "stiffness" : 500,
-                        "type" : "spring"
-                      }
-                    },
-                    "appearsFrom" : {
-                      "type" : "segmentedenum",
-                      "value" : "right"
-                    },
-                    "backdropColor" : {
-                      "type" : "color",
-                      "value" : "rgba(4,4,15,.4)"
-                    },
-                    "target" : {
-                      "type" : "componentinstance",
-                      "value" : "mt5SoYdWi"
-                    },
-                    "transition" : {
-                      "type" : "enum",
-                      "value" : "magicMotion"
-                    },
-                    "type" : {
-                      "type" : "segmentedenum",
-                      "value" : "next"
-                    }
-                  },
-                  "identifier" : "867998d9-ba3c-4e54-bfd5-c6c651c34bb7"
-                }
+
               ],
               "showUnderline" : true,
               "spaceAround" : false,
               "type" : "default"
             },
-            "codeOverrideEnabled" : false,
+            "codeOverrideEnabled" : true,
+            "codeOverrideFile" : ".\/Examples.tsx",
+            "codeOverrideIdentifier" : ".\/Examples.tsx_Nav",
+            "codeOverrideName" : "Nav",
             "constraintsLocked" : false,
             "duplicatedFrom" : [
               "b7sk1OycK"
