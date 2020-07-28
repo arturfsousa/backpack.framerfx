@@ -86,6 +86,9 @@ HorizontalNav.defaultProps = {
     items: ["Tab 1", "Tab 2", "Tab 3"],
     type: HORIZONTAL_NAV_TYPES.default,
     _selectedItem: 1,
+    spaceAround: false,
+    showUnderline: true,
+    autoScrollToSelected: false,
 }
 
 addPropertyControls(HorizontalNav, {
@@ -99,7 +102,7 @@ addPropertyControls(HorizontalNav, {
     spaceAround: {
         type: ControlType.Boolean,
         title: "Alignment",
-        defaultValue: true,
+        defaultValue: false,
         enabledTitle: "Justify",
         disabledTitle: "Left",
     },
