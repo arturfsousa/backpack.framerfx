@@ -47,7 +47,8 @@ export function ChipSet(props) {
 }
 
 ChipSet.defaultProps = {
-    height: 36,
+    width: 360,
+    height: 84,
     chipsText: "BCN, CDG, EDI, FCO, JFK, LHR, TXL",
     type: CHIP_TYPES.neutral,
     dismissible: true,
@@ -77,4 +78,4 @@ addPropertyControls(ChipSet, {
     },
 })
 
-ChipSet.defaultName = "Chip Set"
+ChipSet.displayName = "Chip Set"
