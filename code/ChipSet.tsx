@@ -12,6 +12,7 @@ export function ChipSet(props) {
     const { chipsText, onChange, ...rest } = props
 
     const [chips, setChips] = React.useState(getArrayFromText(chipsText))
+    React.useEffect(() => setChips(getArrayFromText(chipsText)), [chipsText])
 
     const handleClose = (index) => {
         const newChips = [...chips]
