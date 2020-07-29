@@ -4,22 +4,9 @@ import { addPropertyControls, ControlType } from "framer"
 // @ts-ignore
 import BpkChip, { CHIP_TYPES } from "backpack-transpiled/bpk-component-chip"
 
-interface Props {
-    height?: number
-    text?: string
-    type?: "neutral" | "primary"
-    dismissible?: boolean
-    onClose?: any
-}
+const chipTypes = Object.keys(CHIP_TYPES)
 
-const defaultProps: Props = {
-    height: 36,
-    text: "Chip",
-    type: CHIP_TYPES.neutral,
-    dismissible: true,
-}
-
-export function Chip(props: Props) {
+export function Chip(props) {
     const { text, onClose, ...rest } = props
 
     const [dismissed, setDismissed] = React.useState(false)
@@ -38,7 +25,12 @@ export function Chip(props: Props) {
     )
 }
 
-Chip.defaultProps = defaultProps
+Chip.defaultProps = {
+    height: 36,
+    text: "Chip",
+    type: CHIP_TYPES.neutral,
+    dismissible: true,
+}
 
 addPropertyControls(Chip, {
     text: {
@@ -48,7 +40,7 @@ addPropertyControls(Chip, {
     type: {
         type: ControlType.Enum,
         title: "Type",
-        options: [CHIP_TYPES.neutral, CHIP_TYPES.primary],
+        options: chipTypes,
         defaultValue: CHIP_TYPES.neutral,
     },
     dismissible: {
