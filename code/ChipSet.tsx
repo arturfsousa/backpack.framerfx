@@ -9,15 +9,17 @@ import BpkChip, { CHIP_TYPES } from "backpack-transpiled/bpk-component-chip"
 const chipTypes = Object.keys(CHIP_TYPES)
 
 export function ChipSet(props) {
-    const { chipsText, onChange, ...rest } = props
+    const { chips, chipsText, onChange, ...rest } = props
 
-    const [chips, setChips] = React.useState(getArrayFromText(chipsText))
-    React.useEffect(() => setChips(getArrayFromText(chipsText)), [chipsText])
+    const getChips = () => chips === null ? getArrayFromText(chipsText) : chips
+
+    const [stateChips, setStateChips] = React.useState(getChips())
+    React.useEffect(() => setStateChips(getChips()), [chipsText, chips])
 
     const handleClose = (index) => {
-        const newChips = [...chips]
+        const newChips = [...stateChips]
         newChips.splice(index, 1)
-        setChips(newChips)
+        setStateChips(newChips)
         onChange && onChange(newChips)
     }
 
@@ -31,7 +33,7 @@ export function ChipSet(props) {
                 margin: "-.375rem",
             }}
         >
-            {chips.map((chip, index) => {
+            {stateChips.map((chip, index) => {
                 return (
                     <BpkChip
                         {...rest}
@@ -54,6 +56,7 @@ ChipSet.defaultProps = {
     type: CHIP_TYPES.neutral,
     dismissible: true,
     onChange: () => null,
+    chips: null,
 }
 
 addPropertyControls(ChipSet, {
