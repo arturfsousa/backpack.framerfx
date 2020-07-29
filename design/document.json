@@ -23890,7 +23890,7 @@
             "codeComponentIdentifier" : ".\/ChipSet.tsx_ChipSet",
             "codeComponentPackageVersion" : "1.74.0",
             "codeComponentProps" : {
-              "chipsText" : "BCN, CDG, EDI, FCO, JFK, LHR, TXL",
+              "chipsText" : "CDG, EDI, FCO, JFK, LHR, TXL",
               "dismissible" : true,
               "type" : "neutral"
             },
