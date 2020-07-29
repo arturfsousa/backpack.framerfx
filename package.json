@@ -19,6 +19,6 @@
 	},
 	"dependencies": {
 		"@framer/framer.default": "^1.74.0",
-		"backpack-transpiled": "^0.0.6"
+		"backpack-transpiled": "^0.0.8"
 	}
 }
