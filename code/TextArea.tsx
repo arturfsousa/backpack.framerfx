@@ -17,6 +17,8 @@ export function TextArea(props) {
         disabled,
         placeholder,
         onChange,
+        onFocus,
+        onBlur,
     } = props
 
     const [value, setValue] = React.useState(props.value)
@@ -25,9 +27,11 @@ export function TextArea(props) {
     React.useEffect(() => setValue(props.value), [props.value])
     React.useEffect(() => setValid(props.valid), [props.valid])
 
-    const handleChange = (event) => {
-        setValue(event.target.value)
-        onChange && onChange(event)
+    const handleChange = (event: React.ChangeEvent) => {
+        const element = event.nativeEvent.target as HTMLTextAreaElement
+        const value = element.value
+        setValue(value)
+        onChange && onChange(value)
     }
 
     const control = (
@@ -37,9 +41,15 @@ export function TextArea(props) {
             value={value}
             valid={valid}
             disabled={disabled}
-            onChange={handleChange}
             placeholder={placeholder}
             style={{ height: _textareaHeight }}
+            onChange={handleChange}
+            onFocus={() => {
+                if (onFocus) onFocus()
+            }}
+            onBlur={() => {
+                if (onBlur) onBlur()
+            }}
         />
     )
 
@@ -148,6 +158,8 @@ addPropertyControls(TextArea, {
         defaultValue: "",
         placeholder: "None",
     },
+    onFocus: { type: ControlType.EventHandler },
+    onBlur: { type: ControlType.EventHandler },
 })
 
 TextArea.displayName = "Text Area"
