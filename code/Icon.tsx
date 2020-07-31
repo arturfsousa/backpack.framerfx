@@ -12,6 +12,7 @@ export function Icon(props) {
         _chosenIcon,
         _searchPhrase,
         _isLarge,
+        _isScaled,
         _tint,
         onClick,
         ...rest
@@ -20,7 +21,24 @@ export function Icon(props) {
     const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
     const Icon = _isLarge ? Icons.lg[iconName] : Icons.sm[iconName]
 
-    return <Icon fill={_tint} onClick={onClick} />
+    const scaledProps = _isScaled
+        ? {
+              viewBox: "0 0 24 24",
+              style: {
+                  width: "100%",
+                  height: "100%",
+              },
+          }
+        : null
+
+    return (
+        <Icon
+            {...rest}
+            {...scaledProps}
+            fill={_tint}
+            onClick={onClick}
+        />
+    )
 }
 
 export function findIcon(_searchPhrase) {
@@ -44,6 +62,7 @@ Icon.defaultProps = {
     _chosenIcon: "flight",
     _searchPhrase: "flight",
     _isLarge: false,
+    _isScaled: false,
     _tint: "#0099ff",
 }
 
@@ -79,6 +98,13 @@ addPropertyControls(Icon, {
         defaultValue: false,
         enabledTitle: "Large",
         disabledTitle: "Small",
+    },
+    _isScaled: {
+        type: ControlType.Boolean,
+        title: "Scale",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
     },
     _tint: {
         title: "Colour",
