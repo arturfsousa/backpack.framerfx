@@ -20406,6 +20406,7 @@
                   "_chosenIcon" : "accessibility",
                   "_isIconSearch" : false,
                   "_isLarge" : false,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20464,6 +20465,7 @@
                   "_chosenIcon" : "account--add",
                   "_isIconSearch" : false,
                   "_isLarge" : false,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20523,6 +20525,7 @@
                   "_chosenIcon" : "add-circle",
                   "_isIconSearch" : false,
                   "_isLarge" : false,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20583,6 +20586,7 @@
                   "_chosenIcon" : "flight",
                   "_isIconSearch" : false,
                   "_isLarge" : false,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20644,6 +20648,7 @@
                   "_chosenIcon" : "gears-manual",
                   "_isIconSearch" : false,
                   "_isLarge" : false,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20779,6 +20784,7 @@
                   "_chosenIcon" : "accessibility",
                   "_isIconSearch" : false,
                   "_isLarge" : true,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20838,6 +20844,7 @@
                   "_chosenIcon" : "account--add",
                   "_isIconSearch" : false,
                   "_isLarge" : true,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20898,6 +20905,7 @@
                   "_chosenIcon" : "add-circle",
                   "_isIconSearch" : false,
                   "_isLarge" : true,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -20959,6 +20967,7 @@
                   "_chosenIcon" : "flight",
                   "_isIconSearch" : false,
                   "_isLarge" : true,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
@@ -21021,6 +21030,7 @@
                   "_chosenIcon" : "gears-manual",
                   "_isIconSearch" : false,
                   "_isLarge" : true,
+                  "_isScaled" : false,
                   "_searchPhrase" : "flight",
                   "_tint" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
                 },
