@@ -21,6 +21,8 @@ export function Select(props) {
         large,
         disabled,
         onChange,
+        onFocus,
+        onBlur,
         ...rest
     } = props
 
@@ -41,9 +43,11 @@ export function Select(props) {
         )
     })
 
-    const handleChange = (event) => {
-        setValue(event.target.value)
-        onChange && onChange(event)
+    const handleChange = (event: React.ChangeEvent) => {
+        const element = event.nativeEvent.target as HTMLSelectElement
+        const value = element.value
+        setValue(value)
+        onChange && onChange(value)
     }
 
     const promptOption =
@@ -63,6 +67,12 @@ export function Select(props) {
             value={value}
             valid={valid}
             onChange={handleChange}
+            onFocus={() => {
+                if (onFocus) onFocus()
+            }}
+            onBlur={() => {
+                if (onBlur) onBlur()
+            }}
         >
             {promptOption}
             {options}
@@ -181,6 +191,9 @@ addPropertyControls(Select, {
         defaultValue: "Please Select",
         placeholder: "None",
     },
+    onChange: { type: ControlType.EventHandler },
+    onFocus: { type: ControlType.EventHandler },
+    onBlur: { type: ControlType.EventHandler },
 })
 
 function optionsFromText(text) {
