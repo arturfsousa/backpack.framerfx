@@ -35,6 +35,10 @@ export function Autosuggest(props) {
         validationMessage,
         disabled,
         onChange,
+        onSuggestionSelected,
+        onFocus,
+        onBlur,
+        onSubmit,
     } = props
 
     const [value, setValue] = React.useState(props.value)
@@ -61,7 +65,7 @@ export function Autosuggest(props) {
 
     const handleChange = (event, { newValue }) => {
         setValue(newValue)
-        onChange && onChange(event)
+        onChange && onChange(newValue)
     }
 
     const onSuggestionsFetchRequested = ({ value }) =>
@@ -75,6 +79,17 @@ export function Autosuggest(props) {
         placeholder: prompt,
         value,
         onChange: handleChange,
+        onFocus: () => {
+            if (onFocus) onFocus()
+        },
+        onBlur: () => {
+            if (onBlur) onBlur()
+        },
+        onKeyDown: (e) => {
+            if (e.keyCode === 13) {
+                if (onSubmit) onSubmit()
+            }
+        },
     }
 
     const disabledInput = (
@@ -90,6 +105,9 @@ export function Autosuggest(props) {
 
     const autosuggest = (
         <BpkAutosuggest
+            onSuggestionSelected={() => {
+                if (onSuggestionSelected) onSuggestionSelected()
+            }}
             suggestions={suggestions}
             onSuggestionsFetchRequested={onSuggestionsFetchRequested}
             onSuggestionsClearRequested={onSuggestionsClearRequested}
@@ -120,6 +138,7 @@ export function Autosuggest(props) {
 Autosuggest.defaultProps = {
     height: 36,
     width: 240,
+    _isFieldSet: false,
     disabled: false,
     value: "",
     prompt: "Type something",
@@ -207,6 +226,10 @@ addPropertyControls(Autosuggest, {
         defaultValue: "Type something",
         placeholder: "None",
     },
+    onSubmit: { type: ControlType.EventHandler },
+    onSuggestionSelected: { type: ControlType.EventHandler },
+    onFocus: { type: ControlType.EventHandler },
+    onBlur: { type: ControlType.EventHandler },
 })
 
 function optionsFromText(text) {
