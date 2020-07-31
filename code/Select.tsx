@@ -87,6 +87,7 @@ export function Select(props) {
 Select.defaultProps = {
     height: 36,
     width: 240,
+    _isFieldSet: false,
     disabled: false,
     value: "",
     prompt: "Please Select",

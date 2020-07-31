@@ -87,7 +87,7 @@ export function Input(props) {
 Input.defaultProps = {
     height: 36,
     width: 240,
-    _isFieldSet: true,
+    _isFieldSet: false,
     valid: null,
     label: "Label",
     placeholder: "Country, city or airport",
