@@ -23,6 +23,9 @@ export function Input(props) {
         clearButtonMode,
         placeholder,
         onChange,
+        onSubmit,
+        onFocus,
+        onBlur,
     } = props
 
     const [value, setValue] = React.useState(props.value)
@@ -31,13 +34,26 @@ export function Input(props) {
     React.useEffect(() => setValue(props.value), [props.value])
     React.useEffect(() => setValid(props.valid), [props.valid])
 
-    const handleChange = (event) => {
-        setValue(event.target.value)
-        onChange && onChange(event)
+    const handleChange = (event: React.ChangeEvent) => {
+        const element = event.nativeEvent.target as HTMLInputElement
+        const value = element.value
+        setValue(value)
+        onChange && onChange(value)
     }
 
     const control = (
         <BpkInput
+            onKeyDown={(e) => {
+                if (e.keyCode === 13) {
+                    if (onSubmit) onSubmit()
+                }
+            }}
+            onFocus={() => {
+                if (onFocus) onFocus()
+            }}
+            onBlur={() => {
+                if (onBlur) onBlur()
+            }}
             id={label}
             type={type}
             large={large}
@@ -71,7 +87,7 @@ export function Input(props) {
 Input.defaultProps = {
     height: 36,
     width: 240,
-    isField: true,
+    _isFieldSet: false,
     valid: null,
     label: "Label",
     placeholder: "Country, city or airport",
@@ -174,4 +190,7 @@ addPropertyControls(Input, {
         defaultValue: "",
         placeholder: "None",
     },
+    onSubmit: { type: ControlType.EventHandler },
+    onFocus: { type: ControlType.EventHandler },
+    onBlur: { type: ControlType.EventHandler },
 })
