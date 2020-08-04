@@ -1,35 +1,61 @@
 import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
-// @ts-ignore
-import BpkChip, { CHIP_TYPES } from "backpack-transpiled/bpk-component-chip"
+import BpkSelectableChip, {
+    BpkDismissibleChip,
+    CHIP_TYPES,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-chip"
 
 const chipTypes = Object.keys(CHIP_TYPES)
 
 export function Chip(props) {
-    const { text, onClose, ...rest } = props
+    const { _isSelectable, _isntSelected, text, onClick, ...rest } = props
 
-    const [dismissed, setDismissed] = React.useState(false)
+    const [clicked, setClicked] = React.useState(_isSelectable && !_isntSelected)
+    React.useEffect(() => setClicked(_isSelectable && !_isntSelected), [_isSelectable, _isntSelected])
 
-    const handleClose = () => {
-        setDismissed(true)
-        onClose && onClose()
+    const handleClick = () => {
+        setClicked(!clicked)
+        onClick && onClick()
     }
 
-    return (
-        <div style={dismissed ? { display: "none" } : {display: "inline-block"}}>
-            <BpkChip {...rest} onClose={handleClose}>
+    if (_isSelectable) {
+        return (
+            <BpkSelectableChip
+                {...rest}
+                accessibilityLabel="Toggle"
+                selected={clicked}
+                onClick={handleClick}
+            >
                 {text}
-            </BpkChip>
-        </div>
-    )
+            </BpkSelectableChip>
+        )
+    } else {
+        return (
+            <div
+                style={
+                    clicked
+                        ? { display: "none" }
+                        : { display: "inline-block" }
+                }
+            >
+                <BpkDismissibleChip
+                    {...rest}
+                    accessibilityLabel="Close"
+                    onClick={handleClick}
+                >
+                    {text}
+                </BpkDismissibleChip>
+            </div>
+        )
+    }
 }
 
 Chip.defaultProps = {
     height: 36,
     text: "Chip",
-    type: CHIP_TYPES.neutral,
-    dismissible: true,
+    type: CHIP_TYPES.primary,
 }
 
 addPropertyControls(Chip, {
@@ -41,16 +67,24 @@ addPropertyControls(Chip, {
         type: ControlType.Enum,
         title: "Type",
         options: chipTypes,
-        defaultValue: CHIP_TYPES.neutral,
+        defaultValue: Chip.defaultProps.type,
     },
-    dismissible: {
+    _isSelectable: {
         type: ControlType.Boolean,
-        title: "Dismissible",
+        title: "Action",
         defaultValue: true,
-        enabledTitle: "Yes",
-        disabledTitle: "No",
+        enabledTitle: "Select",
+        disabledTitle: "Dismiss",
     },
-    onClose: {
+    _isntSelected: {
+        type: ControlType.Boolean,
+        title: "State",
+        defaultValue: true,
+        enabledTitle: "Default",
+        disabledTitle: "Selected",
+        hidden: ({ _isSelectable }) => !_isSelectable,
+    },
+    onClick: {
         type: ControlType.EventHandler,
     },
 })

@@ -1,20 +1,79 @@
 import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
+import BpkSelectableChip, {
+    BpkDismissibleChip,
+    CHIP_TYPES,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-chip"
+
 import { getArrayFromText } from "./lib/getArrayFromText"
 
-// @ts-ignore
-import BpkChip, { CHIP_TYPES } from "backpack-transpiled/bpk-component-chip"
+function getArray(array, text) {
+    return array === null ? getArrayFromText(text) : array
+}
 
 const chipTypes = Object.keys(CHIP_TYPES)
 
+const style: React.CSSProperties = {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "flex-start",
+    alignContent: "start",
+    margin: "-.375rem",
+}
+
 export function ChipSet(props) {
+    const { _areSelectable, ...rest } = props
+
+    if (_areSelectable) {
+        return <SelectableChipSet {...rest} />
+    } else {
+        return <DismissableChipSet {...rest} />
+    }
+}
+
+function SelectableChipSet(props) {
     const { chips, chipsText, onChange, ...rest } = props
 
-    const getChips = () => chips === null ? getArrayFromText(chipsText) : chips
+    const _chips = getArray(chips, chipsText)
 
-    const [stateChips, setStateChips] = React.useState(getChips())
-    React.useEffect(() => setStateChips(getChips()), [chipsText, chips])
+    return (
+        <div style={style}>
+            {_chips.map((chip, index) => {
+                const [selected, setSelected] = React.useState(false)
+                const handleClick = () => {
+                    const newState = !selected
+                    setSelected(newState)
+                    onChange && onChange({ index: index, selected: newState })
+                }
+                return (
+                    <BpkSelectableChip
+                        {...rest}
+                        key={index}
+                        accessibilityLabel="Toggle"
+                        selected={selected}
+                        onClick={handleClick}
+                        style={{ margin: ".375rem" }}
+                    >
+                        {chip}
+                    </BpkSelectableChip>
+                )
+            })}
+        </div>
+    )
+}
+
+function DismissableChipSet(props) {
+    const { chips, chipsText, onChange, ...rest } = props
+
+    const [stateChips, setStateChips] = React.useState(
+        getArray(chips, chipsText)
+    )
+    React.useEffect(() => setStateChips(getArray(chips, chipsText)), [
+        chips,
+        chipsText,
+    ])
 
     const handleClose = (index) => {
         const newChips = [...stateChips]
@@ -24,25 +83,18 @@ export function ChipSet(props) {
     }
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "flex-start",
-                alignContent: "start",
-                margin: "-.375rem",
-            }}
-        >
+        <div style={style}>
             {stateChips.map((chip, index) => {
                 return (
-                    <BpkChip
+                    <BpkDismissibleChip
                         {...rest}
                         key={index}
-                        onClose={() => handleClose(index)}
+                        accessibilityLabel="Close"
+                        onClick={() => handleClose(index)}
                         style={{ margin: ".375rem" }}
                     >
                         {chip}
-                    </BpkChip>
+                    </BpkDismissibleChip>
                 )
             })}
         </div>
@@ -53,8 +105,8 @@ ChipSet.defaultProps = {
     width: 360,
     height: 84,
     chipsText: "BCN, CDG, EDI, FCO, JFK, LHR, TXL",
-    type: CHIP_TYPES.neutral,
-    dismissible: true,
+    type: CHIP_TYPES.primary,
+    _areSelectable: false,
     onChange: () => null,
     chips: null,
 }
@@ -71,14 +123,14 @@ addPropertyControls(ChipSet, {
         type: ControlType.Enum,
         title: "Type",
         options: chipTypes,
-        defaultValue: CHIP_TYPES.neutral,
+        defaultValue: ChipSet.defaultProps.type,
     },
-    dismissible: {
+    _areSelectable: {
         type: ControlType.Boolean,
-        title: "Dismissible",
-        defaultValue: true,
-        enabledTitle: "Yes",
-        disabledTitle: "No",
+        title: "Action",
+        defaultValue: false,
+        enabledTitle: "Select",
+        disabledTitle: "Dismiss",
     },
 })
 
