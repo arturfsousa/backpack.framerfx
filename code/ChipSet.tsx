@@ -1,20 +1,115 @@
 import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
-import { getArrayFromText } from "./lib/getArrayFromText"
+import BpkSelectableChip, {
+    BpkDismissibleChip,
+    CHIP_TYPES,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-chip"
 
 // @ts-ignore
-import BpkChip, { CHIP_TYPES } from "backpack-transpiled/bpk-component-chip"
+import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 
+import { findIcon } from "./Icon"
+import { indentTitle } from "./lib/indentTitle"
+import { getArrayFromText } from "./lib/getArrayFromText"
+
+function getArray(array, text) {
+    return array === null ? getArrayFromText(text) : array
+}
+
+const iconNames = Object.keys(Icons.sm)
 const chipTypes = Object.keys(CHIP_TYPES)
 
+const style: React.CSSProperties = {
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "flex-start",
+    alignContent: "start",
+    margin: "-.375rem",
+}
+
 export function ChipSet(props) {
+    const {
+        _selectableIconPosition,
+        _isDismissibleWithoutIcon,
+        _isIconSearch,
+        _chosenIcon,
+        _searchPhrase,
+        _areSelectable,
+        ...rest
+    } = props
+
+    const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
+    const Icon = Icons.sm[iconName]
+
+    if (_areSelectable) {
+        const leadingAccessoryView =
+            _selectableIconPosition === "left" ? <Icon /> : null
+
+        const trailingAccessoryView =
+            _selectableIconPosition === "right" ? <Icon /> : null
+
+        return (
+            <SelectableChipSet
+                {...rest}
+                leadingAccessoryView={leadingAccessoryView}
+                trailingAccessoryView={trailingAccessoryView}
+            />
+        )
+    } else {
+        const leadingAccessoryView = _isDismissibleWithoutIcon ? null : <Icon />
+
+        return (
+            <DismissableChipSet
+                {...rest}
+                leadingAccessoryView={leadingAccessoryView}
+            />
+        )
+    }
+}
+
+function SelectableChipSet(props) {
     const { chips, chipsText, onChange, ...rest } = props
 
-    const getChips = () => chips === null ? getArrayFromText(chipsText) : chips
+    const _chips = getArray(chips, chipsText)
 
-    const [stateChips, setStateChips] = React.useState(getChips())
-    React.useEffect(() => setStateChips(getChips()), [chipsText, chips])
+    return (
+        <div style={style}>
+            {_chips.map((chip, index) => {
+                const [selected, setSelected] = React.useState(false)
+                const handleClick = () => {
+                    const newState = !selected
+                    setSelected(newState)
+                    onChange && onChange({ index: index, selected: newState })
+                }
+                return (
+                    <BpkSelectableChip
+                        {...rest}
+                        key={index}
+                        accessibilityLabel="Toggle"
+                        selected={selected}
+                        onClick={handleClick}
+                        style={{ margin: ".375rem" }}
+                    >
+                        {chip}
+                    </BpkSelectableChip>
+                )
+            })}
+        </div>
+    )
+}
+
+function DismissableChipSet(props) {
+    const { chips, chipsText, onChange, ...rest } = props
+
+    const [stateChips, setStateChips] = React.useState(
+        getArray(chips, chipsText)
+    )
+    React.useEffect(() => setStateChips(getArray(chips, chipsText)), [
+        chips,
+        chipsText,
+    ])
 
     const handleClose = (index) => {
         const newChips = [...stateChips]
@@ -24,25 +119,18 @@ export function ChipSet(props) {
     }
 
     return (
-        <div
-            style={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "flex-start",
-                alignContent: "start",
-                margin: "-.375rem",
-            }}
-        >
+        <div style={style}>
             {stateChips.map((chip, index) => {
                 return (
-                    <BpkChip
+                    <BpkDismissibleChip
                         {...rest}
                         key={index}
-                        onClose={() => handleClose(index)}
+                        accessibilityLabel="Close"
+                        onClick={() => handleClose(index)}
                         style={{ margin: ".375rem" }}
                     >
                         {chip}
-                    </BpkChip>
+                    </BpkDismissibleChip>
                 )
             })}
         </div>
@@ -53,8 +141,13 @@ ChipSet.defaultProps = {
     width: 360,
     height: 84,
     chipsText: "BCN, CDG, EDI, FCO, JFK, LHR, TXL",
-    type: CHIP_TYPES.neutral,
-    dismissible: true,
+    type: CHIP_TYPES.primary,
+    _areSelectable: false,
+    _selectableIconPosition: null,
+    _isDismissibleWithoutIcon: true,
+    _isIconSearch: false,
+    _chosenIcon: "flight",
+    _searchPhrase: "flight",
     onChange: () => null,
     chips: null,
 }
@@ -71,14 +164,84 @@ addPropertyControls(ChipSet, {
         type: ControlType.Enum,
         title: "Type",
         options: chipTypes,
-        defaultValue: CHIP_TYPES.neutral,
+        defaultValue: ChipSet.defaultProps.type,
     },
-    dismissible: {
+    _areSelectable: {
         type: ControlType.Boolean,
-        title: "Dismissible",
+        title: "Action",
+        defaultValue: false,
+        enabledTitle: "Select",
+        disabledTitle: "Dismiss",
+    },
+    // Icon Controls
+    _selectableIconPosition: {
+        type: ControlType.Enum,
+        title: "Icon",
+        defaultValue: null,
+        optionTitles: ["None", "Left", "Right"],
+        options: [null, "left", "right"],
+        displaySegmentedControl: true,
+        hidden: ({ _areSelectable }) => !_areSelectable,
+    },
+    _isDismissibleWithoutIcon: {
+        type: ControlType.Boolean,
+        title: "Icon",
         defaultValue: true,
-        enabledTitle: "Yes",
-        disabledTitle: "No",
+        enabledTitle: "None",
+        disabledTitle: "Left",
+        hidden: ({ _areSelectable }) => _areSelectable,
+    },
+    _isIconSearch: {
+        type: ControlType.Boolean,
+        title: indentTitle("Find Icon"),
+        defaultValue: false,
+        enabledTitle: "Search",
+        disabledTitle: "Choose",
+        hidden({
+            _areSelectable,
+            _selectableIconPosition,
+            _isDismissibleWithoutIcon,
+        }) {
+            const hasIcon =
+                (_areSelectable && _selectableIconPosition !== null) ||
+                (!_areSelectable && !_isDismissibleWithoutIcon)
+            return !hasIcon
+        },
+    },
+    _chosenIcon: {
+        type: ControlType.Enum,
+        title: indentTitle("Icon Name"),
+        defaultValue: "flight",
+        options: iconNames,
+        optionTitles: iconNames.map((key) => Icons.sm[key]),
+        hidden({
+            _isIconSearch,
+            _areSelectable,
+            _selectableIconPosition,
+            _isDismissibleWithoutIcon,
+        }) {
+            const hasIcon =
+                (_areSelectable && _selectableIconPosition !== null) ||
+                (!_areSelectable && !_isDismissibleWithoutIcon)
+            return _isIconSearch || !hasIcon
+        },
+    },
+    _searchPhrase: {
+        type: ControlType.String,
+        title: indentTitle("Icon Name"),
+        defaultValue: "flight",
+        placeholder: "None",
+        hidden({
+            _isIconSearch,
+            _areSelectable,
+            _selectableIconPosition,
+            _isDismissibleWithoutIcon,
+        }) {
+            const hasIcon =
+                (_areSelectable && _selectableIconPosition !== null) ||
+                (!_areSelectable && !_isDismissibleWithoutIcon)
+            return !_isIconSearch || !hasIcon
+        },
     },
 })
 
