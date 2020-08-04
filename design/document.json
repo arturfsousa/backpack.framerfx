@@ -22796,7 +22796,7 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : 0,
-            "centerAnchorX" : 0.17894736842105263,
+            "centerAnchorX" : 0.19707602339181288,
             "centerAnchorY" : 0.65165876777251186,
             "children" : [
               {
@@ -22812,14 +22812,19 @@
                     "__class" : "CodeComponentNode",
                     "aspectRatio" : null,
                     "bottom" : 0,
-                    "centerAnchorX" : 0.12267657992565056,
+                    "centerAnchorX" : 0.10784313725490197,
                     "centerAnchorY" : 0.5,
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "ppe",
+                      "_isDismissibleWithoutIcon" : false,
+                      "_isIconSearch" : true,
                       "_isntSelected" : true,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "help",
+                      "_selectableIconPosition" : null,
                       "text" : "One",
                       "type" : "primary"
                     },
@@ -22869,14 +22874,19 @@
                     "__class" : "CodeComponentNode",
                     "aspectRatio" : null,
                     "bottom" : 0,
-                    "centerAnchorX" : 0.4107806691449814,
+                    "centerAnchorX" : 0.40032679738562094,
                     "centerAnchorY" : 0.5,
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "flight",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : "left",
                       "text" : "Two",
                       "type" : "primary"
                     },
@@ -22920,7 +22930,7 @@
                     "rotation" : 0,
                     "top" : 0,
                     "visible" : true,
-                    "width" : 65,
+                    "width" : 89,
                     "widthType" : 0
                   },
                   {
@@ -22933,8 +22943,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : false,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Three",
                       "type" : "primary"
                     },
@@ -23064,8 +23079,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "One",
                       "type" : "success"
                     },
@@ -23116,14 +23136,19 @@
                     "__class" : "CodeComponentNode",
                     "aspectRatio" : null,
                     "bottom" : 0,
-                    "centerAnchorX" : 0.4107806691449814,
+                    "centerAnchorX" : 0.40032679738562094,
                     "centerAnchorY" : 0.5,
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "flight",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : "left",
                       "text" : "Two",
                       "type" : "success"
                     },
@@ -23168,7 +23193,7 @@
                     "rotation" : 0,
                     "top" : 0,
                     "visible" : true,
-                    "width" : 65,
+                    "width" : 89,
                     "widthType" : 0
                   },
                   {
@@ -23181,8 +23206,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : false,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Three",
                       "type" : "success"
                     },
@@ -23315,8 +23345,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "One",
                       "type" : "light"
                     },
@@ -23367,14 +23402,19 @@
                     "__class" : "CodeComponentNode",
                     "aspectRatio" : null,
                     "bottom" : 0,
-                    "centerAnchorX" : 0.4107806691449814,
+                    "centerAnchorX" : 0.40032679738562094,
                     "centerAnchorY" : 0.5,
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : true,
                       "_isntSelected" : true,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "flight",
+                      "_selectableIconPosition" : "left",
                       "text" : "Two",
                       "type" : "light"
                     },
@@ -23419,7 +23459,7 @@
                     "rotation" : 0,
                     "top" : 0,
                     "visible" : true,
-                    "width" : 65,
+                    "width" : 89,
                     "widthType" : 0
                   },
                   {
@@ -23432,8 +23472,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : false,
                       "_isSelectable" : true,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Three",
                       "type" : "light"
                     },
@@ -23566,8 +23611,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : true,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "One",
                       "type" : "primary"
                     },
@@ -23618,14 +23668,19 @@
                     "__class" : "CodeComponentNode",
                     "aspectRatio" : null,
                     "bottom" : 0,
-                    "centerAnchorX" : 0.51041666666666663,
+                    "centerAnchorX" : 0.51797385620915037,
                     "centerAnchorY" : 0.5,
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "flight",
+                      "_isDismissibleWithoutIcon" : false,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Two",
                       "type" : "primary"
                     },
@@ -23666,11 +23721,11 @@
                     "radiusPerCorner" : false,
                     "radiusTopLeft" : 0,
                     "radiusTopRight" : 0,
-                    "right" : 73,
+                    "right" : 91,
                     "rotation" : 0,
                     "top" : 0,
                     "visible" : true,
-                    "width" : 89,
+                    "width" : 113,
                     "widthType" : 0
                   },
                   {
@@ -23683,8 +23738,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Three",
                       "type" : "primary"
                     },
@@ -23817,8 +23877,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "One",
                       "type" : "success"
                     },
@@ -23870,14 +23935,19 @@
                     "__class" : "CodeComponentNode",
                     "aspectRatio" : null,
                     "bottom" : 0,
-                    "centerAnchorX" : 0.51041666666666663,
+                    "centerAnchorX" : 0.51797385620915037,
                     "centerAnchorY" : 0.5,
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "flight",
+                      "_isDismissibleWithoutIcon" : false,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Two",
                       "type" : "success"
                     },
@@ -23919,11 +23989,11 @@
                     "radiusPerCorner" : false,
                     "radiusTopLeft" : 0,
                     "radiusTopRight" : 0,
-                    "right" : 73,
+                    "right" : 91,
                     "rotation" : 0,
                     "top" : 0,
                     "visible" : true,
-                    "width" : 89,
+                    "width" : 113,
                     "widthType" : 0
                   },
                   {
@@ -23936,8 +24006,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Three",
                       "type" : "success"
                     },
@@ -24072,8 +24147,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "One",
                       "type" : "light"
                     },
@@ -24125,14 +24205,19 @@
                     "__class" : "CodeComponentNode",
                     "aspectRatio" : null,
                     "bottom" : 0,
-                    "centerAnchorX" : 0.51041666666666663,
+                    "centerAnchorX" : 0.51797385620915037,
                     "centerAnchorY" : 0.5,
                     "clip" : true,
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "flight",
+                      "_isDismissibleWithoutIcon" : false,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Two",
                       "type" : "light"
                     },
@@ -24174,11 +24259,11 @@
                     "radiusPerCorner" : false,
                     "radiusTopLeft" : 0,
                     "radiusTopRight" : 0,
-                    "right" : 73,
+                    "right" : 91,
                     "rotation" : 0,
                     "top" : 0,
                     "visible" : true,
-                    "width" : 89,
+                    "width" : 113,
                     "widthType" : 0
                   },
                   {
@@ -24191,8 +24276,13 @@
                     "codeComponentIdentifier" : ".\/Chip.tsx_Chip",
                     "codeComponentPackageVersion" : "1.74.0",
                     "codeComponentProps" : {
+                      "_chosenIcon" : "plus",
+                      "_isDismissibleWithoutIcon" : true,
+                      "_isIconSearch" : false,
                       "_isntSelected" : true,
                       "_isSelectable" : false,
+                      "_searchPhrase" : "plus",
+                      "_selectableIconPosition" : null,
                       "text" : "Three",
                       "type" : "light"
                     },
@@ -24369,7 +24459,7 @@
             "stackGap" : 24,
             "top" : null,
             "visible" : true,
-            "width" : 306,
+            "width" : 337,
             "widthType" : 0
           },
           {
