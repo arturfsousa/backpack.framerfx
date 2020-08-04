@@ -7,12 +7,18 @@ import BpkSelectableChip, {
     // @ts-ignore
 } from "backpack-transpiled/bpk-component-chip"
 
+// @ts-ignore
+import * as Icons from "backpack-transpiled/bpk-component-icon/all"
+
+import { findIcon } from "./Icon"
+import { indentTitle } from "./lib/indentTitle"
 import { getArrayFromText } from "./lib/getArrayFromText"
 
 function getArray(array, text) {
     return array === null ? getArrayFromText(text) : array
 }
 
+const iconNames = Object.keys(Icons.sm)
 const chipTypes = Object.keys(CHIP_TYPES)
 
 const style: React.CSSProperties = {
@@ -24,12 +30,42 @@ const style: React.CSSProperties = {
 }
 
 export function ChipSet(props) {
-    const { _areSelectable, ...rest } = props
+    const {
+        _selectableIconPosition,
+        _isDismissibleWithoutIcon,
+        _isIconSearch,
+        _chosenIcon,
+        _searchPhrase,
+        _areSelectable,
+        ...rest
+    } = props
+
+    const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
+    const Icon = Icons.sm[iconName]
 
     if (_areSelectable) {
-        return <SelectableChipSet {...rest} />
+        const leadingAccessoryView =
+            _selectableIconPosition === "left" ? <Icon /> : null
+
+        const trailingAccessoryView =
+            _selectableIconPosition === "right" ? <Icon /> : null
+
+        return (
+            <SelectableChipSet
+                {...rest}
+                leadingAccessoryView={leadingAccessoryView}
+                trailingAccessoryView={trailingAccessoryView}
+            />
+        )
     } else {
-        return <DismissableChipSet {...rest} />
+        const leadingAccessoryView = _isDismissibleWithoutIcon ? null : <Icon />
+
+        return (
+            <DismissableChipSet
+                {...rest}
+                leadingAccessoryView={leadingAccessoryView}
+            />
+        )
     }
 }
 
@@ -107,6 +143,11 @@ ChipSet.defaultProps = {
     chipsText: "BCN, CDG, EDI, FCO, JFK, LHR, TXL",
     type: CHIP_TYPES.primary,
     _areSelectable: false,
+    _selectableIconPosition: null,
+    _isDismissibleWithoutIcon: true,
+    _isIconSearch: false,
+    _chosenIcon: "flight",
+    _searchPhrase: "flight",
     onChange: () => null,
     chips: null,
 }
@@ -131,6 +172,76 @@ addPropertyControls(ChipSet, {
         defaultValue: false,
         enabledTitle: "Select",
         disabledTitle: "Dismiss",
+    },
+    // Icon Controls
+    _selectableIconPosition: {
+        type: ControlType.Enum,
+        title: "Icon",
+        defaultValue: null,
+        optionTitles: ["None", "Left", "Right"],
+        options: [null, "left", "right"],
+        displaySegmentedControl: true,
+        hidden: ({ _areSelectable }) => !_areSelectable,
+    },
+    _isDismissibleWithoutIcon: {
+        type: ControlType.Boolean,
+        title: "Icon",
+        defaultValue: true,
+        enabledTitle: "None",
+        disabledTitle: "Left",
+        hidden: ({ _areSelectable }) => _areSelectable,
+    },
+    _isIconSearch: {
+        type: ControlType.Boolean,
+        title: indentTitle("Find Icon"),
+        defaultValue: false,
+        enabledTitle: "Search",
+        disabledTitle: "Choose",
+        hidden({
+            _areSelectable,
+            _selectableIconPosition,
+            _isDismissibleWithoutIcon,
+        }) {
+            const hasIcon =
+                (_areSelectable && _selectableIconPosition !== null) ||
+                (!_areSelectable && !_isDismissibleWithoutIcon)
+            return !hasIcon
+        },
+    },
+    _chosenIcon: {
+        type: ControlType.Enum,
+        title: indentTitle("Icon Name"),
+        defaultValue: "flight",
+        options: iconNames,
+        optionTitles: iconNames.map((key) => Icons.sm[key]),
+        hidden({
+            _isIconSearch,
+            _areSelectable,
+            _selectableIconPosition,
+            _isDismissibleWithoutIcon,
+        }) {
+            const hasIcon =
+                (_areSelectable && _selectableIconPosition !== null) ||
+                (!_areSelectable && !_isDismissibleWithoutIcon)
+            return _isIconSearch || !hasIcon
+        },
+    },
+    _searchPhrase: {
+        type: ControlType.String,
+        title: indentTitle("Icon Name"),
+        defaultValue: "flight",
+        placeholder: "None",
+        hidden({
+            _isIconSearch,
+            _areSelectable,
+            _selectableIconPosition,
+            _isDismissibleWithoutIcon,
+        }) {
+            const hasIcon =
+                (_areSelectable && _selectableIconPosition !== null) ||
+                (!_areSelectable && !_isDismissibleWithoutIcon)
+            return !_isIconSearch || !hasIcon
+        },
     },
 })
 

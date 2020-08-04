@@ -24572,7 +24572,12 @@
             "codeComponentIdentifier" : ".\/ChipSet.tsx_ChipSet",
             "codeComponentPackageVersion" : "1.74.0",
             "codeComponentProps" : {
-              "_areSelectable" : false,
+              "_areSelectable" : true,
+              "_chosenIcon" : "flight",
+              "_isDismissibleWithoutIcon" : false,
+              "_isIconSearch" : false,
+              "_searchPhrase" : "flight",
+              "_selectableIconPosition" : "left",
               "chipsText" : "CDG, EDI, FCO, JFK, LHR, TXL",
               "type" : "success"
             },
