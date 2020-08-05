@@ -20462,7 +20462,7 @@
                 "codeComponentIdentifier" : ".\/Icon.tsx_Icon",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "_chosenIcon" : "account--add",
+                  "_chosenIcon" : "location",
                   "_isIconSearch" : false,
                   "_isLarge" : false,
                   "_isScaled" : false,
@@ -24548,9 +24548,9 @@
                 "os" : "macos 10_15 framerx",
                 "size" : {
                   "height" : 76,
-                  "width" : 170
+                  "width" : 169
                 },
-                "width" : 169
+                "width" : 0
               },
               "entityMap" : {
 
