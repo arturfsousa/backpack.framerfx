@@ -54,7 +54,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-list`](https://backpack.github.io/components/list/?platform=web)                                           | -         |
 | [`bpk-component-mobile-scroll-container`](https://backpack.github.io/components/mobile-scroll-container/?platform=web)     | -         |
 | [`bpk-component-modal`](https://backpack.github.io/components/modal/?platform=web)                                         | -         |
-| [`bpk-component-navigation-bar`](https://backpack.github.io/components/navigation-bar/?platform=web)                       | -         |
+| [`bpk-component-navigation-bar`](https://backpack.github.io/components/navigation-bar/?platform=web)                       | 👍        |
 | [`bpk-component-navigation-stack`](https://backpack.github.io/components/navigation-stack/?platform=web)                   | -         |
 | [`bpk-component-nudger`](https://backpack.github.io/components/nudger/?platform=web)                                       | -         |
 | [`bpk-component-pagination`](https://backpack.github.io/components/pagination/?platform=web)                               | -         |
@@ -74,4 +74,4 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-text`](https://backpack.github.io/components/text/?platform=web)                                           | 👍        |
 | [`bpk-component-textarea`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-textarea)             | 👍        |
 | [`bpk-component-ticket`](https://backpack.github.io/components/ticket/?platform=web)                                       | -         |
-| [`bpk-component-tooltip`](https://backpack.github.io/components/tooltip/?platform=web)                                     | -         |
+| [`bpk-component-tooltip`](https://backpack.github.io/components/tooltip/?platform=web)                                     | 👍        |

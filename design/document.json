@@ -24810,7 +24810,7 @@
             "codeComponentProps" : {
               "padded" : true,
               "placement" : "bottom",
-              "text" : "Tooltip",
+              "text" : "This is my tool tip",
               "type" : "light"
             },
             "codeOverrideEnabled" : false,
