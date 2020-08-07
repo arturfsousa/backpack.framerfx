@@ -27,13 +27,14 @@ export function Tooltip(props) {
 
     const isOnCanvas = RenderTarget.current() === RenderTarget.canvas
 
-    const styleOnCanvas = isOnCanvas
+    const styleOnCanvas: React.CSSProperties = isOnCanvas
         ? {
               background: "rgba(7, 112, 227, .1)",
               border: "1px solid rgba(7, 112, 227, .25)",
               color: "rgba(7, 112, 227, 0.5)",
               fontSize: 10,
               lineHeight: 1,
+              whiteSpace: "nowrap",
           }
         : null
 
