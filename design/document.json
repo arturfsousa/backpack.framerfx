@@ -24682,9 +24682,9 @@
                 }
               ],
               "closeButtonText" : "",
-              "label" : "",
-              "padded" : true,
-              "placement" : "bottom",
+              "label" : "Label",
+              "padded" : false,
+              "placement" : "left",
               "text" : "Popovers"
             },
             "codeOverrideEnabled" : false,
@@ -25104,8 +25104,8 @@
         "radiusBottomRight" : 0,
         "radiusIsRelative" : false,
         "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
+        "radiusTopLeft" : 19,
+        "radiusTopRight" : 20,
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,

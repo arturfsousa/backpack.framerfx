@@ -61,10 +61,12 @@ export function Popover(props) {
 
     const contentStyle = props.padded
         ? {
-              // width - padding - border
-              maxWidth: `calc(${breakpointMobile} - 2 * ${spacingSm} - 2px)`,
+              maxWidth: `calc(${breakpointMobile} - 2px - 2 * ${spacingSm})`,
           }
-        : { borderRadius: borderRadiusSm, maxWidth: breakpointMobile }
+        : {
+              borderRadius: borderRadiusSm,
+              maxWidth: `calc(${breakpointMobile} - 2px)`,
+          }
 
     const relativeChildren = React.Children.map(children, (child) =>
         React.cloneElement(child, {
@@ -84,7 +86,11 @@ export function Popover(props) {
             id="my-tooltip"
             target={
                 <div
-                    style={{ ...styleOnCanvas, height: "100%", cursor: "pointer" }}
+                    style={{
+                        ...styleOnCanvas,
+                        height: "100%",
+                        cursor: "pointer",
+                    }}
                     onClick={() => setIsOpen(true)}
                 >
                     {caption}
