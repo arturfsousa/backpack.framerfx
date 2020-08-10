@@ -35,7 +35,6 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-chip`](https://backpack.github.io/components/chip/?platform=web)                                           | 👍        |
 | [`bpk-component-close-button`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-close-button)     | 👍        |
 | [`bpk-component-code`](https://backpack.github.io/components/code/?platform=web)                                           | -         |
-| [`bpk-component-datatable`](https://backpack.github.io/components/datatable/?platform=web)                                 | -         |
 | [`bpk-component-datepicker`](https://backpack.github.io/components/datepicker/?platform=web)                               | -         |
 | [`bpk-component-description-list`](https://backpack.github.io/components/description-list/?platform=web)                   | -         |
 | [`bpk-component-dialog`](https://backpack.github.io/components/dialog/?platform=web)                                       | -         |
@@ -60,7 +59,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-pagination`](https://backpack.github.io/components/pagination/?platform=web)                               | -         |
 | [`bpk-component-panel`](https://backpack.github.io/components/panel/?platform=web)                                         | 👍        |
 | [`bpk-component-phone-input`](https://backpack.github.io/components/phone-input/?platform=web)                             | -         |
-| [`bpk-component-popover`](https://backpack.github.io/components/popover/?platform=web)                                     | -         |
+| [`bpk-component-popover`](https://backpack.github.io/components/popover/?platform=web)                                     | 👍        |
 | [`bpk-component-progress`](https://backpack.github.io/components/progress/?platform=web)                                   | -         |
 | [`bpk-component-radio`](https://backpack.github.io/components/radio/?platform=web)                                         | 👍        |
 | [`bpk-component-rating`](https://backpack.github.io/components/rating/?platform=web)                                       | -         |
