@@ -84,7 +84,7 @@ export function Popover(props) {
             id="my-tooltip"
             target={
                 <div
-                    style={{ ...styleOnCanvas, height: "100%" }}
+                    style={{ ...styleOnCanvas, height: "100%", cursor: "pointer" }}
                     onClick={() => setIsOpen(true)}
                 >
                     {caption}
