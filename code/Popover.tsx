@@ -22,8 +22,15 @@ import { RenderTarget, addPropertyControls, ControlType } from "framer"
 // @ts-ignore
 import BpkPopover from "backpack-transpiled/bpk-component-popover"
 
+import {
+    borderRadiusSm,
+    spacingSm,
+    breakpointMobile,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-tokens/tokens/base.es6"
+
 export function Popover(props) {
-    const { label, text, closeButtonText, ...rest } = props
+    const { label, text, closeButtonText, children, ...rest } = props
 
     const isOnCanvas = RenderTarget.current() === RenderTarget.canvas
 
@@ -52,6 +59,23 @@ export function Popover(props) {
         </div>
     ) : null
 
+    const contentStyle = props.padded
+        ? {
+              // width - padding - border
+              maxWidth: `calc(${breakpointMobile} - 2 * ${spacingSm} - 2px)`,
+          }
+        : { borderRadius: borderRadiusSm, maxWidth: breakpointMobile }
+
+    const relativeChildren = React.Children.map(children, (child) =>
+        React.cloneElement(child, {
+            position: "relative",
+            style: { ...contentStyle },
+        })
+    )
+
+    const contents =
+        React.Children.count(children) === 0 ? text : relativeChildren
+
     const [isOpen, setIsOpen] = React.useState(false)
 
     return (
@@ -73,7 +97,7 @@ export function Popover(props) {
             isOpen={isOnCanvas ? false : isOpen}
             onClose={() => setIsOpen(false)}
         >
-            {text}
+            {contents}
         </BpkPopover>
     )
 }
@@ -102,6 +126,9 @@ addPropertyControls(Popover, {
         defaultValue: Popover.defaultProps.text,
         displayTextArea: true,
         placeholder: "Enter a message",
+        hidden(props) {
+            return props.children.length > 0
+        },
     },
     closeButtonText: {
         title: "Close Text",
