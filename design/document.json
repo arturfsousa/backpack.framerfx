@@ -24674,11 +24674,18 @@
             "codeComponentIdentifier" : ".\/Popover.tsx_Popover",
             "codeComponentPackageVersion" : "1.74.0",
             "codeComponentProps" : {
+              "children" : [
+                {
+                  "enabled" : true,
+                  "type" : "componentinstance",
+                  "value" : "cyfeyak8h"
+                }
+              ],
               "closeButtonText" : "",
-              "label" : "My Popover",
+              "label" : "",
               "padded" : true,
               "placement" : "bottom",
-              "text" : "Popovers display related content or functionality that is related to a particular element."
+              "text" : "Popovers"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
@@ -24950,6 +24957,161 @@
         "top" : -4554,
         "visible" : true,
         "width" : 150,
+        "widthType" : 0
+      },
+      {
+        "__class" : "FrameNode",
+        "aspectRatio" : null,
+        "blendingEnabled" : 0,
+        "blendingMode" : "normal",
+        "bottom" : null,
+        "centerAnchorX" : 0,
+        "centerAnchorY" : 0,
+        "children" : [
+          {
+            "__class" : "TextNode",
+            "autoSize" : true,
+            "bottom" : null,
+            "centerAnchorX" : 0.50279720279720275,
+            "centerAnchorY" : 0.5,
+            "clip" : true,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : null,
+            "exportOptions" : [
+
+            ],
+            "height" : 27,
+            "heightType" : 0,
+            "id" : "zUC68CFZd",
+            "isTarget" : false,
+            "left" : null,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "cyfeyak8h",
+            "right" : null,
+            "rotation" : 0,
+            "styledText" : {
+              "__class" : "StyledTextDraft",
+              "blocks" : [
+                {
+                  "data" : {
+                    "emptyStyle" : [
+                      "FONT:Inter",
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2",
+                      "COLOR:hsl(0, 0%, 100%)",
+                      "SIZE:23"
+                    ]
+                  },
+                  "depth" : 0,
+                  "entityRanges" : [
+
+                  ],
+                  "inlineStyleRanges" : [
+                    {
+                      "length" : 15,
+                      "offset" : 0,
+                      "style" : "FONT:Inter"
+                    },
+                    {
+                      "length" : 15,
+                      "offset" : 0,
+                      "style" : "LETTERSPACING:0"
+                    },
+                    {
+                      "length" : 15,
+                      "offset" : 0,
+                      "style" : "LINEHEIGHT:1.2"
+                    },
+                    {
+                      "length" : 15,
+                      "offset" : 0,
+                      "style" : "COLOR:hsl(0, 0%, 100%)"
+                    },
+                    {
+                      "length" : 15,
+                      "offset" : 0,
+                      "style" : "SIZE:23"
+                    }
+                  ],
+                  "key" : "1r53e",
+                  "text" : "Popover Content",
+                  "type" : "unstyled"
+                }
+              ],
+              "cached" : {
+                "html" : "<div data-offset-key=\"1r53e-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"1r53e-0-0\" style=\"tab-size:4;font-family:&quot;Inter&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:23px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Popover Content<\/span><\/span><\/div>",
+                "os" : "macos 10_15 framerx",
+                "size" : {
+                  "height" : 27,
+                  "width" : 185
+                },
+                "width" : 0
+              },
+              "entityMap" : {
+
+              }
+            },
+            "textVerticalAlignment" : "top",
+            "top" : null,
+            "visible" : true,
+            "width" : 185,
+            "widthType" : 0
+          }
+        ],
+        "clip" : true,
+        "codeOverrideEnabled" : false,
+        "constraintsLocked" : false,
+        "duplicatedFrom" : null,
+        "exportOptions" : [
+
+        ],
+        "fillColor" : "var(--token-082e4b44-760b-4525-b536-b36671ad2c14, rgb(7, 112, 227)) \/* {\"name\":\"Sky Blue\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+        "fillEnabled" : true,
+        "fillImage" : null,
+        "fillImageOriginalName" : null,
+        "fillImagePixelHeight" : null,
+        "fillImagePixelWidth" : null,
+        "fillImageResize" : "fill",
+        "fillType" : "color",
+        "framePreset" : null,
+        "guidesX" : [
+
+        ],
+        "guidesY" : [
+
+        ],
+        "height" : 173,
+        "heightType" : 0,
+        "id" : "cyfeyak8h",
+        "intrinsicHeight" : null,
+        "intrinsicWidth" : null,
+        "isExternalMaster" : null,
+        "isMaster" : false,
+        "isTarget" : false,
+        "left" : 1854,
+        "locked" : false,
+        "name" : null,
+        "opacity" : 1,
+        "originalid" : null,
+        "parentid" : "BsMOCu9oR",
+        "previewSettings" : null,
+        "radius" : 0,
+        "radiusBottomLeft" : 0,
+        "radiusBottomRight" : 0,
+        "radiusIsRelative" : false,
+        "radiusPerCorner" : false,
+        "radiusTopLeft" : 0,
+        "radiusTopRight" : 0,
+        "replicaInfo" : null,
+        "right" : null,
+        "rotation" : 0,
+        "top" : -3443,
+        "visible" : true,
+        "width" : 715,
         "widthType" : 0
       }
     ],
