@@ -41,7 +41,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-drawer`](https://backpack.github.io/components/drawer/?platform=web)                                       | -         |
 | [`bpk-component-fieldset`](https://backpack.github.io/components/fieldset/?platform=web)                                   | 👍        |
 | [`bpk-component-flare`](https://backpack.github.io/components/flare/?platform=web)                                         | 👍        |
-| [`bpk-component-form-validation`](https://backpack.github.io/components/form-validation/?platform=web)                     | -         |
+| [`bpk-component-form-validation`](https://backpack.github.io/components/form-validation/?platform=web)                     | 👍        |
 | [`bpk-component-grid`](https://backpack.github.io/components/grid/?platform=web)                                           | -         |
 | [`bpk-component-horizontal-nav`](https://backpack.github.io/components/horizontal-nav/?platform=web)                       | 👍        |
 | [`bpk-component-icon`](https://backpack.github.io/components/icon/?platform=web)                                           | 👍        |
