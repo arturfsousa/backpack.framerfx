@@ -34,7 +34,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-checkbox`](https://backpack.github.io/components/checkbox/?platform=web)                                   | 👍        |
 | [`bpk-component-chip`](https://backpack.github.io/components/chip/?platform=web)                                           | 👍        |
 | [`bpk-component-close-button`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-close-button)     | 👍        |
-| [`bpk-component-code`](https://backpack.github.io/components/code/?platform=web)                                           | -         |
+| [`bpk-component-code`](https://backpack.github.io/components/code/?platform=web)                                           | 👍        |
 | [`bpk-component-datepicker`](https://backpack.github.io/components/datepicker/?platform=web)                               | -         |
 | [`bpk-component-description-list`](https://backpack.github.io/components/description-list/?platform=web)                   | -         |
 | [`bpk-component-dialog`](https://backpack.github.io/components/dialog/?platform=web)                                       | -         |
