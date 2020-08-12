@@ -60,7 +60,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-panel`](https://backpack.github.io/components/panel/?platform=web)                                         | 👍        |
 | [`bpk-component-phone-input`](https://backpack.github.io/components/phone-input/?platform=web)                             | -         |
 | [`bpk-component-popover`](https://backpack.github.io/components/popover/?platform=web)                                     | 👍        |
-| [`bpk-component-progress`](https://backpack.github.io/components/progress/?platform=web)                                   | -         |
+| [`bpk-component-progress`](https://backpack.github.io/components/progress/?platform=web)                                   | 👍        |
 | [`bpk-component-radio`](https://backpack.github.io/components/radio/?platform=web)                                         | 👍        |
 | [`bpk-component-rating`](https://backpack.github.io/components/rating/?platform=web)                                       | -         |
 | [`bpk-component-rtl-toggle`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-rtl-toggle)         | 👍        |
