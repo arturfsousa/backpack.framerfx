@@ -41,6 +41,7 @@ const iconNames = Object.keys(Icons.lg)
 export function Button(props) {
     const {
         iconPosition,
+        _isStretched,
         _hasTrailingIcon,
         _isIconSearch,
         _chosenIcon,
@@ -57,6 +58,7 @@ export function Button(props) {
     if (_variant !== "primary") {
         rest[_variant] = true
     }
+    const widthStyle = _isStretched ? { width: "100%" } : null
 
     // Get icon
     const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
@@ -100,6 +102,7 @@ export function Button(props) {
                 icon={<AlignedIcon />}
                 iconDisabled={<AlignedIcon />}
                 iconPosition={iconPosition}
+                style={widthStyle}
                 onClick={handleClickWithDelay}
             >
                 {_label}
@@ -107,7 +110,7 @@ export function Button(props) {
         )
     } else {
         return (
-            <BpkButton {...rest} onClick={onClick}>
+            <BpkButton {...rest} style={widthStyle} onClick={onClick}>
                 {contents}
             </BpkButton>
         )
@@ -161,6 +164,13 @@ addPropertyControls(Button, {
         defaultValue: false,
         enabledTitle: "Large",
         disabledTitle: "Small",
+    },
+    _isStretched: {
+        type: ControlType.Boolean,
+        title: "Width",
+        defaultValue: false,
+        enabledTitle: "100%",
+        disabledTitle: "Auto",
     },
     disabled: {
         type: ControlType.Boolean,
