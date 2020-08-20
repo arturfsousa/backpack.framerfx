@@ -1,6 +1,6 @@
 # Backpack Framer
 
-[Backpack](https://backpack.github.io//?platform=web)     is a collection of design resources, reusable components and guidelines for creating Skyscanner's products.
+[Backpack](https://backpack.github.io//?platform=web) is a collection of design resources, reusable components and guidelines for creating Skyscanner's products.
 
 This is the Backpack package for Framer components.
 
@@ -49,7 +49,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-infinite-scroll`](https://backpack.github.io/components/infinite-scroll/?platform=web)                     | -         |
 | [`bpk-component-input`](https://backpack.github.io/components/input/?platform=web)                                         | 👍        |
 | [`bpk-component-label`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-label)                   | -         |
-| [`bpk-component-link`](https://backpack.github.io/components/link/?platform=web)                                           | -         |
+| [`bpk-component-link`](https://backpack.github.io/components/link/?platform=web)                                           | 👍        |
 | [`bpk-component-list`](https://backpack.github.io/components/list/?platform=web)                                           | -         |
 | [`bpk-component-mobile-scroll-container`](https://backpack.github.io/components/mobile-scroll-container/?platform=web)     | -         |
 | [`bpk-component-modal`](https://backpack.github.io/components/modal/?platform=web)                                         | -         |
