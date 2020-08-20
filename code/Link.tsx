@@ -31,6 +31,7 @@ const largerTextStyleRegex = RegExp("^x+l$")
 interface Props {
     height: number
     alternate?: boolean
+    _textAlign?: "left" | "center" | "right"
     weight?: string
     _weightIfSmaller?: string
     _weightIfLarger?: string
@@ -54,6 +55,7 @@ const defaultProps: Props = {
     textStyle: "base",
     weight: "regular",
     alternate: false,
+    _textAlign: "left",
     onClick: () => null,
 }
 
@@ -64,6 +66,7 @@ export function Link(props: Props) {
         _weightIfSmaller,
         _weightIfLarger,
         alternate,
+        _textAlign,
         onClick,
     } = props
 
@@ -77,11 +80,13 @@ export function Link(props: Props) {
     })
 
     return (
-        <Component>
-            <BpkLink href="#" onClick={onClick} alternate={alternate}>
-                {text}
-            </BpkLink>
-        </Component>
+        <div style={{ textAlign: _textAlign }}>
+            <Component>
+                <BpkLink href="#" onClick={onClick} alternate={alternate}>
+                    {text}
+                </BpkLink>
+            </Component>
+        </div>
     )
 }
 
@@ -137,6 +142,12 @@ addPropertyControls(Link, {
         defaultValue: false,
         enabledTitle: "On Dark",
         disabledTitle: "On Light",
+    },
+    _textAlign: {
+        type: ControlType.SegmentedEnum,
+        options: ["left", "center", "right"],
+        optionTitles: ["Left", "Center", "Right"],
+        title: "Align",
     },
     onClick: {
         type: ControlType.EventHandler,

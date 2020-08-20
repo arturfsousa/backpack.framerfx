@@ -31,6 +31,7 @@ const largerTextStyleRegex = RegExp("^x+l$")
 interface Props {
     height: number
     _color?: "Text Primary" | "Text Secondary" | "Sky White"
+    _textAlign?: "left" | "center" | "right"
     weight?: string
     _weightIfSmaller?: string
     _weightIfLarger?: string
@@ -55,10 +56,17 @@ const defaultProps: Props = {
     tagName: "span",
     weight: "regular",
     _color: "Text Primary",
+    _textAlign: "left",
 }
 
 export function Text(props: Props) {
-    const { text, textStyle, _weightIfSmaller, _weightIfLarger } = props
+    const {
+        text,
+        textStyle,
+        _weightIfSmaller,
+        _weightIfLarger,
+        _textAlign,
+    } = props
 
     const color = colors[props._color]
 
@@ -72,7 +80,7 @@ export function Text(props: Props) {
     })
 
     return (
-        <div style={{ color: color }}>
+        <div style={{ color: color, textAlign: _textAlign }}>
             <Component>{text}</Component>
         </div>
     )
@@ -124,13 +132,6 @@ addPropertyControls(Text, {
             return !largerTextStyleRegex.test(props.textStyle)
         },
     },
-    // weight: {
-    //     type: ControlType.Enum,
-    //     title: "Weight",
-    //     defaultValue: "regular",
-    //     options: weights,
-    //     optionTitles: weights.map((key) => WEIGHT_STYLES[key]),
-    // },
     _color: {
         type: ControlType.Enum,
         title: "Style",
@@ -138,9 +139,10 @@ addPropertyControls(Text, {
         options: ["Text Primary", "Text Secondary", "Sky White"],
         optionTitles: ["Primary", "Secondary", "White"],
     },
-    // tagName: {
-    //     type: ControlType.Enum,
-    //     title: "Text Style",
-    //     options: ["span", "p", "text", "h1", "h2", "h3", "h4", "h5", "h6"],
-    // },
+    _textAlign: {
+        type: ControlType.SegmentedEnum,
+        options: ["left", "center", "right"],
+        optionTitles: ["Left", "Center", "Right"],
+        title: "Align",
+    },
 })
