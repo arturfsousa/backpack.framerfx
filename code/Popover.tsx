@@ -17,7 +17,7 @@
  */
 
 import * as React from "react"
-import { RenderTarget, addPropertyControls, ControlType } from "framer"
+import { Frame, RenderTarget, addPropertyControls, ControlType } from "framer"
 
 // @ts-ignore
 import BpkPopover from "backpack-transpiled/bpk-component-popover"
@@ -30,111 +30,138 @@ import {
 } from "backpack-transpiled/bpk-tokens/tokens/base.es6"
 
 export function Popover(props) {
-    const { label, text, closeButtonText, children, ...rest } = props
-
-    const isOnCanvas = RenderTarget.current() === RenderTarget.canvas
-
-    const styleOnCanvas: React.CSSProperties = isOnCanvas
-        ? {
-              background: "rgba(0, 166, 152, .1)",
-              border: "1px solid rgba(0, 166, 152, .25)",
-              color: "rgba(0, 166, 152, 0.5)",
-              fontSize: 10,
-              lineHeight: 1,
-          }
-        : null
-
-    const caption = isOnCanvas ? (
-        <div
-            style={{
-                position: "relative",
-                top: "-14px",
-                width: "200px",
-                overflow: "hidden",
-                whiteSpace: "nowrap",
-                textOverflow: "ellipsis",
-            }}
-        >
-            {label !== "" ? label : text}
-        </div>
-    ) : null
-
-    const contentStyle = props.padded
-        ? {
-              maxWidth: `calc(${breakpointMobile} - 2px - 2 * ${spacingSm})`,
-          }
-        : {
-              borderRadius: borderRadiusSm,
-              maxWidth: `calc(${breakpointMobile} - 2px)`,
-          }
-
-    const relativeChildren = React.Children.map(children, (child) =>
-        React.cloneElement(child, {
-            position: "relative",
-            style: { ...contentStyle },
-        })
-    )
-
-    const contents =
-        React.Children.count(children) === 0 ? text : relativeChildren
+    const {
+        label,
+        _text,
+        closeButtonText,
+        _isTextContent,
+        _component,
+        target,
+        ...rest
+    } = props
 
     const [isOpen, setIsOpen] = React.useState(false)
 
-    return (
-        <BpkPopover
-            {...rest}
-            id="my-tooltip"
-            target={
-                <div
-                    style={{
-                        ...styleOnCanvas,
-                        height: "100%",
-                        cursor: "pointer",
-                    }}
-                    onClick={() => setIsOpen(true)}
+    if (RenderTarget.current() === RenderTarget.canvas) {
+        const caption = (
+            <div
+                style={{
+                    position: "absolute",
+                    left: 0,
+                    top: "-14px",
+                    maxWidth: "200px",
+                    overflow: "hidden",
+                    color: "rgba(0, 166, 152, 0.5)",
+                    fontSize: 10,
+                    lineHeight: 1,
+                    whiteSpace: "nowrap",
+                    textOverflow: "ellipsis",
+                }}
+            >
+                {label !== "" ? label : _text}
+            </div>
+        )
+
+        return (
+            <>
+                <Frame
+                    size="100%"
+                    background="rgba(0, 166, 152, .1)"
+                    border="1px solid rgba(0, 166, 152, .25)"
                 >
                     {caption}
-                </div>
-            }
-            label={label !== "" ? label : "Label"}
-            labelAsTitle={label !== ""}
-            closeButtonText={closeButtonText !== "" ? closeButtonText : "Close"}
-            closeButtonIcon={closeButtonText === ""}
-            isOpen={isOnCanvas ? false : isOpen}
-            onClose={() => setIsOpen(false)}
-        >
-            {contents}
-        </BpkPopover>
-    )
+                </Frame>
+                {target}
+            </>
+        )
+    } else {
+        const contentStyle = props.padded
+            ? {
+                  maxWidth: `calc(${breakpointMobile} - 2px - 2 * ${spacingSm})`,
+              }
+            : {
+                  borderRadius: borderRadiusSm,
+                  maxWidth: `calc(${breakpointMobile} - 2px)`,
+              }
+
+        const relativeChildren = React.Children.map(_component, (child) =>
+            React.cloneElement(child, {
+                position: "relative",
+                style: { ...contentStyle },
+            })
+        )
+
+        const contents = _isTextContent ? _text : relativeChildren
+
+        return (
+            <BpkPopover
+                {...rest}
+                id="my-tooltip"
+                target={
+                    <div
+                        style={{
+                            height: "100%",
+                            cursor: "pointer",
+                        }}
+                        onClick={() => setIsOpen(true)}
+                    >
+                        {target}
+                    </div>
+                }
+                label={label !== "" ? label : "Label"}
+                labelAsTitle={label !== ""}
+                closeButtonText={
+                    closeButtonText !== "" ? closeButtonText : "Close"
+                }
+                closeButtonIcon={closeButtonText === ""}
+                isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
+            >
+                {contents}
+            </BpkPopover>
+        )
+    }
 }
 
 Popover.defaultProps = {
     height: 36,
     width: 180,
     label: "Label",
-    text:
+    _text:
         "Popovers display content or functionality that is related to a particular element",
     closeButtonText: "Close",
     padded: true,
     placement: "bottom",
+    _component: null,
+    target: null,
 }
 
 addPropertyControls(Popover, {
+    _isTextContent: {
+        title: "Content",
+        type: ControlType.Boolean,
+        defaultValue: true,
+        enabledTitle: "Text",
+        disabledTitle: "Component",
+    },
+    _text: {
+        title: "Text",
+        type: ControlType.String,
+        defaultValue: Popover.defaultProps._text,
+        displayTextArea: true,
+        placeholder: "Enter a message",
+        hidden: ({ _isTextContent }) => !_isTextContent,
+    },
+    _component: {
+        title: "Component",
+        type: ControlType.ComponentInstance,
+        hidden: ({ _isTextContent }) => _isTextContent,
+    },
     label: {
         title: "Label",
         type: ControlType.String,
         defaultValue: Popover.defaultProps.label,
         placeholder: "None",
-    },
-    text: {
-        title: "Text",
-        type: ControlType.String,
-        defaultValue: Popover.defaultProps.text,
-        displayTextArea: true,
-        placeholder: "Enter a message",
-        hidden(props) {
-            return props.children.length > 0
-        },
     },
     closeButtonText: {
         title: "Close Text",
@@ -154,5 +181,9 @@ addPropertyControls(Popover, {
         defaultValue: true,
         enabledTitle: "Yes",
         disabledTitle: "No",
+    },
+    target: {
+        title: "Target",
+        type: ControlType.ComponentInstance,
     },
 })
