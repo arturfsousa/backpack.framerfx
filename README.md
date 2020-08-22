@@ -55,7 +55,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-modal`](https://backpack.github.io/components/modal/?platform=web)                                         | -         |
 | [`bpk-component-navigation-bar`](https://backpack.github.io/components/navigation-bar/?platform=web)                       | 👍        |
 | [`bpk-component-navigation-stack`](https://backpack.github.io/components/navigation-stack/?platform=web)                   | -         |
-| [`bpk-component-nudger`](https://backpack.github.io/components/nudger/?platform=web)                                       | -         |
+| [`bpk-component-nudger`](https://backpack.github.io/components/nudger/?platform=web)                                       | 👍        |
 | [`bpk-component-pagination`](https://backpack.github.io/components/pagination/?platform=web)                               | -         |
 | [`bpk-component-panel`](https://backpack.github.io/components/panel/?platform=web)                                         | 👍        |
 | [`bpk-component-phone-input`](https://backpack.github.io/components/phone-input/?platform=web)                             | -         |
