@@ -27,7 +27,7 @@ import BpkLabel from "backpack-transpiled/bpk-component-label"
 import BpkText from "backpack-transpiled/bpk-component-text"
 // @ts-ignore
 import BpkFormValidation from "backpack-transpiled/bpk-component-form-validation"
-
+// @ts-ignore
 import format = require("date-fns/format")
 const formatDate = (date) => format(date, "DD/MM/YYYY")
 const formatDateFull = (date) => format(date, "do MMMM YYYY")
