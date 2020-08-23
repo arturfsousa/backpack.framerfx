@@ -29,7 +29,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-breadcrumb`](https://backpack.github.io/components/breadcrumb/?platform=web)                               | 👍        |
 | [`bpk-component-breakpoint`](https://backpack.github.io/components/breakpoint/?platform=web)                               | -         |
 | [`bpk-component-button`](https://backpack.github.io/components/button/?platform=web)                                       | 👍        |
-| [`bpk-component-calendar`](https://backpack.github.io/components/calendar/?platform=web)                                   | -         |
+| [`bpk-component-calendar`](https://backpack.github.io/components/calendar/?platform=web)                                   | 👍        |
 | [`bpk-component-card`](https://backpack.github.io/components/card/?platform=web)                                           | 👍        |
 | [`bpk-component-checkbox`](https://backpack.github.io/components/checkbox/?platform=web)                                   | 👍        |
 | [`bpk-component-chip`](https://backpack.github.io/components/chip/?platform=web)                                           | 👍        |
