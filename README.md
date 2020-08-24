@@ -27,7 +27,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-barchart`](https://backpack.github.io/components/barchart/?platform=web)                                   | -         |
 | [`bpk-component-blockquote`](https://backpack.github.io/components/blockquote/?platform=web)                               | 👍        |
 | [`bpk-component-breadcrumb`](https://backpack.github.io/components/breadcrumb/?platform=web)                               | 👍        |
-| [`bpk-component-breakpoint`](https://backpack.github.io/components/breakpoint/?platform=web)                               | -         |
+| [`bpk-component-breakpoint`](https://backpack.github.io/components/breakpoint/?platform=web)                               | 👍        |
 | [`bpk-component-button`](https://backpack.github.io/components/button/?platform=web)                                       | 👍        |
 | [`bpk-component-calendar`](https://backpack.github.io/components/calendar/?platform=web)                                   | 👍        |
 | [`bpk-component-card`](https://backpack.github.io/components/card/?platform=web)                                           | 👍        |
