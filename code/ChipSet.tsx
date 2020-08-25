@@ -54,14 +54,14 @@ export function ChipSet(props) {
         _isIconSearch,
         _chosenIcon,
         _searchPhrase,
-        _areSelectable,
+        _isSelectable,
         ...rest
     } = props
 
     const iconName = _isIconSearch ? findIcon(_searchPhrase) : _chosenIcon
     const Icon = Icons.sm[iconName]
 
-    if (_areSelectable) {
+    if (_isSelectable) {
         const leadingAccessoryView =
             _selectableIconPosition === "left" ? <Icon /> : null
 
@@ -88,7 +88,9 @@ export function ChipSet(props) {
 }
 
 function SelectableChipSet(props) {
-    const { chips, chipsText, onChange, ...rest } = props
+    const { _isRadio, chips, chipsText, onChange, ...rest } = props
+
+    const [radioChoice, setRadioChoice] = React.useState(0)
 
     const _chips = getArray(chips, chipsText)
 
@@ -96,18 +98,24 @@ function SelectableChipSet(props) {
         <div style={style}>
             {_chips.map((chip, index) => {
                 const [selected, setSelected] = React.useState(false)
-                const handleClick = () => {
+                const handleCheck = () => {
                     const newState = !selected
                     setSelected(newState)
                     onChange && onChange({ index: index, selected: newState })
+                }
+                const handleRadio = (index) => {
+                    setRadioChoice(index)
+                    onChange && onChange({ index: index, selected: true })
                 }
                 return (
                     <BpkSelectableChip
                         {...rest}
                         key={index}
                         accessibilityLabel="Toggle"
-                        selected={selected}
-                        onClick={handleClick}
+                        selected={_isRadio ? index === radioChoice : selected}
+                        onClick={
+                            _isRadio ? () => handleRadio(index) : handleCheck
+                        }
                         style={{ margin: ".375rem" }}
                     >
                         {chip}
@@ -160,7 +168,8 @@ ChipSet.defaultProps = {
     height: 84,
     chipsText: "BCN, CDG, EDI, FCO, JFK, LHR, TXL",
     type: CHIP_TYPES.primary,
-    _areSelectable: false,
+    _isSelectable: false,
+    _isRadio: false,
     _selectableIconPosition: null,
     _isDismissibleWithoutIcon: true,
     _isIconSearch: false,
@@ -184,12 +193,20 @@ addPropertyControls(ChipSet, {
         options: chipTypes,
         defaultValue: ChipSet.defaultProps.type,
     },
-    _areSelectable: {
+    _isSelectable: {
         type: ControlType.Boolean,
         title: "Action",
         defaultValue: false,
         enabledTitle: "Select",
         disabledTitle: "Dismiss",
+    },
+    _isRadio: {
+        type: ControlType.Boolean,
+        title: indentTitle("Choice"),
+        defaultValue: false,
+        enabledTitle: "Radio",
+        disabledTitle: "Multiple",
+        hidden: ({ _isSelectable }) => !_isSelectable,
     },
     // Icon Controls
     _selectableIconPosition: {
@@ -199,7 +216,7 @@ addPropertyControls(ChipSet, {
         optionTitles: ["None", "Left", "Right"],
         options: [null, "left", "right"],
         displaySegmentedControl: true,
-        hidden: ({ _areSelectable }) => !_areSelectable,
+        hidden: ({ _isSelectable }) => !_isSelectable,
     },
     _isDismissibleWithoutIcon: {
         type: ControlType.Boolean,
@@ -207,7 +224,7 @@ addPropertyControls(ChipSet, {
         defaultValue: true,
         enabledTitle: "None",
         disabledTitle: "Left",
-        hidden: ({ _areSelectable }) => _areSelectable,
+        hidden: ({ _isSelectable }) => _isSelectable,
     },
     _isIconSearch: {
         type: ControlType.Boolean,
@@ -216,13 +233,13 @@ addPropertyControls(ChipSet, {
         enabledTitle: "Search",
         disabledTitle: "Choose",
         hidden({
-            _areSelectable,
+            _isSelectable,
             _selectableIconPosition,
             _isDismissibleWithoutIcon,
         }) {
             const hasIcon =
-                (_areSelectable && _selectableIconPosition !== null) ||
-                (!_areSelectable && !_isDismissibleWithoutIcon)
+                (_isSelectable && _selectableIconPosition !== null) ||
+                (!_isSelectable && !_isDismissibleWithoutIcon)
             return !hasIcon
         },
     },
@@ -234,13 +251,13 @@ addPropertyControls(ChipSet, {
         optionTitles: iconNames.map((key) => Icons.sm[key]),
         hidden({
             _isIconSearch,
-            _areSelectable,
+            _isSelectable,
             _selectableIconPosition,
             _isDismissibleWithoutIcon,
         }) {
             const hasIcon =
-                (_areSelectable && _selectableIconPosition !== null) ||
-                (!_areSelectable && !_isDismissibleWithoutIcon)
+                (_isSelectable && _selectableIconPosition !== null) ||
+                (!_isSelectable && !_isDismissibleWithoutIcon)
             return _isIconSearch || !hasIcon
         },
     },
@@ -251,13 +268,13 @@ addPropertyControls(ChipSet, {
         placeholder: "None",
         hidden({
             _isIconSearch,
-            _areSelectable,
+            _isSelectable,
             _selectableIconPosition,
             _isDismissibleWithoutIcon,
         }) {
             const hasIcon =
-                (_areSelectable && _selectableIconPosition !== null) ||
-                (!_areSelectable && !_isDismissibleWithoutIcon)
+                (_isSelectable && _selectableIconPosition !== null) ||
+                (!_isSelectable && !_isDismissibleWithoutIcon)
             return !_isIconSearch || !hasIcon
         },
     },
