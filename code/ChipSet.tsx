@@ -28,6 +28,9 @@ import BpkSelectableChip, {
 // @ts-ignore
 import * as Icons from "backpack-transpiled/bpk-component-icon/all"
 
+// @ts-ignore
+import { spacingXs } from "backpack-transpiled/bpk-tokens/tokens/base.es6"
+
 import { findIcon } from "./Icon"
 import { indentTitle } from "./lib/indentTitle"
 import { getArrayFromText } from "./lib/getArrayFromText"
@@ -39,12 +42,22 @@ function getArray(array, text) {
 const iconNames = Object.keys(Icons.sm)
 const chipTypes = Object.keys(CHIP_TYPES)
 
-const style: React.CSSProperties = {
+const containerStyle: React.CSSProperties = {
     display: "flex",
     flexWrap: "wrap",
     alignItems: "flex-start",
     alignContent: "start",
-    margin: "-.375rem",
+    marginLeft: `calc(-${spacingXs}/2)`,
+    marginRight: `calc(-${spacingXs}/2)`,
+    marginTop: `calc(-${spacingXs})`,
+    marginBottom: `calc(-${spacingXs})`,
+}
+
+const chipStyle: React.CSSProperties = {
+    marginLeft: `calc(${spacingXs}/2)`,
+    marginRight: `calc(${spacingXs}/2)`,
+    marginTop: `calc(${spacingXs})`,
+    marginBottom: `calc(${spacingXs})`,
 }
 
 export function ChipSet(props) {
@@ -95,7 +108,7 @@ function SelectableChipSet(props) {
     const _chips = getArray(chips, chipsText)
 
     return (
-        <div style={style}>
+        <div style={containerStyle}>
             {_chips.map((chip, index) => {
                 const [selected, setSelected] = React.useState(false)
                 const handleCheck = () => {
@@ -116,7 +129,7 @@ function SelectableChipSet(props) {
                         onClick={
                             _isRadio ? () => handleRadio(index) : handleCheck
                         }
-                        style={{ margin: ".375rem" }}
+                        style={{ ...chipStyle }}
                     >
                         {chip}
                     </BpkSelectableChip>
@@ -145,7 +158,7 @@ function DismissableChipSet(props) {
     }
 
     return (
-        <div style={style}>
+        <div style={containerStyle}>
             {stateChips.map((chip, index) => {
                 return (
                     <BpkDismissibleChip
@@ -153,7 +166,7 @@ function DismissableChipSet(props) {
                         key={index}
                         accessibilityLabel="Close"
                         onClick={() => handleClose(index)}
-                        style={{ margin: ".375rem" }}
+                        style={{ ...chipStyle }}
                     >
                         {chip}
                     </BpkDismissibleChip>
