@@ -68,7 +68,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-select`](https://backpack.github.io/components/select/?platform=web)                                       | 👍        |
 | [`bpk-component-slider`](https://backpack.github.io/components/slider/?platform=web)                                       | 👍        |
 | [`bpk-component-spinner`](https://backpack.github.io/components/spinner/?platform=web)                                     | 👍        |
-| [`bpk-component-star-rating`](https://backpack.github.io/components/star-rating/?platform=web)                             | -         |
+| [`bpk-component-star-rating`](https://backpack.github.io/components/star-rating/?platform=web)                             | 👍        |
 | [`bpk-component-table`](https://backpack.github.io/components/table/?platform=web)                                         | -         |
 | [`bpk-component-text`](https://backpack.github.io/components/text/?platform=web)                                           | 👍        |
 | [`bpk-component-textarea`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-textarea)             | 👍        |
