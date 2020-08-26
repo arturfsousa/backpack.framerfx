@@ -72,5 +72,5 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-table`](https://backpack.github.io/components/table/?platform=web)                                         | -         |
 | [`bpk-component-text`](https://backpack.github.io/components/text/?platform=web)                                           | 👍        |
 | [`bpk-component-textarea`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-textarea)             | 👍        |
-| [`bpk-component-ticket`](https://backpack.github.io/components/ticket/?platform=web)                                       | -         |
+| [`bpk-component-ticket`](https://backpack.github.io/components/ticket/?platform=web)                                       | 👍        |
 | [`bpk-component-tooltip`](https://backpack.github.io/components/tooltip/?platform=web)                                     | 👍        |
