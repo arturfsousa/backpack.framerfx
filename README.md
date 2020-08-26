@@ -42,7 +42,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-fieldset`](https://backpack.github.io/components/fieldset/?platform=web)                                   | 👍        |
 | [`bpk-component-flare`](https://backpack.github.io/components/flare/?platform=web)                                         | 👍        |
 | [`bpk-component-form-validation`](https://backpack.github.io/components/form-validation/?platform=web)                     | 👍        |
-| [`bpk-component-grid`](https://backpack.github.io/components/grid/?platform=web)                                           | -         |
+| [`bpk-component-grid`](https://backpack.github.io/components/horizontal-grid/?platform=web)                                | -         |
 | [`bpk-component-horizontal-nav`](https://backpack.github.io/components/horizontal-nav/?platform=web)                       | 👍        |
 | [`bpk-component-icon`](https://backpack.github.io/components/icon/?platform=web)                                           | 👍        |
 | [`bpk-component-image`](https://backpack.github.io/components/image/?platform=web)                                         | 👍        |
@@ -56,7 +56,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-navigation-bar`](https://backpack.github.io/components/navigation-bar/?platform=web)                       | 👍        |
 | [`bpk-component-navigation-stack`](https://backpack.github.io/components/navigation-stack/?platform=web)                   | -         |
 | [`bpk-component-nudger`](https://backpack.github.io/components/nudger/?platform=web)                                       | 👍        |
-| [`bpk-component-pagination`](https://backpack.github.io/components/pagination/?platform=web)                               | -         |
+| [`bpk-component-pagination`](https://backpack.github.io/components/pagination/?platform=web)                               | 👍        |
 | [`bpk-component-panel`](https://backpack.github.io/components/panel/?platform=web)                                         | 👍        |
 | [`bpk-component-phone-input`](https://backpack.github.io/components/phone-input/?platform=web)                             | -         |
 | [`bpk-component-popover`](https://backpack.github.io/components/popover/?platform=web)                                     | 👍        |
