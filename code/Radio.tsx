@@ -23,22 +23,10 @@ import { addPropertyControls, ControlType } from "framer"
 import BpkRadio from "backpack-transpiled/bpk-component-radio"
 
 export function Radio(props) {
-    const {
-        name,
-        label,
-        onChange,
-        disabled,
-        valid,
-        // smallLabel,
-        white,
-    } = props
-
-    const [checked, setChecked] = React.useState(props.checked)
-    React.useEffect(() => setChecked(props.checked), [props.checked])
+    const { name, label, onChange, disabled, valid, white } = props
 
     const handleChange = () => {
-        setChecked(!checked)
-        onChange && onChange()
+        onChange && onChange(label)
     }
 
     return (
@@ -46,10 +34,8 @@ export function Radio(props) {
             name={name}
             onChange={handleChange}
             label={label}
-            checked={checked}
             disabled={disabled}
             valid={valid}
-            // smallLabel={smallLabel}
             white={white}
         />
     )
@@ -62,7 +48,6 @@ Radio.defaultProps = {
     disabled: false,
     label: "Add nearby airports",
     white: false,
-    // smallLabel: false,
     valid: true,
 }
 
@@ -85,20 +70,6 @@ addPropertyControls(Radio, {
         defaultValue: false,
         enabledTitle: "White",
         disabledTitle: "Default",
-    },
-    // smallLabel: {
-    //     type: ControlType.Boolean,
-    //     title: "Label Size",
-    //     defaultValue: false,
-    //     enabledTitle: "Small",
-    //     disabledTitle: "Default",
-    // },
-    checked: {
-        type: ControlType.Boolean,
-        title: "State",
-        defaultValue: true,
-        enabledTitle: "On",
-        disabledTitle: "Off",
     },
     valid: {
         type: ControlType.Boolean,
