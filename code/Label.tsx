@@ -35,8 +35,9 @@ export function Label(props) {
 Label.defaultProps = {
     height: 16,
     width: 180,
+    label: "Label",
     required: false,
-    invalid: false,
+    valid: true,
     disabled: false,
     white: false,
 }
