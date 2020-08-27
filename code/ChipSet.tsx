@@ -56,8 +56,8 @@ const containerStyle: React.CSSProperties = {
 const chipStyle: React.CSSProperties = {
     marginLeft: `calc(${spacingXs}/2)`,
     marginRight: `calc(${spacingXs}/2)`,
-    marginTop: `calc(${spacingXs})`,
-    marginBottom: `calc(${spacingXs})`,
+    marginTop: spacingXs,
+    marginBottom: spacingXs,
 }
 
 export function ChipSet(props) {
