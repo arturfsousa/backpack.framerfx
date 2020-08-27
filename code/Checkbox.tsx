@@ -40,8 +40,9 @@ export function Checkbox(props) {
     React.useEffect(() => setChecked(props.checked), [props.checked])
 
     const handleChange = () => {
-        setChecked(!checked)
-        onChange && onChange()
+        const state = !checked
+        setChecked(state)
+        onChange && onChange(state)
     }
 
     return (
