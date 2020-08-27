@@ -51,6 +51,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-label`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-label)                   | 👍        |
 | [`bpk-component-link`](https://backpack.github.io/components/link/?platform=web)                                           | 👍        |
 | [`bpk-component-list`](https://backpack.github.io/components/list/?platform=web)                                           | -         |
+| [`bpk-component-map`](https://backpack.github.io/components/map/?platform=web)                                             | -         |
 | [`bpk-component-mobile-scroll-container`](https://backpack.github.io/components/mobile-scroll-container/?platform=web)     | -         |
 | [`bpk-component-modal`](https://backpack.github.io/components/modal/?platform=web)                                         | -         |
 | [`bpk-component-navigation-bar`](https://backpack.github.io/components/navigation-bar/?platform=web)                       | 👍        |
@@ -64,11 +65,13 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-radio`](https://backpack.github.io/components/radio/?platform=web)                                         | 👍        |
 | [`bpk-component-rating`](https://backpack.github.io/components/rating/?platform=web)                                       | 👍        |
 | [`bpk-component-rtl-toggle`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-rtl-toggle)         | 👍        |
+| [`bpk-component-scrollable-calendar`](https://backpack.github.io/components/scrollable-calendar/?platform=web)             | -         |
 | [`bpk-component-section-list`](https://backpack.github.io/components/section-list/?platform=web)                           | -         |
 | [`bpk-component-select`](https://backpack.github.io/components/select/?platform=web)                                       | 👍        |
 | [`bpk-component-slider`](https://backpack.github.io/components/slider/?platform=web)                                       | 👍        |
 | [`bpk-component-spinner`](https://backpack.github.io/components/spinner/?platform=web)                                     | 👍        |
 | [`bpk-component-star-rating`](https://backpack.github.io/components/star-rating/?platform=web)                             | 👍        |
+| [`bpk-component-switch`](https://backpack.github.io/components/switch/?platform=web)                                       | 👍        |
 | [`bpk-component-table`](https://backpack.github.io/components/table/?platform=web)                                         | -         |
 | [`bpk-component-text`](https://backpack.github.io/components/text/?platform=web)                                           | 👍        |
 | [`bpk-component-textarea`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-textarea)             | 👍        |

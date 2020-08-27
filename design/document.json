@@ -12087,70 +12087,6 @@
         "widthType" : 0
       },
       {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "clip" : true,
-        "codeComponentIdentifier" : ".\/Checkbox.tsx_Checkbox",
-        "codeComponentPackageVersion" : "1.71.0",
-        "codeComponentProps" : {
-          "checked" : true,
-          "disabled" : false,
-          "indeterminate" : false,
-          "label" : "Add nearby airports",
-          "onChange" : [
-
-          ],
-          "required" : false,
-          "smallLabel" : false,
-          "valid" : true,
-          "white" : false
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "duplicatedFrom" : [
-          "S24mZgSmu"
-        ],
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImageOriginalName" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillType" : "color",
-        "height" : 20,
-        "heightType" : 0,
-        "id" : "AGzQslTL1",
-        "intrinsicHeight" : 128,
-        "intrinsicWidth" : 240,
-        "left" : 839,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "BsMOCu9oR",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -1644,
-        "visible" : true,
-        "width" : 173,
-        "widthType" : 0
-      },
-      {
         "__class" : "FrameNode",
         "aspectRatio" : null,
         "blendingEnabled" : 0,
@@ -12498,10 +12434,25 @@
                 "codeComponentIdentifier" : ".\/Radio.tsx_Radio",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "checked" : true,
                   "disabled" : false,
-                  "label" : "Add nearby airports",
+                  "label" : "One",
                   "name" : "radio1",
+                  "onChange" : [
+                    {
+                      "actionIdentifier" : "framer\/useLog",
+                      "controls" : {
+                        "message" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "type" : {
+                          "type" : "enum",
+                          "value" : "event"
+                        }
+                      },
+                      "identifier" : "7d494e2d-2ce0-436d-aace-d2d69e006541"
+                    }
+                  ],
                   "valid" : true,
                   "white" : false
                 },
@@ -12557,10 +12508,25 @@
                 "codeComponentIdentifier" : ".\/Radio.tsx_Radio",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "checked" : true,
                   "disabled" : false,
-                  "label" : "Add nearby airports",
+                  "label" : "Two",
                   "name" : "radio1",
+                  "onChange" : [
+                    {
+                      "actionIdentifier" : "framer\/useLog",
+                      "controls" : {
+                        "message" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "type" : {
+                          "type" : "enum",
+                          "value" : "event"
+                        }
+                      },
+                      "identifier" : "50d8d2d7-06e7-481a-a543-b99d6381718e"
+                    }
+                  ],
                   "valid" : true,
                   "white" : false
                 },
@@ -12617,10 +12583,25 @@
                 "codeComponentIdentifier" : ".\/Radio.tsx_Radio",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "checked" : false,
                   "disabled" : false,
-                  "label" : "Add nearby airports",
+                  "label" : "Three",
                   "name" : "radio1",
+                  "onChange" : [
+                    {
+                      "actionIdentifier" : "framer\/useLog",
+                      "controls" : {
+                        "message" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "type" : {
+                          "type" : "enum",
+                          "value" : "event"
+                        }
+                      },
+                      "identifier" : "28357e0a-785a-45ec-bce7-a1edc967159a"
+                    }
+                  ],
                   "valid" : true,
                   "white" : false
                 },
@@ -12751,7 +12732,6 @@
                 "codeComponentIdentifier" : ".\/Radio.tsx_Radio",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "checked" : true,
                   "disabled" : false,
                   "label" : "Add nearby airports",
                   "name" : "radio2",
@@ -12811,7 +12791,6 @@
                 "codeComponentIdentifier" : ".\/Radio.tsx_Radio",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "checked" : true,
                   "disabled" : false,
                   "label" : "Add nearby airports",
                   "name" : "radio2",
@@ -12872,7 +12851,6 @@
                 "codeComponentIdentifier" : ".\/Radio.tsx_Radio",
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
-                  "checked" : true,
                   "disabled" : false,
                   "label" : "Add nearby airports",
                   "name" : "radio2",
@@ -13442,7 +13420,7 @@
         "isExternalMaster" : null,
         "isMaster" : false,
         "isTarget" : false,
-        "left" : 839,
+        "left" : 1364,
         "locked" : false,
         "name" : "Slider",
         "opacity" : 1,
@@ -13459,7 +13437,7 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : -777,
+        "top" : -1266,
         "visible" : true,
         "width" : 317,
         "widthType" : 0
@@ -13668,69 +13646,6 @@
             "aspectRatio" : null,
             "bottom" : null,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.41563786008230452,
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/Autosuggest.tsx_Autosuggest",
-            "codeComponentPackageVersion" : "1.74.0",
-            "codeComponentProps" : {
-              "_isFieldSet" : true,
-              "description" : "",
-              "disabled" : false,
-              "label" : "Auto-suggest",
-              "optionsText" : "Australia, Austria, Canada, Czech Republic, Germany, Hungary, India, Italy, Norway, Romania, Singapore, Spain, UK, USA",
-              "prompt" : "Type something",
-              "required" : false,
-              "valid" : true,
-              "validationMessage" : "Please enter a value",
-              "value" : ""
-            },
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "duplicatedFrom" : [
-              "aGjzqLpbm"
-            ],
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 52,
-            "heightType" : 0,
-            "id" : "LehxFPfu_",
-            "intrinsicHeight" : 36,
-            "intrinsicWidth" : 240,
-            "left" : 0,
-            "locked" : false,
-            "name" : null,
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "rzvlN7gwC",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : 0,
-            "rotation" : 0,
-            "top" : 176,
-            "visible" : true,
-            "width" : 1,
-            "widthType" : 3
-          },
-          {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : 118,
-            "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.65020576131687247,
             "clip" : true,
             "codeComponentIdentifier" : ".\/TextArea.tsx_TextArea",
@@ -13782,9 +13697,9 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 0,
+            "right" : null,
             "rotation" : 0,
-            "top" : null,
+            "top" : 0,
             "visible" : true,
             "width" : 1,
             "widthType" : 3
@@ -13792,7 +13707,70 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 30,
+            "bottom" : null,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.41563786008230452,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Autosuggest.tsx_Autosuggest",
+            "codeComponentPackageVersion" : "1.74.0",
+            "codeComponentProps" : {
+              "_isFieldSet" : true,
+              "description" : "",
+              "disabled" : false,
+              "label" : "Auto-suggest",
+              "optionsText" : "Australia, Austria, Canada, Czech Republic, Germany, Hungary, India, Italy, Norway, Romania, Singapore, Spain, UK, USA",
+              "prompt" : "Type something",
+              "required" : false,
+              "valid" : true,
+              "validationMessage" : "Please enter a value",
+              "value" : ""
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "aGjzqLpbm"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 52,
+            "heightType" : 0,
+            "id" : "LehxFPfu_",
+            "intrinsicHeight" : 36,
+            "intrinsicWidth" : 240,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "rzvlN7gwC",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 0,
+            "visible" : true,
+            "width" : 1,
+            "widthType" : 3
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.8847736625514403,
             "clip" : true,
@@ -13832,7 +13810,7 @@
             "id" : "yH6jPVPAK",
             "intrinsicHeight" : 36,
             "intrinsicWidth" : 240,
-            "left" : null,
+            "left" : 0,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
@@ -13848,10 +13826,206 @@
             "radiusTopRight" : 0,
             "right" : null,
             "rotation" : 0,
-            "top" : null,
+            "top" : 0,
             "visible" : true,
             "width" : 1,
             "widthType" : 3
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.093333333333333338,
+            "centerAnchorY" : 1.0669642857142858,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Nudger.tsx_Nudger",
+            "codeComponentPackageVersion" : "1.74.0",
+            "codeComponentProps" : {
+              "_isFieldSet" : true,
+              "buttonType" : "secondary",
+              "description" : "",
+              "label" : "Nudger",
+              "max" : 10,
+              "min" : 1,
+              "value" : 1
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "ggNJhE4nS"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 59,
+            "heightType" : 0,
+            "id" : "oOsw60q72",
+            "intrinsicHeight" : 43,
+            "intrinsicWidth" : 108,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "rzvlN7gwC",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 0,
+            "visible" : true,
+            "width" : 108,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Checkbox.tsx_Checkbox",
+            "codeComponentPackageVersion" : "1.71.0",
+            "codeComponentProps" : {
+              "checked" : true,
+              "disabled" : false,
+              "indeterminate" : false,
+              "label" : "Add nearby airports",
+              "onChange" : [
+                {
+                  "actionIdentifier" : "framer\/useLog",
+                  "controls" : {
+                    "message" : {
+                      "type" : "string",
+                      "value" : ""
+                    },
+                    "type" : {
+                      "type" : "enum",
+                      "value" : "event"
+                    }
+                  },
+                  "identifier" : "c428e5da-37e0-4185-b5d2-ae8d65cbfb29"
+                }
+              ],
+              "required" : false,
+              "smallLabel" : false,
+              "valid" : true,
+              "white" : false
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "S24mZgSmu"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 20,
+            "heightType" : 0,
+            "id" : "AGzQslTL1",
+            "intrinsicHeight" : 128,
+            "intrinsicWidth" : 240,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "rzvlN7gwC",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 0,
+            "visible" : true,
+            "width" : 173,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/Switch.tsx_Switch",
+            "codeComponentPackageVersion" : "1.74.0",
+            "codeComponentProps" : {
+              "checked" : true,
+              "label" : "Add nearby airports",
+              "onChange" : [
+
+              ],
+              "type" : "primary"
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "d5ApiiL5i"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 30,
+            "heightType" : 0,
+            "id" : "HRzrGdFmm",
+            "intrinsicHeight" : 30,
+            "intrinsicWidth" : 240,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "rzvlN7gwC",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 0,
+            "visible" : true,
+            "width" : 240,
+            "widthType" : 0
           }
         ],
         "clip" : true,
@@ -13876,7 +14050,7 @@
         "guidesY" : [
 
         ],
-        "height" : 486,
+        "height" : 815,
         "heightType" : 0,
         "id" : "rzvlN7gwC",
         "intrinsicHeight" : null,
@@ -13889,12 +14063,12 @@
         "name" : "Inputs",
         "opacity" : 1,
         "originalid" : null,
-        "padding" : 0,
-        "paddingBottom" : 0,
-        "paddingLeft" : 0,
+        "padding" : 24,
+        "paddingBottom" : 24,
+        "paddingLeft" : 24,
         "paddingPerSide" : false,
-        "paddingRight" : 0,
-        "paddingTop" : 0,
+        "paddingRight" : 24,
+        "paddingTop" : 24,
         "parentid" : "BsMOCu9oR",
         "previewSettings" : null,
         "radius" : 0,
@@ -13914,7 +14088,7 @@
         "stackGap" : 36,
         "top" : -1394,
         "visible" : true,
-        "width" : 240,
+        "width" : 345,
         "widthType" : 0
       },
       {
@@ -26271,66 +26445,6 @@
         "top" : -3601,
         "visible" : true,
         "width" : 36,
-        "widthType" : 0
-      },
-      {
-        "__class" : "CodeComponentNode",
-        "aspectRatio" : null,
-        "bottom" : null,
-        "centerAnchorX" : 0,
-        "centerAnchorY" : 0,
-        "clip" : true,
-        "codeComponentIdentifier" : ".\/Nudger.tsx_Nudger",
-        "codeComponentPackageVersion" : "1.74.0",
-        "codeComponentProps" : {
-          "_isFieldSet" : true,
-          "buttonType" : "secondary",
-          "description" : "",
-          "label" : "Nudger",
-          "max" : 10,
-          "min" : 1,
-          "value" : 1
-        },
-        "codeOverrideEnabled" : false,
-        "constraintsLocked" : false,
-        "duplicatedFrom" : [
-          "ggNJhE4nS"
-        ],
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "rgba(255,255,255,1)",
-        "fillEnabled" : false,
-        "fillImage" : null,
-        "fillImageOriginalName" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillType" : "color",
-        "height" : 59,
-        "heightType" : 0,
-        "id" : "oOsw60q72",
-        "intrinsicHeight" : 43,
-        "intrinsicWidth" : 108,
-        "left" : 839,
-        "locked" : false,
-        "name" : null,
-        "opacity" : 1,
-        "originalid" : null,
-        "parentid" : "BsMOCu9oR",
-        "previewSettings" : null,
-        "radius" : 0,
-        "radiusBottomLeft" : 0,
-        "radiusBottomRight" : 0,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 0,
-        "radiusTopRight" : 0,
-        "right" : null,
-        "rotation" : 0,
-        "top" : -1791,
-        "visible" : true,
-        "width" : 108,
         "widthType" : 0
       },
       {

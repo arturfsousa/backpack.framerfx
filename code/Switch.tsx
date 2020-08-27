@@ -20,74 +20,60 @@ import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
 // @ts-ignore
-import BpkRadio from "backpack-transpiled/bpk-component-radio"
+import BpkSwitch, {
+    SWITCH_TYPES,
+} from "backpack-transpiled/bpk-component-switch"
 
-export function Radio(props) {
-    const { name, label, onChange, disabled, valid, white } = props
+const switchTypes = Object.keys(SWITCH_TYPES)
+
+export function Switch(props) {
+    const { label, type, onChange } = props
+
+    const [checked, setChecked] = React.useState(props.checked)
+    React.useEffect(() => setChecked(props.checked), [props.checked])
 
     const handleChange = () => {
-        onChange && onChange(label)
+        const state = !checked
+        setChecked(state)
+        onChange && onChange(state)
     }
 
     return (
-        <BpkRadio
-            name={name}
+        <BpkSwitch
+            type={type}
             onChange={handleChange}
             label={label}
-            disabled={disabled}
-            valid={valid}
-            white={white}
+            checked={checked}
         />
     )
 }
 
-Radio.defaultProps = {
-    height: 20,
+Switch.defaultProps = {
+    height: 30,
     width: 240,
     checked: true,
-    disabled: false,
     label: "Add nearby airports",
-    white: false,
-    valid: true,
 }
 
-addPropertyControls(Radio, {
-    name: {
-        title: "Input Name",
-        type: ControlType.String,
-        defaultValue: "radio",
-        placeholder: "Enter a name",
+addPropertyControls(Switch, {
+    type: {
+        type: ControlType.Enum,
+        title: "Type",
+        options: switchTypes,
     },
     label: {
         title: "Label",
         type: ControlType.String,
         defaultValue: "Add nearby airports",
-        placeholder: "Enter a label",
     },
-    white: {
+    checked: {
         type: ControlType.Boolean,
-        title: "Label Colour",
-        defaultValue: false,
-        enabledTitle: "White",
-        disabledTitle: "Default",
-    },
-    valid: {
-        type: ControlType.Boolean,
-        title: "Validation",
+        title: "State",
         defaultValue: true,
-        enabledTitle: "Valid",
-        disabledTitle: "Invalid",
-    },
-    disabled: {
-        type: ControlType.Boolean,
-        title: "Disabled",
-        defaultValue: false,
-        enabledTitle: "Disabled",
-        disabledTitle: "Enabled",
+        enabledTitle: "On",
+        disabledTitle: "Off",
     },
     onChange: {
         type: ControlType.EventHandler,
     },
 })
-
-Radio.displayName = "Radio Button"
