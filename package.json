@@ -1,7 +1,7 @@
 {
 	"name": "@framer/skyscanner.backpack",
 	"description": "Backpack Framer Components",
-	"version": "1.76.0",
+	"version": "1.77.0",
 	"main": "dist/index.js",
 	"license": "Apache-2.0",
 	"author": "Artur Sousa",
