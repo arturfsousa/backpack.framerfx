@@ -30,6 +30,7 @@ export function Image(props) {
     return (
         <Frame
             {...rest}
+            backgroundColor="transparent"
             radius={isntRounded ? 0 : borderRadiusSm}
             image={isURL ? url : image}
             onTap={onTap}
