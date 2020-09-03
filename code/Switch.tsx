@@ -19,9 +19,9 @@
 import * as React from "react"
 import { addPropertyControls, ControlType } from "framer"
 
-// @ts-ignore
 import BpkSwitch, {
     SWITCH_TYPES,
+    // @ts-ignore
 } from "backpack-transpiled/bpk-component-switch"
 
 const switchTypes = Object.keys(SWITCH_TYPES)

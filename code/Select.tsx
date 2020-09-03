@@ -36,24 +36,27 @@ export function Select(props) {
         description,
         prompt,
         validationMessage,
+        valid,
         large,
         disabled,
+        options,
+        _optionsText,
         onChange,
         onFocus,
         onBlur,
         ...rest
     } = props
 
-    const [value, setValue] = React.useState(props.value)
-    const [valid, setValid] = React.useState(props.valid)
+    const [value, setValue] = React.useState("")
+    const [_valid, setValid] = React.useState(valid)
 
-    React.useEffect(() => setValid(props.valid), [props.valid])
+    React.useEffect(() => setValid(valid), [valid])
 
-    const optionArray = props.options
-        ? props.options
-        : optionsFromText(props.optionsText)
+    const optionArray = options
+        ? options
+        : optionsFromText(_optionsText)
 
-    const options = optionArray.map((option, index) => {
+    const _options = optionArray.map((option, index) => {
         return (
             <option key={index} value={option}>
                 {option}
@@ -83,7 +86,7 @@ export function Select(props) {
             large={large}
             name="select"
             value={value}
-            valid={valid}
+            valid={_valid}
             onChange={handleChange}
             onFocus={() => {
                 if (onFocus) onFocus()
@@ -93,7 +96,7 @@ export function Select(props) {
             }}
         >
             {promptOption}
-            {options}
+            {_options}
         </BpkSelect>
     )
 
@@ -117,9 +120,9 @@ Select.defaultProps = {
     width: 240,
     _isFieldSet: false,
     disabled: false,
-    value: "",
+    // value: "",
     prompt: "Please Select",
-    optionsText: defaultOptionsText,
+    _optionsText: defaultOptionsText,
     options: null,
     onChange: () => null,
 }
@@ -196,7 +199,7 @@ addPropertyControls(Select, {
     //     type: ControlType.String,
     //     defaultValue: "",
     // },
-    optionsText: {
+    _optionsText: {
         type: ControlType.String,
         title: "Options",
         defaultValue: defaultOptionsText,
