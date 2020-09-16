@@ -24,9 +24,10 @@ import { colors } from "./canvas"
 // @ts-ignore
 import { withDefaultProps } from "backpack-transpiled/bpk-react-utils"
 // @ts-ignore
-import BpkText from "backpack-transpiled/bpk-component-text"
+import BpkText, { TEXT_STYLES } from "backpack-transpiled/bpk-component-text"
+const textStyles = Object.keys(TEXT_STYLES)
 
-const largerTextStyleRegex = RegExp("^x+l$")
+export const largerTextStyleRegex = RegExp("^x+l$")
 
 interface Props {
     height: number
@@ -99,17 +100,7 @@ addPropertyControls(Text, {
         type: ControlType.Enum,
         title: "Size",
         defaultValue: "base",
-        options: [
-            "xs",
-            "sm",
-            "base",
-            "lg",
-            "xl",
-            "xxl",
-            "xxxl",
-            "xxxxl",
-            "xxxxxl",
-        ],
+        options: textStyles,
     },
     // Weight can only be `black` if textStyle is `xl` or larger
     _weightIfSmaller: {
@@ -140,9 +131,10 @@ addPropertyControls(Text, {
         optionTitles: ["Primary", "Secondary", "White"],
     },
     _textAlign: {
-        type: ControlType.SegmentedEnum,
+        type: ControlType.Enum,
         options: ["left", "center", "right"],
         optionTitles: ["Left", "Center", "Right"],
         title: "Align",
+        displaySegmentedControl: true,
     },
 })
