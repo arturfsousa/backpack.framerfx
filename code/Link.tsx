@@ -144,10 +144,11 @@ addPropertyControls(Link, {
         disabledTitle: "On Light",
     },
     _textAlign: {
-        type: ControlType.SegmentedEnum,
+        type: ControlType.Enum,
         options: ["left", "center", "right"],
         optionTitles: ["Left", "Center", "Right"],
         title: "Align",
+        displaySegmentedControl: true,
     },
     onClick: {
         type: ControlType.EventHandler,

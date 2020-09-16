@@ -47,7 +47,7 @@ and open the project folder `backpack.framerfx` in `Framer`.
 | [`bpk-component-icon`](https://backpack.github.io/components/icon/?platform=web)                                           | 👍        |
 | [`bpk-component-image`](https://backpack.github.io/components/image/?platform=web)                                         | 👍        |
 | [`bpk-component-infinite-scroll`](https://backpack.github.io/components/infinite-scroll/?platform=web)                     | -         |
-| [`bpk-component-input`](https://backpack.github.io/components/input/?platform=web)                                         | 👍        |
+| [`bpk-component-input`](https://backpack.github.io/components/text-input?platform=web)                                     | 👍        |
 | [`bpk-component-label`](https://github.com/Skyscanner/backpack/tree/master/packages/bpk-component-label)                   | 👍        |
 | [`bpk-component-link`](https://backpack.github.io/components/link/?platform=web)                                           | 👍        |
 | [`bpk-component-list`](https://backpack.github.io/components/list/?platform=web)                                           | -         |

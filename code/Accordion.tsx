@@ -17,9 +17,10 @@
  */
 
 import * as React from "react"
-import { addPropertyControls, ControlType, Stack } from "framer"
+import { addPropertyControls, ControlType } from "framer"
 
 import { NotConnected } from "./NotConnected"
+import { largerTextStyleRegex } from "./Text"
 
 import {
     BpkAccordion,
@@ -28,6 +29,10 @@ import {
     withAccordionItemState,
     // @ts-ignore
 } from "backpack-transpiled/bpk-component-accordion"
+
+// @ts-ignore
+import { TEXT_STYLES } from "backpack-transpiled/bpk-component-text"
+const textStyles = Object.keys(TEXT_STYLES)
 
 const SingleItemAccordion = withSingleItemAccordionState(BpkAccordion)
 const StatefulAccordionItem = withAccordionItemState(BpkAccordionItem)
@@ -39,7 +44,14 @@ const defaultProps = {
 }
 
 export function Accordion(props) {
-    const { _isSingleExpander, children, ...rest } = props
+    const {
+        _isSingleExpander,
+        children,
+        textStyle,
+        _weightIfSmaller,
+        _weightIfLarger,
+        ...rest
+    } = props
 
     if (React.Children.count(children) === 0) {
         return <NotConnected prompt="Connect to a stack" />
@@ -58,12 +70,28 @@ export function Accordion(props) {
                         width: "100%",
                     })
 
+                    const weight = largerTextStyleRegex.test(props.textStyle)
+                        ? _weightIfLarger
+                        : _weightIfSmaller
+
                     return _isSingleExpander ? (
-                        <BpkAccordionItem id={name} title={name} key={key}>
+                        <BpkAccordionItem
+                            id={name}
+                            title={name}
+                            textStyle={textStyle}
+                            weight={weight}
+                            key={key}
+                        >
                             {element}
                         </BpkAccordionItem>
                     ) : (
-                        <StatefulAccordionItem id={name} title={name} key={key}>
+                        <StatefulAccordionItem
+                            id={name}
+                            title={name}
+                            textStyle={textStyle}
+                            weight={weight}
+                            key={key}
+                        >
                             {element}
                         </StatefulAccordionItem>
                     )
@@ -92,5 +120,32 @@ addPropertyControls(Accordion, {
         defaultValue: true,
         enabledTitle: "Single",
         disabledTitle: "Multiple",
+    },
+    textStyle: {
+        type: ControlType.Enum,
+        title: "Text Size",
+        defaultValue: "base",
+        options: textStyles,
+    },
+    // Weight can only be `black` if textStyle is `xl` or larger
+    _weightIfSmaller: {
+        type: ControlType.Enum,
+        title: "Weight",
+        defaultValue: "regular",
+        options: ["regular", "bold"],
+        optionTitles: ["Book", "Bold"],
+        hidden(props) {
+            return largerTextStyleRegex.test(props.textStyle)
+        },
+    },
+    _weightIfLarger: {
+        type: ControlType.Enum,
+        title: "Weight",
+        defaultValue: "regular",
+        options: ["regular", "bold", "black"],
+        optionTitles: ["Book", "Bold", "Black"],
+        hidden(props) {
+            return !largerTextStyleRegex.test(props.textStyle)
+        },
     },
 })

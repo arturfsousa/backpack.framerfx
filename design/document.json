@@ -11648,13 +11648,16 @@
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
                   "_isSingleExpander" : false,
+                  "_weightIfLarger" : "regular",
+                  "_weightIfSmaller" : "regular",
                   "children" : [
                     {
                       "enabled" : true,
                       "type" : "componentinstance",
                       "value" : "hy7lq80ou"
                     }
-                  ]
+                  ],
+                  "textStyle" : "base"
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -13524,11 +13527,11 @@
                 "codeComponentPackageVersion" : "1.71.0",
                 "codeComponentProps" : {
                   "_isFieldSet" : false,
+                  "_optionsText" : "Economy, Premium Economy, Business Class, First Class",
                   "description" : "",
                   "disabled" : false,
                   "label" : "Select",
                   "large" : false,
-                  "optionsText" : "One, Two, Three",
                   "prompt" : "Select",
                   "required" : true,
                   "valid" : true,
@@ -27711,6 +27714,150 @@
             "top" : -2761,
             "visible" : true,
             "width" : 900,
+            "widthType" : 0
+          },
+          {
+            "__class" : "FrameNode",
+            "aspectRatio" : null,
+            "blendingEnabled" : 0,
+            "blendingMode" : "normal",
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "children" : [
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : null,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.027093596059113302,
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/HorizontalNav.tsx_HorizontalNav",
+                "codeComponentPackageVersion" : "1.74.0",
+                "codeComponentProps" : {
+                  "_selectedItem" : 1,
+                  "autoScrollToSelected" : false,
+                  "items" : [
+                    {
+                      "enabled" : true,
+                      "type" : "string",
+                      "value" : "Tab 1"
+                    },
+                    {
+                      "enabled" : true,
+                      "type" : "string",
+                      "value" : "Tab 2"
+                    },
+                    {
+                      "enabled" : true,
+                      "type" : "string",
+                      "value" : "Tab 3"
+                    }
+                  ],
+                  "showUnderline" : true,
+                  "spaceAround" : false,
+                  "type" : "default"
+                },
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "duplicatedFrom" : [
+                  "zDGtW3qjI"
+                ],
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillImage" : null,
+                "fillImageOriginalName" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 44,
+                "heightType" : 0,
+                "id" : "xhehlK3OU",
+                "intrinsicHeight" : 44,
+                "intrinsicWidth" : 240,
+                "left" : 0,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "Cncssgdww",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : 0,
+                "rotation" : 0,
+                "top" : 0,
+                "visible" : true,
+                "width" : 375,
+                "widthType" : 0
+              }
+            ],
+            "clip" : true,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "var(--token-bac119f7-32ef-42c7-aca3-6ce838ec76ad, rgb(241, 242, 248)) \/* {\"name\":\"Sky Gray Tint 07\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/",
+            "fillEnabled" : true,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "framePreset" : "iPhone_375_812",
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
+            "height" : 812,
+            "heightType" : 0,
+            "id" : "Cncssgdww",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
+            "left" : 3894,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "BsMOCu9oR-page",
+            "previewSettings" : {
+              "__class" : "PreviewSettings",
+              "bezel" : false,
+              "responsive" : true,
+              "rotate" : false,
+              "touch" : false,
+              "zoom" : -1
+            },
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "replicaInfo" : null,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 1874,
+            "visible" : true,
+            "width" : 375,
             "widthType" : 0
           }
         ],
