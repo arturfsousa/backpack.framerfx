@@ -36,7 +36,6 @@ import {
     // @ts-ignore
 } from "backpack-transpiled/bpk-component-text"
 const textStyles = Object.keys(TEXT_STYLES)
-const weights = Object.keys(WEIGHT_STYLES)
 
 const SingleItemAccordion = withSingleItemAccordionState(BpkAccordion)
 const StatefulAccordionItem = withAccordionItemState(BpkAccordionItem)
