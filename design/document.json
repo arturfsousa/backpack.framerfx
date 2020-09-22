@@ -13721,6 +13721,7 @@
                 "codeComponentPackageVersion" : "1.74.0",
                 "codeComponentProps" : {
                   "_isFieldSet" : true,
+                  "clearButtonMode" : "always",
                   "description" : "",
                   "disabled" : false,
                   "label" : "Auto-suggest",
@@ -27672,7 +27673,7 @@
             "codeComponentPackageVersion" : "1.74.0",
             "codeComponentProps" : {
               "_isLarge" : true,
-              "_tint" : "var(--token-eb2a63c5-a33d-4eed-80cc-db57b59afcbf, rgb(17, 18, 54))"
+              "_tint" : "var(--token-dbe1cd98-17ea-4dc9-86d8-49201aafdefc, rgb(255, 255, 255)) \/* {\"name\":\"Sky White\",\"packageIdentifier\":\"@framer\/skyscanner.backpack\"} *\/"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
