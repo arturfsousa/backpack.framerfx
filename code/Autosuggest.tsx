@@ -21,8 +21,10 @@ import { addPropertyControls, ControlType } from "framer"
 
 // @ts-ignore
 import BpkFieldset from "backpack-transpiled/bpk-component-fieldset"
-// @ts-ignore
-import BpkInput from "backpack-transpiled/bpk-component-input"
+import BpkInput, {
+    CLEAR_BUTTON_MODES,
+    // @ts-ignore
+} from "backpack-transpiled/bpk-component-input"
 import BpkAutosuggest, {
     BpkAutosuggestSuggestion,
     // @ts-ignore
@@ -52,6 +54,7 @@ export function Autosuggest(props) {
         prompt,
         validationMessage,
         disabled,
+        clearButtonMode,
         onChange,
         onSuggestionSelected,
         onFocus,
@@ -108,6 +111,9 @@ export function Autosuggest(props) {
                 if (onSubmit) onSubmit()
             }
         },
+        clearButtonMode: clearButtonMode,
+        clearButtonLabel: "Clear",
+        onClear: () => setValue(""),
     }
 
     const disabledInput = (
@@ -243,6 +249,12 @@ addPropertyControls(Autosuggest, {
         type: ControlType.String,
         defaultValue: "Type something",
         placeholder: "None",
+    },
+    clearButtonMode: {
+        title: "Clear Button",
+        type: ControlType.Enum,
+        defaultValue: CLEAR_BUTTON_MODES.never,
+        options: Object.keys(CLEAR_BUTTON_MODES),
     },
     onSubmit: { type: ControlType.EventHandler },
     onSuggestionSelected: { type: ControlType.EventHandler },
