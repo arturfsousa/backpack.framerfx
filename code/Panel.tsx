@@ -23,7 +23,7 @@ import { colors } from "./canvas"
 // @ts-ignore
 import BpkPanel from "backpack-transpiled/bpk-component-panel"
 // @ts-ignore
-import { borderRadiusSm } from "backpack-transpiled/bpk-tokens/tokens/base.es6"
+import { borderRadiusMd as borderRadius } from "backpack-transpiled/bpk-tokens/tokens/base.es6"
 
 interface Props {
     children: NonNullable<React.ReactNode>
@@ -42,7 +42,7 @@ export function Panel(props) {
 
     const cardRadiusStyle = props.padded
         ? null
-        : { style: { borderRadius: borderRadiusSm } }
+        : { style: { borderRadius: borderRadius } }
 
     const relativeChildren = React.Children.map(children, (child) =>
         React.cloneElement(child, {
