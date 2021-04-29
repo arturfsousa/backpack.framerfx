@@ -161,7 +161,7 @@ addPropertyControls(HorizontalNav, {
         title: "Tabs",
         maxCount: 10,
         defaultValue: HorizontalNav.defaultProps.items,
-        propertyControl: {
+        control: {
             type: ControlType.String,
             defaultValue: "Tab Title",
         },

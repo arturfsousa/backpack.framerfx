@@ -108,7 +108,7 @@ addPropertyControls(Breadcrumb, {
         title: "Items",
         maxCount: 10,
         defaultValue: Breadcrumb.defaultProps.items,
-        propertyControl: {
+        control: {
             type: ControlType.String,
             defaultValue: "Page Title",
         },
