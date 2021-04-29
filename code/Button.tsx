@@ -158,6 +158,14 @@ addPropertyControls(Button, {
             "Link",
         ],
     },
+    padded: {
+        type: ControlType.Boolean,
+        title: "Padded",
+        defaultValue: false,
+        enabledTitle: "Yes",
+        disabledTitle: "No",
+        hidden: ({ _variant }) => _variant !== "link",
+    },
     large: {
         type: ControlType.Boolean,
         title: "Size",
